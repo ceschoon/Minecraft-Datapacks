@@ -11,6 +11,6 @@ execute as @a[scores={tag_DeathCount=5,tag_Tag=1}] run scoreboard players set @s
 execute as @a[scores={tag_Tag=2}] at @s run execute as @r[scores={tag_Tag=0}] at @s run function tag:newrunner
 
 # detect win
-execute as @a[scores={tag_On=1,tag_Time=24000..}] at @s run function tag:win 
+execute as @a[scores={tag_On=1,tag_TimeSec=1200..}] at @s run function tag:win 
 
 

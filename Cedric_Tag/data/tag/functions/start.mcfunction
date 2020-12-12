@@ -1,6 +1,7 @@
 
 scoreboard players set @a tag_On 1
-scoreboard players set @a tag_Time 0
+scoreboard players set @a tag_TimeTicksCount 0
+scoreboard players set @a tag_TimeSec 0
 scoreboard players set @a tag_Tag 0
 
 time set 0
