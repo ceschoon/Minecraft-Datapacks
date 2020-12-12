@@ -1,3 +1,4 @@
+
 # compass
 function tag:compassdetect
 
@@ -18,4 +19,8 @@ execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard pla
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard players set @s tag_TimeTicks 0
 
 # detect win (implemented in derived games)
+
+# run main function form derived games
+execute as @r[scores={tag_rrtag=1}] run function rrtag:main
+execute as @r[scores={tag_rrtagx=1}] run function rrtagx:main
 
