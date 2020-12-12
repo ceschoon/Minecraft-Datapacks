@@ -9,23 +9,17 @@ Game modes: (each has its own namespace)
 	rtag	reverse tag: keep tag as long as possible (killer gets the tag)
 	rrtag	randomized reverse tag: random selection of tag holder (current mode)
 
-Parameters:
-	worldborder size (user should change it himself ??)
-	strength 255 (user should place command block instead ??)
-	glowing (user should place command block instead ??)
-	max tag holding time (time for win/loose)
-
-Modifications to existing code:
-	increase time in seconds?
-	Make a git repo on GitHub
++ closely related "x" version of each game where hunters have strength 255
 
 ----------------------------------- Dev TODO -------------------------------
 
 tag:
-	change time to seconds
 
 stag:
 	implement using teams?
+
+stagx:
+	better version to implement first?
 
 rtag:
 	would be very nice but how to implement??
@@ -35,8 +29,5 @@ rtag:
 rrtag:
 
 rrtagx:
-	strength 255 for hunters
-	smaller worldborder
-	less time to win (e.g. 12000)
 
 
