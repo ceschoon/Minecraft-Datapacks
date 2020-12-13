@@ -21,6 +21,7 @@ execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard pla
 # detect win (implemented in derived games)
 
 # run main function form derived games
+execute as @r[scores={tag_htag=1}] run function htag:main
 execute as @r[scores={tag_rrtag=1}] run function rrtag:main
 execute as @r[scores={tag_rrtagx=1}] run function rrtagx:main
 
