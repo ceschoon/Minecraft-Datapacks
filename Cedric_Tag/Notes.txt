@@ -8,8 +8,27 @@ Game modes: (each has its own namespace)
 	stag 	simple tag: 1 player must tag someone else to get rid of tag (victim gets the tag)
 	rtag	reverse tag: keep tag as long as possible (killer gets the tag)
 	rrtag	randomized reverse tag: random selection of tag holder (current mode)
+	htag	hitman tag: one player tagged and game stops when he dies
 
 + closely related "x" version of each game where hunters have strength 255
+
+
+------------------------------------ Usage ---------------------------------
+
+1. Put datapack in the server's datapack folder. Preferably alone to be 
+   sure there is no conflict with other datapacks.
+
+2. Reload datapacks with the "/reload" command.
+
+3. Go to the location in the minecraft world where you will play the game.
+
+4. Use the "/function <tag game>:start" command to start the game,
+   where <tag game> is the name of the tag game variant you want to play.
+   
+   Example: /function rrtag:start
+
+5. If you want to stop the game prematurely, you can simply /reload
+
 
 ----------------------------------- Dev TODO -------------------------------
 
