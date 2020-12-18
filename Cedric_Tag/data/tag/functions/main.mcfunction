@@ -13,8 +13,9 @@ scoreboard players set @a[scores={tag_DeathCount=3}] tag_DeathCount 4
 scoreboard players set @a[scores={tag_DeathCount=2}] tag_DeathCount 3
 scoreboard players set @a[scores={tag_DeathCount=1}] tag_DeathCount 2
 
-# increment time for tagged player
+# increment time
 scoreboard players add @a[scores={tag_On=1,tag_Tag=1}] tag_TimeTicks 1
+scoreboard players add @a[scores={tag_On=1,tag_Tag=1}] tag_TimeTotal 1
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard players add @s tag_TimeSec 1
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard players set @s tag_TimeTicks 0
 
@@ -24,4 +25,4 @@ execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard pla
 execute as @r[scores={tag_htag=1}] run function htag:main
 execute as @r[scores={tag_rrtag=1}] run function rrtag:main
 execute as @r[scores={tag_rrtagx=1}] run function rrtagx:main
-
+execute as @r[scores={tag_stag=1}] run function stag:main

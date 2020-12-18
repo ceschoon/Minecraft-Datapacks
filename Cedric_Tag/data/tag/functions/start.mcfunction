@@ -1,9 +1,12 @@
+scoreboard players set @a tag_htag 0
 scoreboard players set @a tag_rrtag 0
 scoreboard players set @a tag_rrtagx 0
+scoreboard players set @a tag_stag 0
 
 scoreboard players set @a tag_On 1
 scoreboard players set @a tag_TimeTicks 0
 scoreboard players set @a tag_TimeSec 0
+scoreboard players set @a tag_TimeTotal 0
 scoreboard players set @a tag_Tag 0
 
 time set 0
