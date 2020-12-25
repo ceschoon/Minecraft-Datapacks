@@ -5,10 +5,10 @@ scoreboard objectives remove tag_kbhunter2
 scoreboard objectives remove tag_kbhunter3
 scoreboard objectives remove tag_kbhunter4
 
-scoreboard objectives add tag_kbrunner killedByTeam.green
-scoreboard objectives add tag_kbrunner killedByTeam.dark_green
-scoreboard objectives add tag_kbrunner killedByTeam.blue
-scoreboard objectives add tag_kbrunner killedByTeam.dark_blue
+scoreboard objectives add tag_kbhunter1 killedByTeam.green
+scoreboard objectives add tag_kbhunter2 killedByTeam.dark_green
+scoreboard objectives add tag_kbhunter3 killedByTeam.blue
+scoreboard objectives add tag_kbhunter4 killedByTeam.dark_blue
 
 team remove runner
 team remove hunter1
