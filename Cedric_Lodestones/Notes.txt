@@ -1,0 +1,76 @@
+Minecraft datapack: Cedric_Lodestones
+=====================================
+
+
+------------------------------------ Plan ----------------------------------
+
+Game for two teams where one team must defend its lodestone and destroy 
+the other team's one.
+
+
+------------------ To go further: Guardians of the Lodestone ---------------
+
+*********
+Roles randomly assigned to the players, each with special abilities/weapons
+
+--> All with armor pieces that idenfity their role 
+--> The armor and weapons/tools must have curse of binding and vanishing
+--> The armor pieces must be unbreakable (unbreaking 1000?)
+
+--> Scout: feather falling II boots,
+           speed and jump boost effects
+           start with (bow and arrow?) in inventory
+--> Knight: leggings,
+            strenght effect,
+            start with iron sword in inventory
+--> Tower: protection II chestplate
+           slowness (and resistance) effect, knockback/punch weapons,
+           effect nearby team mates with resistance and 
+           effect nearby adversaries with weakness
+           start with a lot of building blocks in inventory
+--> Magician: all other roles' armor pieces (but removable),
+              stick giving blindness to nearby adversaries
+              stick giving levitation
+              stick giving fire resistance
+              stick giving invisibility
+              stick for water breathing
+              stick for speed
+              (start with one random? stick in inventory)
+              (other sticks in chests on the map)
+              (the sticks are not usable by non magicians)
+--> Miner: helmet with blast protection IV
+           haste and night vision effect
+           start with iron pickaxe, tnt and fint-and-steel in inventory
+**********
+
+**********
+Dungeons with chests a bit everywhere on the map with random loot
+
+--> generated using armorstands spread around the map
+--> above and under the surface
+--> reuse loot tables from totem game
+--> add enderpearls to loot
+--> add magician sticks to loot
+**********
+
+
+
+------------------------------------ Usage ---------------------------------
+
+1. Put datapack in the server's datapack folder. Preferably alone to be 
+   sure there is no conflict with other datapacks.
+
+2. Reload datapacks with the "/reload" command.
+
+3. Go to the location in the minecraft world where you will play the game.
+
+4. Use the "/function lodestones:start" command to start the game.
+
+5. If you want to stop the game prematurely, you can simply /reload
+
+
+----------------------------------- Dev TODO -------------------------------
+
+
+
+
