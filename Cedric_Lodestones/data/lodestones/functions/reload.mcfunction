@@ -1,3 +1,6 @@
+# Scoreboard for variables
+scoreboard objectives remove ls_On
+scoreboard objectives add ls_On dummy
 
 # Teams 
 team remove team1

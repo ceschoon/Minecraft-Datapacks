@@ -1,5 +1,11 @@
 #### Start of Lodestones game
 
+# Init scoreboard variables
+scoreboard players set @a ls_On 1
+
+# Kill all armorstands
+kill @e[type=armor_stand]
+
 # World Properties
 worldborder center ~ ~
 worldborder set 400
