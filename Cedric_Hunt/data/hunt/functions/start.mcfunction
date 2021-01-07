@@ -1,12 +1,12 @@
 
-scoreboard players set @a hunt_On 0 # will start a bit later
+scoreboard players set @a hunt_On 0
 scoreboard players set @a hunt_TimeTicks 0
 scoreboard players set @a hunt_TimeSec 0
 scoreboard players set @a hunt_TimeTotal 0
 scoreboard players set @a hunt_Hunted 0
 
 gamerule keepInventory false
-gamerule doImmediateRespawn false
+gamerule doImmediateRespawn true
 
 time set 0
 
@@ -20,6 +20,7 @@ effect clear @a
 effect give @a resistance 10 255
 effect give @a regeneration 10
 effect give @a saturation 10 10
+#effect give @a slowness 10 10
 
 clear @a
 give @a compass
