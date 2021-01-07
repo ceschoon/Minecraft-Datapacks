@@ -10,6 +10,9 @@ scoreboard players set @a tag_TimeSec 0
 scoreboard players set @a tag_TimeTotal 0
 scoreboard players set @a tag_Tag 0
 
+gamerule keepInventory true
+gamerule doImmediateRespawn true
+
 time set 0
 
 worldborder center ~ ~

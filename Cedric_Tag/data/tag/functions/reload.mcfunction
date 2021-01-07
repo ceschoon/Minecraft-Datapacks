@@ -43,7 +43,4 @@ function stag:reload
 # compass module
 function tag:compassreload
 
-gamerule keepInventory true
-gamerule doImmediateRespawn true
-
 say "Cedric Tag: reloaded tag"
