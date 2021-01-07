@@ -1,6 +1,8 @@
 # Scoreboard for variables
 scoreboard objectives remove ls_On
+scoreboard objectives remove ls_DeathCount
 scoreboard objectives add ls_On dummy
+scoreboard objectives add ls_DeathCount deathCount
 
 # Teams 
 team remove team1
