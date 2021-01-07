@@ -1,8 +1,9 @@
 Minecraft datapack: Cedric_Lodestones
 =====================================
 
+WORK IN PROGRESS
 
------------------------------------- Plan ----------------------------------
+------------------------------------ About ----------------------------------
 
 Game for two teams where one team must defend its lodestone and destroy 
 the other team's one.
