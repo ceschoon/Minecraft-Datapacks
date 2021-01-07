@@ -1,0 +1,20 @@
+Minecraft datapack: Cedric_Compass
+==================================
+
+------------------------------------ About ---------------------------------
+
+Track a player with compasses in every dimensions.
+
+------------------------------------ Usage ---------------------------------
+
+1. Put the datapack in the server's datapack folder.
+   You may remove other datapacks to be sure there is no conflict.
+
+2. Reload all datapacks with the "/reload" command.
+
+3. The player to be tracked must execute the "/function compass:trackme" 
+   command to make the compasses point to him.
+
+4. Drop your compass to the ground to make it point to the targeted player's
+   current location.
+
