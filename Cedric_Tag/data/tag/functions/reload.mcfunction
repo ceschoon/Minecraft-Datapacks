@@ -40,7 +40,4 @@ function rrtag:reload
 function rrtagx:reload
 function stag:reload
 
-# compass module
-function tag:compassreload
-
 say "Cedric Tag: reloaded tag"

@@ -1,7 +1,4 @@
 
-# compass
-function tag:compassdetect
-
 # detect death and give respawn kit (implemented in derived games)
 
 # detect death of runner and select new runner (implemented in derived game)

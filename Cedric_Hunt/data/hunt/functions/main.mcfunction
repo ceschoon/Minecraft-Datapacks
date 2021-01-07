@@ -4,11 +4,6 @@ execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run title @a title {"
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run tellraw @a {"text":"Hunt starts now!","color":"gold"}
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run scoreboard players set @a hunt_On 1
 
-# compass
-execute if entity @p[scores={target=1},nbt={Dimension:"minecraft:overworld"}] run function hunt:compassdetectoverworld
-execute if entity @p[scores={target=1},nbt={Dimension:"minecraft:the_nether"}] run function hunt:compassdetectnether
-execute if entity @p[scores={target=1},nbt={Dimension:"minecraft:the_end"}] run function hunt:compassdetectend
-
 # delay and reset death detection
 scoreboard players set @a[scores={hunt_DeathCount=5}] hunt_DeathCount 0
 scoreboard players set @a[scores={hunt_DeathCount=4}] hunt_DeathCount 5

@@ -14,7 +14,4 @@ scoreboard objectives add hunt_TimeTotal dummy
 scoreboard objectives add hunt_Hunted dummy
 scoreboard objectives add hunt_On dummy
 
-# compass module
-function hunt:compassreload
-
 say "Cedric Hunt: reloaded hunt"
