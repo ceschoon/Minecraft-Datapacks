@@ -1,4 +1,4 @@
-# Start of rrtag game (variant of base tag)
+# Start of rtag game (variant of base tag)
 
 function tag:start
 
