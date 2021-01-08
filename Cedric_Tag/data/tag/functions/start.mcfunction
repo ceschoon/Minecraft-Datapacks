@@ -4,6 +4,8 @@ scoreboard players set @a tag_rrtag 0
 scoreboard players set @a tag_rrtagx 0
 scoreboard players set @a tag_stag 0
 
+scoreboard objectives setdisplay sidebar tag_TimeSec
+
 scoreboard players set @a tag_On 1
 scoreboard players set @a tag_TimeTicks 0
 scoreboard players set @a tag_TimeSec 0

@@ -1,5 +1,9 @@
 #### Start of Lodestones game
 
+# Gamerules 
+gamerule keepInventory false
+gamerule doImmediateRespawn true
+
 # Init scoreboard variables
 scoreboard players set @a ls_On 1
 

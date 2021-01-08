@@ -9,7 +9,6 @@ scoreboard objectives remove tag_On
 scoreboard objectives add tag_DeathCount deathCount
 scoreboard objectives add tag_TimeTicks dummy
 scoreboard objectives add tag_TimeSec dummy "Time Tagged"
-scoreboard objectives setdisplay sidebar tag_TimeSec
 scoreboard objectives add tag_TimeTotal dummy
 scoreboard objectives add tag_Tag dummy
 scoreboard objectives add tag_On dummy

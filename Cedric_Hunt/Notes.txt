@@ -8,11 +8,9 @@ Minecraft Manhunt.
 ------------------------------------ Usage ---------------------------------
 
 1. Put the datapack in the server's datapack folder, next to the Compass
-   datapack. You may remove other datapacks to be sure there is no conflict.
+   datapack.
 
-2. Reload all datapacks with the "/reload" command. You may want to reload
-   this datapack individually right after to be sure this one is reloaded
-   last (/function hunt:reload).
+2. Reload all datapacks with the "/reload" command.
 
 3. Go to the location in the minecraft world where you will start the game.
 
@@ -20,4 +18,9 @@ Minecraft Manhunt.
    a message will appear within 10 seconds to give the start signal.
 
 5. If you want to stop the game prematurely, you can simply /reload
+
+In case you encounter trouble, remove other datapacks to be sure there is 
+no conflict. Keep however the compass datapack next to this one. You may 
+also want to reload this datapack individually right after executing the
+"/reload" command to be sure this one is reloaded last.
 

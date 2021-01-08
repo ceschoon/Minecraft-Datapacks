@@ -1,4 +1,6 @@
 
+scoreboard objectives setdisplay sidebar hunt_TimeSec
+
 scoreboard players set @a hunt_On 0
 scoreboard players set @a hunt_TimeTicks 0
 scoreboard players set @a hunt_TimeSec 0
