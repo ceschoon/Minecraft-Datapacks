@@ -6,7 +6,7 @@
 |---------|---------|
 | **Cedric_Compass** | Compass module, simple tracking of one player |
 | **Cedric_Hunt** | Manhunts |
-| **Cedric_Gotl** | !Work in progress! |
+| **Cedric_Gotl** | Guardians of the lodestones: defend a block against the other team. (Work in progress) |
 | **Cedric_Tag** | Suite of various tag games |
 
 
