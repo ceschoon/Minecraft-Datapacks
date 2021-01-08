@@ -1,5 +1,3 @@
-# rng max value
-scoreboard players set @a[scores={gotl_rng=50}] gotl_rng 0
 
 # give powers to each role
 execute as @a[scores={gotl_role=1}] at @s run function gotlroles:scout

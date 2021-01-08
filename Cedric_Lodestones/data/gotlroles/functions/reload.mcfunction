@@ -17,4 +17,4 @@ scoreboard objectives remove gotl_rng
 scoreboard objectives add gotl_rng minecraft.custom:minecraft.play_one_minute
 
 # Messages 
-say "Cedric Gotl: reloaded roles!"
+say "Cedric Gotl: reloaded roles module!"

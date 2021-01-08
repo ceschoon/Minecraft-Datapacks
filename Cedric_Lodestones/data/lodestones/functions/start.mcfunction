@@ -51,5 +51,3 @@ effect give @a saturation 10 10
 clear @a
 execute as @a at @s run function lodestones:givestarterset
 
-# Message
-tellraw @a [{"text":"Lodestones: Each team must destroy the other team's lodestone.","color":"gold"}]
