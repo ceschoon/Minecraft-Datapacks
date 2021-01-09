@@ -16,3 +16,6 @@ execute if entity @s[team=team1] run replaceitem entity @s armor.feet leather_bo
 execute if entity @s[team=team2] run replaceitem entity @s armor.feet leather_boots{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
 give @s stick{display:{Lore:["\"Levitation Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
+give @s stick{display:{Lore:["\"Invisibility Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
+give @s stick{display:{Lore:["\"Fire Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:fire_aspect"}]}
+
