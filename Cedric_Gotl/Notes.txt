@@ -7,7 +7,7 @@ WORK IN PROGRESS
 
 Game for two teams where one team must defend its lodestone and destroy 
 the other team's one. The players are given roles with special abilities.
-
+Dungeons are hidden on the map with randomly generated loot.
 
 ------------------------------------ Usage ---------------------------------
 
@@ -32,55 +32,8 @@ Important: The roles are assigned according to the time played since the
 datapack reload. All players must disconnect between the reload and start 
 commands otherwise everyone will have the same role.
 
------------------------------------ Ideas ----------------------------------
-
-*********
-Roles randomly assigned to the players, each with special abilities/weapons
-
---> All with armor pieces that idenfity their role 
---> The armor and weapons/tools must have curse of binding and vanishing
---> The armor pieces must be unbreakable (unbreaking 1000?)
-
---> Scout: feather falling II boots,
-           speed and jump boost effects
-           start with (bow and arrow?) in inventory
---> Knight: leggings,
-            strenght effect,
-            start with iron sword in inventory
---> Tower: protection II chestplate
-           slowness (and resistance) effect, knockback/punch weapons,
-           effect nearby team mates with resistance and 
-           effect nearby adversaries with weakness
-           start with a lot of building blocks in inventory
---> Magician: all other roles' armor pieces (but removable),
-              stick giving blindness to nearby adversaries
-              stick giving levitation
-              stick giving fire resistance
-              stick giving invisibility
-              stick for water breathing
-              stick for speed
-              (start with one random? stick in inventory)
-              (other sticks in chests on the map)
-              (the sticks are not usable by non magicians)
---> Miner: helmet with blast protection IV
-           haste and night vision effect
-           start with iron pickaxe, tnt and fint-and-steel in inventory
---> Metamorph ??
-**********
-
-**********
-Dungeons with chests a bit everywhere on the map with random loot
-
---> generated using armorstands spread around the map
---> above and under the surface
---> reuse loot tables from totem game
---> add enderpearls to loot
---> add magician sticks to loot
-**********
-
 ----------------------------------- Dev TODO -------------------------------
 
-- Wizard role with sticks
-- Dungeons generation in the map
-- Hide sticks in dungeons
+- Metamorph role ??
+- Better dungeons with structure blocks
 
