@@ -1,7 +1,7 @@
 #### Initialisation function for the wizard
 
-title @s[team=team1] actionbar [{"text":"You are a wizard!","color":"green"}]
-title @s[team=team2] actionbar [{"text":"You are a wizard!","color":"red"}]
+title @s[team=team1] actionbar [{"text":"You are a wizard Harry!","color":"green"}]
+title @s[team=team2] actionbar [{"text":"You are a wizard Harry!","color":"red"}]
 
 execute if entity @s[team=team1] run replaceitem entity @s armor.head leather_helmet{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 execute if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
@@ -24,3 +24,6 @@ execute if entity @s[scores={gotl_rng2=40..49}] run give @s stick{display:{Lore:
 execute if entity @s[scores={gotl_rng2=50..59}] run give @s stick{display:{Lore:["\"Blindness Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
 execute if entity @s[scores={gotl_rng2=60..69}] run give @s stick{display:{Lore:["\"Poison Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
 
+give @s shield
+give @s iron_sword
+give @s iron_axe
