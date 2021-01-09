@@ -1,0 +1,86 @@
+{
+"pools": [
+	{
+		"rolls": 1,
+		"entries": [
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Levitation Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Invisibility Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Fire Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"},{lvl:1s,id:\"minecraft:fire_aspect\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Swiftness Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Water Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Blindness Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Poison Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			}
+		]
+	}
+]
+}
