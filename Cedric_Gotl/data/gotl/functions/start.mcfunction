@@ -5,6 +5,8 @@ function gotlroles:assignrandomly
 # Generate structures with loot chest
 execute as @r[team=team1] at @s run function gotldungeons:generate
 execute as @r[team=team1] at @s run function gotldungeons:generate
+execute as @r[team=team1] at @s run function gotldungeons:generate
+execute as @r[team=team2] at @s run function gotldungeons:generate
 execute as @r[team=team2] at @s run function gotldungeons:generate
 execute as @r[team=team2] at @s run function gotldungeons:generate
 

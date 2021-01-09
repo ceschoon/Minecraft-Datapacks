@@ -1,0 +1,254 @@
+{
+"pools": [
+	
+	
+	{
+		"rolls": 5,
+		"entries": [
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:bread",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 2,
+				"name": "minecraft:golden_apple",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 5,
+				"name": "minecraft:cooked_beef",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 3
+						}
+					]
+			}
+		]
+	},
+	
+	
+	{
+		"rolls": 3,
+		"entries": [
+			{
+				"type": "item",
+				"weight": 1,
+				"name": "minecraft:iron_nugget",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 19
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 5,
+				"name": "minecraft:iron_nugget",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 2,
+				"name": "minecraft:iron_ingot",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 1,
+				"name": "minecraft:obsidian",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 5
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 1,
+				"name": "minecraft:diamond",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 2
+						}
+					]
+			}
+		]
+	},
+	
+	
+	{
+		"rolls": 1,
+		"entries": [
+			{
+				"type": "item",
+				"weight": 5,
+				"name": "minecraft:ender_pearl",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 7
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:ender_pearl",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 3,
+				"name": "minecraft:totem_of_undying",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 3,
+				"name": "minecraft:enchanted_golden_apple",
+				"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+			}
+		]
+	},
+	
+	
+	{
+		"rolls": 1,
+		"entries": [
+			{
+				"type": "item",
+				"weight": 20,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Damaged Wand\"']}}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Levitation Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Invisibility Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Fire Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"},{lvl:1s,id:\"minecraft:fire_aspect\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Swiftness Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 10,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Water Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 20,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Blindness Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			},
+			{
+				"type": "item",
+				"weight": 20,
+				"name": "minecraft:stick",
+				"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"Poison Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"}]}"
+						}
+					]
+			}
+		]
+	}
+	
+	
+]
+}

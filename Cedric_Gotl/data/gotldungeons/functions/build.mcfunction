@@ -31,7 +31,7 @@ setblock ~1 ~-1 ~2 cobblestone
 
 # Place chest with loot
 
-setblock ~ ~ ~ chest{LootTable:"gotldungeons:chests/wands1"}
+setblock ~ ~ ~ chest{LootTable:"gotldungeons:chests/all1"}
 
 
 # Summon invisible armorstand for targeting in commands
