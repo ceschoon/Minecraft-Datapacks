@@ -6,7 +6,7 @@ WORK IN PROGRESS
 ------------------------------------ About ---------------------------------
 
 Game for two teams where one team must defend its lodestone and destroy 
-the other team's one.
+the other team's one. The players are given roles with special abilities.
 
 
 ------------------------------------ Usage ---------------------------------
