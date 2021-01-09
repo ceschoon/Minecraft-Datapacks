@@ -1,5 +1,17 @@
 #### Activation function for the wizard
 
+# count wands in inventory
+
+scoreboard objectives remove gotl_nwands
+scoreboard objectives add gotl_nwands dummy
+execute as @a store result score @s gotl_nwands run clear @s stick{Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]} 0
+
+# apply weakness to wizards possessing wands
+# the many wands the higher the weakness level
+
+execute if entity @s[scores={gotl_role=5,gotl_nwands=1..2}] run effect give @s weakness 1
+execute if entity @s[scores={gotl_role=5,gotl_nwands=3..}] run effect give @s weakness 1 1
+
 # variable for detecting player holding object
 
 scoreboard objectives remove gotl_holding
