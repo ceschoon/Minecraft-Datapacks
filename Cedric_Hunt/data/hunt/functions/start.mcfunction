@@ -27,6 +27,5 @@ effect give @a saturation 10 10
 clear @a
 give @a compass
 
-execute as @r[scores={hunt_Hunted=0}] at @s run function hunt:newrunner
-
+function hunt:newrunner
 
