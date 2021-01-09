@@ -28,6 +28,9 @@ no conflict. Keep however the compass datapack next to this one. You may
 also want to reload this datapack individually right after executing the
 "/reload" command to be sure this one is reloaded last.
 
+Important: The roles are assigned according to the time played since the 
+datapack reload. All players must disconnect between the reload and start 
+commands otherwise everyone will have the same role.
 
 ----------------------------------- Ideas ----------------------------------
 
@@ -62,6 +65,7 @@ Roles randomly assigned to the players, each with special abilities/weapons
 --> Miner: helmet with blast protection IV
            haste and night vision effect
            start with iron pickaxe, tnt and fint-and-steel in inventory
+--> Metamorph ??
 **********
 
 **********

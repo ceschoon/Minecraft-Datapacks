@@ -24,3 +24,32 @@ scoreboard players set @a gotl_holding 0
 scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Fire Wand"']}}}}] gotl_holding 1
 execute if entity @s[scores={gotl_holding=1}] run effect give @s fire_resistance 1
 
+# detect wizard holding swiftness wand
+
+scoreboard players set @a gotl_holding 0
+scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Swiftness Wand"']}}}}] gotl_holding 1
+execute if entity @s[scores={gotl_holding=1}] run effect give @s speed 1
+execute if entity @s[scores={gotl_holding=1}] run effect give @s jump_boost 1 2
+
+# detect wizard holding water wand
+
+scoreboard players set @a gotl_holding 0
+scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Water Wand"']}}}}] gotl_holding 1
+execute if entity @s[scores={gotl_holding=1}] run effect give @s water_breathing 1
+
+# detect wizard holding blindness wand
+
+scoreboard players set @a gotl_holding 0
+scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Blindness Wand"']}}}}] gotl_holding 1
+execute if entity @s[team=team1,scores={gotl_holding=1}] run execute at @s as @a[team=team2,distance=..10] run effect give @s blindness 1
+execute if entity @s[team=team2,scores={gotl_holding=1}] run execute at @s as @a[team=team1,distance=..10] run effect give @s blindness 1
+
+# detect wizard holding poison wand
+
+scoreboard players set @a gotl_holding 0
+scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Poison Wand"']}}}}] gotl_holding 1
+execute if entity @s[team=team1,scores={gotl_holding=1}] run execute at @s as @a[team=team2,distance=..10] run effect give @s poison 5
+execute if entity @s[team=team2,scores={gotl_holding=1}] run execute at @s as @a[team=team1,distance=..10] run effect give @s poison 5
+
+
+

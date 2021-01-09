@@ -3,9 +3,6 @@
 # default to 0 (no role)
 scoreboard players set @s gotl_role 0
 
-# rng max value
-scoreboard players set @a[scores={gotl_rng=50..}] gotl_rng 0
-
 # assign randomly
 execute if entity @s[scores={gotl_rng=0..9}] run scoreboard players set @s gotl_role 1
 execute if entity @s[scores={gotl_rng=10..19}] run scoreboard players set @s gotl_role 2
