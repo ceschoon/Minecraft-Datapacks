@@ -1,14 +1,14 @@
 
 function lodestones:start
-function gotlroles:assignrandomly
+execute as @a run function gotlroles:assignrandomly
 
 # Generate structures with loot chest
-execute as @r[team=team1] at @s run function gotldungeons:generate
-execute as @r[team=team1] at @s run function gotldungeons:generate
-execute as @r[team=team1] at @s run function gotldungeons:generate
-execute as @r[team=team2] at @s run function gotldungeons:generate
-execute as @r[team=team2] at @s run function gotldungeons:generate
-execute as @r[team=team2] at @s run function gotldungeons:generate
+execute as @r[team=team1] run function gotldungeons:generate
+execute as @r[team=team1] run function gotldungeons:generate
+execute as @r[team=team1] run function gotldungeons:generate
+execute as @r[team=team2] run function gotldungeons:generate
+execute as @r[team=team2] run function gotldungeons:generate
+execute as @r[team=team2] run function gotldungeons:generate
 
 # Message
 tellraw @a [{"text":"Guardians of the Lodestones: Start!","color":"gold"}]
