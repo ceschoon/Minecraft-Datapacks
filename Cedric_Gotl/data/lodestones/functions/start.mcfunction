@@ -35,8 +35,8 @@ execute as @r[team=noteam] run team join team2 @s
 
 # Spread Players in teams
 spreadplayers ~ ~ 150 150 true @a
-execute as @a[team=team1] at @s run spawnpoint @a[team=team1] ~ ~ ~
-execute as @a[team=team2] at @s run spawnpoint @a[team=team2] ~ ~ ~
+execute as @a[team=team1] at @s run spawnpoint @a[team=team1] ~ ~2 ~
+execute as @a[team=team2] at @s run spawnpoint @a[team=team2] ~ ~2 ~
 
 # Place lodestone at the feet of a random player in each team
 execute as @r[team=team1] at @s run function lodestones:placelodestone1
