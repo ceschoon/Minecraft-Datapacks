@@ -13,4 +13,6 @@ scoreboard objectives add X dummy
 scoreboard objectives add Y dummy
 scoreboard objectives add Z dummy
 
+scoreboard players set @a target 0
+
 say "Cedric Compass: reloaded"
