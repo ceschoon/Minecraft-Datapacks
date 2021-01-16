@@ -1,4 +1,4 @@
 # give respawn set 
 
-give @s bread 5
+give @s bread 10
 give @s compass
