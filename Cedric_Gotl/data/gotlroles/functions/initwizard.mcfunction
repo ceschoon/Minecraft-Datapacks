@@ -18,7 +18,7 @@ execute if entity @s[team=team2] run replaceitem entity @s armor.feet leather_bo
 # give wand according to rng2
 execute if entity @s[scores={gotl_rng2=0..9}] run give @s stick{display:{Lore:["\"Levitation Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
 execute if entity @s[scores={gotl_rng2=10..19}] run give @s stick{display:{Lore:["\"Invisibility Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
-execute if entity @s[scores={gotl_rng2=20..29}] run give @s stick{display:{Lore:["\"Fire Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:fire_aspect"}]}
+execute if entity @s[scores={gotl_rng2=20..29}] run give @s stick{display:{Lore:["\"Fire Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:3s,id:"minecraft:fire_aspect"}]}
 execute if entity @s[scores={gotl_rng2=30..39}] run give @s stick{display:{Lore:["\"Swiftness Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
 execute if entity @s[scores={gotl_rng2=40..49}] run give @s stick{display:{Lore:["\"Water Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
 execute if entity @s[scores={gotl_rng2=50..59}] run give @s stick{display:{Lore:["\"Blindness Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}

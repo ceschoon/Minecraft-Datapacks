@@ -32,7 +32,7 @@
 				"functions": [
 						{
 							"function": "set_nbt",
-							"tag": "{display:{Lore:['\"Fire Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"},{lvl:1s,id:\"minecraft:fire_aspect\"}]}"
+							"tag": "{display:{Lore:['\"Fire Wand\"']},Enchantments:[{lvl:1s,id:\"minecraft:binding_curse\"},{lvl:3s,id:\"minecraft:fire_aspect\"}]}"
 						}
 					]
 			},

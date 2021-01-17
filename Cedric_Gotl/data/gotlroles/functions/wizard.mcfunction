@@ -9,8 +9,8 @@ execute as @a store result score @s gotl_nwands run clear @s stick{Enchantments:
 # apply weakness to wizards possessing wands
 # the many wands the higher the weakness level
 
-execute if entity @s[scores={gotl_role=5,gotl_nwands=2}] run effect give @s weakness 1
-execute if entity @s[scores={gotl_role=5,gotl_nwands=3..}] run effect give @s weakness 1 1
+execute if entity @s[scores={gotl_role=5,gotl_nwands=3}] run effect give @s weakness 1
+execute if entity @s[scores={gotl_role=5,gotl_nwands=4..}] run effect give @s weakness 1 1
 
 # variable for detecting player holding object
 
@@ -53,8 +53,11 @@ execute if entity @s[scores={gotl_holding=1}] run effect give @s water_breathing
 
 scoreboard players set @a gotl_holding 0
 scoreboard players set @a[scores={gotl_role=5},nbt={SelectedItem:{tag:{display:{Lore:['"Blindness Wand"']}}}}] gotl_holding 1
-execute if entity @s[team=team1,scores={gotl_holding=1}] run execute at @s as @a[team=team2,distance=..10] run effect give @s blindness 1
-execute if entity @s[team=team2,scores={gotl_holding=1}] run execute at @s as @a[team=team1,distance=..10] run effect give @s blindness 1
+execute if entity @s[team=team1,scores={gotl_holding=1}] run execute at @s as @a[team=team2,distance=..10] run effect give @s blindness 4
+execute if entity @s[team=team2,scores={gotl_holding=1}] run execute at @s as @a[team=team1,distance=..10] run effect give @s blindness 4
+execute if entity @s[team=team1,scores={gotl_holding=1}] run execute at @s as @a[team=team2,distance=..10] run effect give @s nausea 4
+execute if entity @s[team=team2,scores={gotl_holding=1}] run execute at @s as @a[team=team1,distance=..10] run effect give @s nausea 4
+
 
 # detect wizard holding poison wand
 
