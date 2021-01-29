@@ -4,4 +4,4 @@
 ## close to zero.
 
 execute as @r[scores={score2=..59}] run function rtag:newrunner
-scoreboard players remove @a score2 60
+scoreboard players remove @a score2 30

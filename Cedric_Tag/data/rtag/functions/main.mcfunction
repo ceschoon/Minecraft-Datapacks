@@ -13,7 +13,7 @@ execute as @a[scores={tag_On=1,tag_Tag=1,tag_kbhunter3=1}] run execute as @a[tea
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_kbhunter4=1}] run execute as @a[team=hunter4] run function rtag:newrunner
 
 # player with lowest score becomes runner in case of death from pve
-execute as @a[scores={tag_On=1,tag_Tag=1,tag_DeathCount=5}] run function rtag:lowrunner
+execute as @a[scores={tag_On=1,tag_Tag=1,tag_DeathCount=5}] run function rtag:copyscores
 execute if entity @a[scores={score2=0..}] run function rtag:lowrunner
 
 # detect win
