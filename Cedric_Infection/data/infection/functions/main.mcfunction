@@ -3,8 +3,9 @@
 effect give @a[scores={inf_On=1},team=sane] glowing 10
 
 # tell sane players when an infected is nearby + play sound
-execute as @a[team=sane] at @s if entity @a[team=infected,distance=20] run playsound minecraft:entity.player.breath master @s ~ ~ ~
-execute as @a[team=sane] at @s if entity @a[team=infected,distance=20] run tellraw @a [{"text":"An infected player is nearby...","color":"red"}]
+execute as @a[team=sane,scores={inf_WarnDelay=60..}] at @s if entity @a[team=infected,distance=..30] run playsound minecraft:entity.zombie.infect master @s ~ ~ ~
+execute as @a[team=sane,scores={inf_WarnDelay=60..}] at @s if entity @a[team=infected,distance=..30] run tellraw @s [{"text":"An infected player is nearby...","color":"red"}]
+execute as @a[team=sane,scores={inf_WarnDelay=60..}] at @s if entity @a[team=infected,distance=..30] run scoreboard players set @s inf_WarnDelay 0
 
 # infect sane players you just died into
 execute if entity @a[scores={inf_On=1,inf_DeathCount=5},team=sane] as @a at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~
@@ -19,8 +20,9 @@ scoreboard players set @a[scores={inf_DeathCount=2}] inf_DeathCount 3
 scoreboard players set @a[scores={inf_DeathCount=1}] inf_DeathCount 2
 
 # increment time
-scoreboard players add @a[scores={inf_On=1},team=sane] tag_TimeTicks 1
+scoreboard players add @a[scores={inf_On=1},team=sane] inf_TimeTicks 1
 execute as @a[scores={inf_On=1,inf_TimeTicks=20..}] run scoreboard players add @s inf_TimeSec 1
+execute as @a[scores={inf_On=1,inf_TimeTicks=20..}] run scoreboard players add @s inf_WarnDelay 1
 execute as @a[scores={inf_On=1,inf_TimeTicks=20..}] run scoreboard players set @s inf_TimeTicks 0
 
 # detect end of the game
