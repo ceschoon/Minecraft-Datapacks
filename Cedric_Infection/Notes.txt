@@ -1,6 +1,12 @@
 Minecraft datapack: Cedric_Infection
 ====================================
 
+------------------------------------ About ---------------------------------
+
+Infected players must hunt and kill sane players. Sane players must survive
+together for as long as possible while avoiding the infected. If a sane
+player dies, by natural death or not, he joins the team of infected.
+
 ------------------------------------ Usage ---------------------------------
 
 1. Put the datapack in the server's datapack folder, next to the Compass
