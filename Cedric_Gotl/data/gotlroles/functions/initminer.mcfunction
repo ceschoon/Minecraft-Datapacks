@@ -9,4 +9,4 @@ tellraw @s[team=team2] [{"text":"You are a miner! The miner can mine faster than
 #give @s iron_pickaxe{Enchantments:[{lvl:3s,id:"minecraft:unbreaking"}]}
 give @s iron_pickaxe
 give @s flint_and_steel
-give @s tnt 16
+give @s torch 16
