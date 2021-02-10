@@ -18,7 +18,7 @@ time set 0
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if both teams are empty
-execute unless entity @r[team=team1] unless entity @r[team=team2] run lodestones:dorandomteams
+execute unless entity @r[team=team1] unless entity @r[team=team2] run function lodestones:dorandomteams
 
 # Spread Players in teams
 spreadplayers ~ ~ 200 200 true @a
