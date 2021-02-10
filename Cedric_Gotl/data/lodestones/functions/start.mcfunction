@@ -16,25 +16,12 @@ worldborder set 400
 setworldspawn ~ ~ ~
 time set 0
 
-# Temporary team for player not assigned in teams to fill
-team remove noteam
-team add noteam
-team join noteam @a
-
-# Fill teams (up to 10 players)
-execute as @r[team=noteam] run team join team1 @s
-execute as @r[team=noteam] run team join team2 @s
-execute as @r[team=noteam] run team join team1 @s
-execute as @r[team=noteam] run team join team2 @s
-execute as @r[team=noteam] run team join team1 @s
-execute as @r[team=noteam] run team join team2 @s
-execute as @r[team=noteam] run team join team1 @s
-execute as @r[team=noteam] run team join team2 @s
-execute as @r[team=noteam] run team join team1 @s
-execute as @r[team=noteam] run team join team2 @s
+# Fill teams randomly if teams have not been manually set up
+# This is called only if both teams are empty
+execute unless entity @r[team=team1] unless entity @r[team=team2] run lodestones:dorandomteams
 
 # Spread Players in teams
-spreadplayers ~ ~ 150 150 true @a
+spreadplayers ~ ~ 200 200 true @a
 execute as @a[team=team1] at @s run spawnpoint @a[team=team1] ~ ~2 ~
 execute as @a[team=team2] at @s run spawnpoint @a[team=team2] ~ ~2 ~
 
