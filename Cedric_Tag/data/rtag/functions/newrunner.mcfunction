@@ -40,6 +40,9 @@ execute as @r[scores={temp_innoteam=1}] run scoreboard players set @s temp_innot
 execute as @r[scores={temp_innoteam=2}] run team join hunter4 @s
 execute as @a[scores={temp_innoteam=2}] run scoreboard players set @s temp_innoteam 0
 
+# avoid bug in low runner
+scoreboard players set @a score2 -1
+
 scoreboard players set @a tag_Tag 0
 scoreboard players set @s tag_Tag 1
 
