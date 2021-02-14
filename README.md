@@ -8,6 +8,7 @@
 | **Cedric_Gotl** | Guardians of the lodestones: defend a block against the other team. |
 | **Cedric_Hunt** | Manhunts |
 | **Cedric_Infection** | "Infected" players must hunt and convert "sane" players. |
+| **Cedric_Koth** | King of the hill game |
 | **Cedric_Tag** | Suite of various tag games |
 
 
