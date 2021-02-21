@@ -8,6 +8,8 @@ scoreboard players set @a inf_WarnDelay 0
 
 gamerule keepInventory true
 gamerule doImmediateRespawn true
+gamerule doDaylightCycle true
+gamerule naturalRegeneration true
 
 time set 0
 

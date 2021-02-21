@@ -9,6 +9,8 @@ scoreboard players set @a hunt_Hunted 0
 
 gamerule keepInventory false
 gamerule doImmediateRespawn true
+gamerule doDaylightCycle true
+gamerule naturalRegeneration true
 
 time set 0
 

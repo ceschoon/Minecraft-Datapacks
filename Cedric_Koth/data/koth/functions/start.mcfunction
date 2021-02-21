@@ -10,6 +10,8 @@ scoreboard players set @a koth_TimeTotal 0
 # Gamerules
 gamerule keepInventory true
 gamerule doImmediateRespawn true
+gamerule doDaylightCycle true
+gamerule naturalRegeneration true
 
 # Store position to target hill with compass
 execute store result score @a X run data get entity @s Pos[0] 1
