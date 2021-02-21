@@ -28,7 +28,7 @@ time set 0
 # Spread players + set spawn (world spawn too, should not be close to platform)
 spreadplayers ~ ~ 300 300 false @a
 execute as @a at @s run spawnpoint @s ~ ~ ~
-execute at @r setworldspawn ~ ~ ~
+execute at @r run setworldspawn ~ ~ ~
 
 # Effects
 effect clear @a
