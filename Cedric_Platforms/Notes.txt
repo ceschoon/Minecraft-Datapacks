@@ -1,0 +1,24 @@
+Minecraft datapack: Cedric_Platforms
+====================================
+
+------------------------------------ About ---------------------------------
+
+Game played on platforms in the sky. Several teams must compete to collect
+and bring resources to their platform.
+
+------------------------------------ Usage ---------------------------------
+
+1. Reload all datapacks with the "/reload" command.
+
+2. Go to the location in the minecraft world where you will start the game.
+   Play above a land mass otherwise there will be issues with the generation
+   of platforms.
+
+3. Use the "/function platforms:start" command to start the game.
+
+4. If you want to stop the game prematurely, you can simply /reload
+
+In case you encounter trouble, remove other datapacks to be sure there is 
+no conflict. You may also want to reload this datapack individually right 
+after executing the "/reload" command to be sure this one is reloaded last.
+
