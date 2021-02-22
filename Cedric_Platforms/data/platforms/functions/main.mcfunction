@@ -50,7 +50,10 @@ execute at @e[type=armor_stand,name=team1] as @a[team=team1,distance=..2] store 
 execute at @e[type=armor_stand,name=team2] as @a[team=team2,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
 execute at @e[type=armor_stand,name=team3] as @a[team=team3,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
 execute at @e[type=armor_stand,name=team4] as @a[team=team4,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
-scoreboard players add @a[scores={pltf_AddScore=1}] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=team1] run scoreboard players add @a[team=team1] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=team2] run scoreboard players add @a[team=team2] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=team3] run scoreboard players add @a[team=team3] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=team4] run scoreboard players add @a[team=team4] pltf_Score 1
 
 # Reset platforms
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
@@ -61,12 +64,12 @@ execute at @e[type=armor_stand,name=team2] run function platforms:buildteam2
 execute at @e[type=armor_stand,name=team3] run function platforms:buildteam3
 execute at @e[type=armor_stand,name=team4] run function platforms:buildteam4
 
-# decrement time delays for generators
+# Decrement time delays for generators
 scoreboard players remove @a pltf_DelayEmrld 1
 scoreboard players remove @a pltf_DelayDiamd 1
 scoreboard players remove @a pltf_DelayWool 1
 
-# spawn loot at armor stand when delay completed
+# Spawn loot at armor stand when delay completed
 execute at @e[type=armor_stand,name=diamond] if entity @a[scores={pltf_DelayDiamd=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/diamond_ore
 execute at @e[type=armor_stand,name=emerald1] if entity @a[scores={pltf_DelayEmrld=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/emerald_ore
 execute at @e[type=armor_stand,name=emerald2] if entity @a[scores={pltf_DelayEmrld=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/emerald_ore
@@ -75,10 +78,17 @@ execute at @e[type=armor_stand,name=team2] if entity @a[scores={pltf_DelayWool=.
 execute at @e[type=armor_stand,name=team3] if entity @a[scores={pltf_DelayWool=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/blue_wool
 execute at @e[type=armor_stand,name=team4] if entity @a[scores={pltf_DelayWool=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/yellow_wool
 
-# reset delay
+# Reset delay
 scoreboard players set @a[scores={pltf_DelayEmrld=..0}] pltf_DelayEmrld 300
 scoreboard players set @a[scores={pltf_DelayDiamd=..0}] pltf_DelayDiamd 600
 scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 20
+
+# Keep villagers in place
+execute at @e[type=armor_stand,name=villager1] run tp @e[type=villager,distance=..2] ~ ~ ~
+execute at @e[type=armor_stand,name=villager2] run tp @e[type=villager,distance=..2] ~ ~ ~
+
+# Summon fireballs
+function platforms:summonfireball
 
 # detect end of the game
 #execute as @a[scores={pltf_On=1,pltf_Score=1200..}] run function platforms:win

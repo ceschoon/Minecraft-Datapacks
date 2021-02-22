@@ -20,6 +20,7 @@ worldborder center ~ ~
 worldborder set 1000000
 setworldspawn ~ 0 ~
 time set 0
+weather clear 999999
 
 # Build central diamond platform
 kill @e[type=armor_stand]
@@ -38,7 +39,19 @@ execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\
 execute at @e[type=armor_stand,name=emerald2] run function platforms:buildemerald
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
-# Build villager platforms on other diagonals
+# Build villager platform 1
+spreadplayers ~-30 ~30 0 10 false @s
+execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
+execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
+execute at @e[type=armor_stand,name=villager1] run function platforms:buildvillager
+execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
+
+# Build villager platform 2
+spreadplayers ~30 ~-30 0 10 false @s
+execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager2\"",CustomNameVisible:0}
+execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
+execute at @e[type=armor_stand,name=villager2] run function platforms:buildvillager
+execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team1 platform
 spreadplayers ~-30 ~ 0 10 false @s
