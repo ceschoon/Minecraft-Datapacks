@@ -26,7 +26,7 @@ execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 # Build villager platform 2
 spreadplayers ~20 ~-20 0 10 false @s
 execute at @s run summon armor_stand ~ 205 ~ {Invisible:1,Marker:1,CustomName:"\"villager2\"",CustomNameVisible:0}
-execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
+execute at @e[type=armor_stand,name=villager2] run function platforms:summonvillager
 execute at @e[type=armor_stand,name=villager2] run function platforms:buildvillager
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 

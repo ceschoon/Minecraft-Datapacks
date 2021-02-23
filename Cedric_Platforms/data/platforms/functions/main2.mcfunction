@@ -24,11 +24,11 @@ execute at @e[type=armor_stand,name=team2] run tp @a[scores={pltf_DeathCount=200
 execute at @e[type=armor_stand,name=team3] run tp @a[scores={pltf_DeathCount=200},team=team3] ~ ~ ~
 execute at @e[type=armor_stand,name=team4] run tp @a[scores={pltf_DeathCount=200},team=team4] ~ ~ ~
 
-# Force players to wear team colors
-execute as @a if entity @s[team=team1] run replaceitem entity @s armor.head leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute as @a if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute as @a if entity @s[team=team3] run replaceitem entity @s armor.head leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute as @a if entity @s[team=team4] run replaceitem entity @s armor.head leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"},{lvl:1s,id:"minecraft:vanishing_curse"}]}
+# Force players to wear team colors (except if player invisible)
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team1] run replaceitem entity @s armor.head leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team3] run replaceitem entity @s armor.head leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team4] run replaceitem entity @s armor.head leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
 # Clear inventories from other team's wool color
 clear @a[team=team2] lime_wool
@@ -85,7 +85,7 @@ execute at @e[type=armor_stand,name=team4] if entity @a[scores={pltf_DelayWool=.
 # Reset delay
 scoreboard players set @a[scores={pltf_DelayEmrld=..0}] pltf_DelayEmrld 300
 scoreboard players set @a[scores={pltf_DelayDiamd=..0}] pltf_DelayDiamd 600
-scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 20
+scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 40
 
 # Keep villagers in place
 execute at @e[type=armor_stand,name=villager1] run tp @e[type=villager,distance=..2] ~ ~ ~
@@ -114,7 +114,9 @@ execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_DelayFire
 execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFire=1}] run summon fireball ~ ~1 ~ {ExplosionPower:3}
 execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFire=1}] run scoreboard players add @a pltf_CountFire2 1
 
-
 # detect end of the game
-#execute as @a[scores={pltf_On=1,pltf_Score=1200..}] run function platforms:win
+execute as @a[team=team1,scores={pltf_Score=40..}] run function platforms:win1
+execute as @a[team=team2,scores={pltf_Score=40..}] run function platforms:win2
+execute as @a[team=team3,scores={pltf_Score=40..}] run function platforms:win3
+execute as @a[team=team4,scores={pltf_Score=40..}] run function platforms:win4
 

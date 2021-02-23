@@ -28,7 +28,7 @@ weather clear 999999
 
 # Generate map
 #function platforms:generatemap1
-function platforms:generatemap2
+#function platforms:generatemap2
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if all teams are empty
@@ -51,7 +51,8 @@ clear @a
 gamemode survival @a
 
 # Game starts message
-execute as @a[scores={pltf_On=1}] at @s run title @s title {"text":"Go!","color":"gold"}
-execute as @a[scores={pltf_On=1}] at @s run tellraw @s {"text":"Platforms game starts Now!","color":"gold"}
+title @a title {"text":"Go!","color":"gold"}
+tellraw @a {"text":"Platforms: Bring 40 diamonds to your base to win.","color":"gold"}
+tellraw @a {"text":"Platforms: Game starts now!","color":"gold"}
 
 
