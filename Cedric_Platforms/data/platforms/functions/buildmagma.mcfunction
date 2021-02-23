@@ -4,8 +4,8 @@ fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 obsidian
 fill ~-2 ~ ~-2 ~2 ~2 ~2 air
 
 # ores in platform
-setblock ~ ~-1 ~ magma_block
-setblock ~ ~-1 ~1 coal_block
+setblock ~ ~-1 ~ coal_block
+setblock ~ ~-1 ~1 magma_block
 setblock ~-2 ~-1 ~1 coal_block
 setblock ~1 ~-1 ~-2 magma_block
 
