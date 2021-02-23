@@ -59,6 +59,10 @@ execute as @a[scores={pltf_AddScore=1},team=team4] run scoreboard players add @a
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
 execute at @e[type=armor_stand,name=emerald1] run function platforms:buildemerald
 execute at @e[type=armor_stand,name=emerald2] run function platforms:buildemerald
+execute at @e[type=armor_stand,name=villager1] run function platforms:buildvillager
+execute at @e[type=armor_stand,name=villager2] run function platforms:buildvillager
+execute at @e[type=armor_stand,name=cannon1] run function platforms:buildmagma
+execute at @e[type=armor_stand,name=cannon2] run function platforms:buildmagma
 execute at @e[type=armor_stand,name=team1] run function platforms:buildteam1
 execute at @e[type=armor_stand,name=team2] run function platforms:buildteam2
 execute at @e[type=armor_stand,name=team3] run function platforms:buildteam3

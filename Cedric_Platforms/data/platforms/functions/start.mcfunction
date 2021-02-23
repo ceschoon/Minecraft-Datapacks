@@ -23,7 +23,8 @@ time set 0
 weather clear 999999
 
 # Generate map
-function platforms:generatemap1
+#function platforms:generatemap1
+function platforms:generatemap2
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if all teams are empty
