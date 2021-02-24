@@ -68,6 +68,12 @@ execute at @e[type=armor_stand,name=team2] run function platforms:buildteam2
 execute at @e[type=armor_stand,name=team3] run function platforms:buildteam3
 execute at @e[type=armor_stand,name=team4] run function platforms:buildteam4
 
+# Remove all diamonds/emerald blocks near corresponding platforms
+# Otherwise players can just farm these resources using tnt/fireballs
+execute at @e[type=armor_stand,name=diamond] run kill @e[type=item,nbt={Item:{id:"minecraft:diamond_block"}},distance=..10]
+execute at @e[type=armor_stand,name=emerald1] run kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..10]
+execute at @e[type=armor_stand,name=emerald2] run kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..10]
+
 # Decrement time delays for generators
 scoreboard players remove @a pltf_DelayEmrld 1
 scoreboard players remove @a pltf_DelayDiamd 1
