@@ -89,7 +89,7 @@ execute at @e[type=armor_stand,name=team3] if entity @a[scores={pltf_DelayWool=.
 execute at @e[type=armor_stand,name=team4] if entity @a[scores={pltf_DelayWool=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/yellow_wool
 
 # Reset delay
-scoreboard players set @a[scores={pltf_DelayEmrld=..0}] pltf_DelayEmrld 300
+scoreboard players set @a[scores={pltf_DelayEmrld=..0}] pltf_DelayEmrld 100
 scoreboard players set @a[scores={pltf_DelayDiamd=..0}] pltf_DelayDiamd 600
 scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 40
 
@@ -103,8 +103,8 @@ execute at @e[type=armor_stand,name=villager2] run tp @e[type=villager,distance=
 # Delay for cannons
 scoreboard players remove @a pltf_DelayFire1 1
 scoreboard players remove @a pltf_DelayFire2 1
-execute if entity @a[scores={pltf_CountFire1=3..,pltf_DelayFire1=..0}] run scoreboard players set @a pltf_DelayFire1 1200
-execute if entity @a[scores={pltf_CountFire2=3..,pltf_DelayFire2=..0}] run scoreboard players set @a pltf_DelayFire2 1200
+execute if entity @a[scores={pltf_CountFire1=3..,pltf_DelayFire1=..0}] run scoreboard players set @a pltf_DelayFire1 2400
+execute if entity @a[scores={pltf_CountFire2=3..,pltf_DelayFire2=..0}] run scoreboard players set @a pltf_DelayFire2 2400
 execute if entity @a[scores={pltf_CountFire1=3..}] run scoreboard players set @a pltf_CountFire1 0
 execute if entity @a[scores={pltf_CountFire2=3..}] run scoreboard players set @a pltf_CountFire2 0
 
