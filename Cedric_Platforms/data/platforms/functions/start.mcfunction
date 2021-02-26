@@ -48,6 +48,7 @@ effect give @a saturation 10 10
 
 # Inventory and gamemode
 clear @a
+execute as @a run function platforms:clearenderchest 
 gamemode survival @a
 
 # Game starts message
