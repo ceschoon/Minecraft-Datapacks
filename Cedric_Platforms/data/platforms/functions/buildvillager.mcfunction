@@ -9,9 +9,11 @@ setblock ~ ~-1 ~1 cobblestone
 setblock ~-2 ~-1 ~1 cobblestone
 setblock ~1 ~-1 ~-2 crafting_table
 
-# ore layers under platform
-fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 cobblestone
-fill ~-1 ~-3 ~-1 ~1 ~-3 ~1 cobblestone
+# ore layers -2 and -3 under platform
+fill ~-1 ~-3 ~-1 ~1 ~-2 ~-1 cobblestone
+fill ~-1 ~-3 ~-1 ~-1 ~-2 ~1 cobblestone
+fill ~1 ~-3 ~1 ~1 ~-2 ~-1 cobblestone
+fill ~1 ~-3 ~1 ~-1 ~-2 ~1 cobblestone
 
 # details in ore layer -2
 setblock ~-2 ~-2 ~ cobblestone
@@ -36,7 +38,7 @@ setblock ~ ~-4 ~1 crafting_table
 setblock ~ ~-5 ~ cobblestone
 
 # hide ender chest 
-setblock ~ ~-3 ~ ender_chest
+execute unless entity @a[scores={pltf_On=1}] run setblock ~ ~-3 ~ ender_chest
 setblock ~ ~-2 ~ air
 setblock ~ ~-2 ~1 cobblestone_stairs[half=top,facing=east]
 setblock ~-1 ~-2 ~1 cobblestone_stairs[half=top,facing=west]

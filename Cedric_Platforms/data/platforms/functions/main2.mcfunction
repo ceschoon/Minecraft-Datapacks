@@ -29,6 +29,7 @@ execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team
 execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team3] run replaceitem entity @s armor.head leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team4] run replaceitem entity @s armor.head leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute as @a if entity @s[nbt={ActiveEffects:[{Id:14b}]}] run replaceitem entity @s armor.head air
 
 # Clear inventories from other team's wool color
 clear @a[team=team2] lime_wool
