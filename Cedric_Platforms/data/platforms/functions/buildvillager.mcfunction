@@ -34,3 +34,11 @@ setblock ~ ~-3 ~1 furnace
 setblock ~ ~-4 ~ furnace
 setblock ~ ~-4 ~1 crafting_table
 setblock ~ ~-5 ~ cobblestone
+
+# hide ender chest 
+setblock ~ ~-3 ~ ender_chest
+setblock ~ ~-2 ~ air
+setblock ~ ~-2 ~1 cobblestone_stairs[half=top,facing=east]
+setblock ~-1 ~-2 ~1 cobblestone_stairs[half=top,facing=west]
+setblock ~-1 ~-2 ~2 cobblestone_slab[type=top]
+
