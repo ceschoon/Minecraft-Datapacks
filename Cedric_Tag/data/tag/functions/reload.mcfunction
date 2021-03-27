@@ -24,6 +24,7 @@ scoreboard objectives remove tag_stag
 
 scoreboard objectives add tag_htag dummy
 scoreboard objectives add tag_rtag dummy
+scoreboard objectives add tag_rtagxs dummy
 scoreboard objectives add tag_rtagx dummy
 scoreboard objectives add tag_rrtag dummy
 scoreboard objectives add tag_rrtagx dummy
@@ -31,6 +32,7 @@ scoreboard objectives add tag_stag dummy
 
 scoreboard players set @a tag_htag 0
 scoreboard players set @a tag_rtag 0
+scoreboard players set @a tag_rtagxs 0
 scoreboard players set @a tag_rtagx 0
 scoreboard players set @a tag_rrtag 0
 scoreboard players set @a tag_rrtagx 0
@@ -38,6 +40,7 @@ scoreboard players set @a tag_stag 0
 
 function htag:reload
 function rtag:reload
+function rtagxs:reload
 function rtagx:reload
 function rrtag:reload
 function rrtagx:reload
