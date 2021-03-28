@@ -1,0 +1,8 @@
+*.dat
+*.mcfunction
+
+!block_ids.dat
+
+amplifier
+generate_maze
+generate_mcfunction
