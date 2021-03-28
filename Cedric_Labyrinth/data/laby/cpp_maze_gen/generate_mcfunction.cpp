@@ -31,7 +31,6 @@ vector<string> cut_line(string line, char separator=' ')
 		if (line[i]==separator && line[i-1]!=separator)
 		{
 			string element_str = line.substr(pos1+1,pos2-pos1-1);
-			cout << "Read line element: \"" << element_str << "\"" << endl;
 			line_elements.push_back(element_str);
 		}
 	}
