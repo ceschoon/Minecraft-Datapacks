@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	
 	// List of possible units (base + offset)
 	
-	vector<string> units_base = {"400", "330", "320", "310", "300", "230", "220", "210", "200", "110", "100", "30", "20", "10", "0"};
+	vector<string> units_base = {"400", "330", "320", "310", "300", "230", "220", "210", "200", "110", "100", "40", "30", "20", "10", "0"};
 	vector<string> units;
 	
 	for (int i=0; i<10; i++)
