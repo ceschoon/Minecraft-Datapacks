@@ -12,7 +12,7 @@ int random_offset(double random_number)
 {
 	double cumul = 0;
 	double proba;
-	/* TODO: uncomment this once you got it working without
+	
 	proba = 1.0/4;
 	if (random_number-cumul<proba) return 1;
 	else cumul += proba;
@@ -48,7 +48,7 @@ int random_offset(double random_number)
 	proba = 1.0/1024;
 	if (random_number-cumul<proba) return 9;
 	else cumul += proba;
-	*/
+	
 	return 0; // proba = 1-cumul = 0.5 (approx)
 }
 
@@ -71,8 +71,8 @@ void dimensions(string maze_in, int &nx, int &ny)
 
 void identify_topology(int array_in[], int array_out[], int nx, int ny)
 {
-	for (int i=1; i<nx-1; i++)
-	for (int j=1; j<ny-1; j++)
+	for (int i=0; i<nx; i++)
+	for (int j=0; j<ny; j++)
 	{
 		int c = array_in[i+nx*j];     // center
 		int t = array_in[i+nx*(j-1)]; // top
@@ -102,7 +102,7 @@ void identify_topology(int array_in[], int array_out[], int nx, int ny)
 		
 		if (c==0 && t==0 && b==0 && l==0 && r==0) topo = 400; // fully open
 		
-		array_out[(i-1)+(nx-2)*(j-1)] = topo;
+		array_out[i+nx*j] = topo;
 	}
 }
 
@@ -112,13 +112,15 @@ int main(int argc, char** argv)
 {
 	// Read options and declare files
 	
-	if (argc<3) throw runtime_error("You must give two arguments (the maze .dat file and an integer for the size of the rooms in the maze)");
+	if (argc<4) throw runtime_error("You must give three arguments (1. the maze .dat file, 2. an integer for the size of the rooms in the maze 3. The name of the mc function)");
 	
 	string maze_in = argv[1];
 	string maze_out = "maze_topo.dat";
-	ofstream fctFile("out.mcfunction");
 	
 	int room_size = stoi(argv[2]);
+	
+	string fct_name = argv[3];
+	ofstream fct_file(fct_name+".mcfunction");
 	
 	
 	// First, read maze and store in an array
@@ -145,9 +147,8 @@ int main(int argc, char** argv)
 	
 	
 	// Second, use the array to identify the topology
-	// Note that we do not copy the walls in the new array
 	
-	int array_out[(nx-2)*(ny-2)];
+	int array_out[nx*ny];
 	identify_topology(array_in, array_out, nx, ny);
 	
 	
@@ -155,9 +156,9 @@ int main(int argc, char** argv)
 	
 	ofstream topo_file("maze_topo.dat");
 	
-	for (int j=0; j<ny-2; j++)
+	for (int j=0; j<ny; j++)
 	{
-		for (int i=0; i<nx-2; i++) topo_file << setw(4) << array_out[i+(nx-2)*j];
+		for (int i=0; i<nx; i++) topo_file << setw(4) << array_out[i+nx*j];
 		topo_file << endl;
 	}
 	
@@ -169,18 +170,18 @@ int main(int argc, char** argv)
 	default_random_engine gen(seed);
 	uniform_real_distribution<double> dist01(0,1);
 	
-	for (int i=0; i<nx-2; i++)
-	for (int j=0; j<ny-2; j++)
+	for (int i=0; i<nx; i++)
+	for (int j=0; j<ny; j++)
 	{
-		array_out[i+(nx-2)*j] += random_offset(dist01(gen));
+		array_out[i+nx*j] += random_offset(dist01(gen));
 	}
 	
 	
 	// Generate commands to place an armor stand
 	// on each north-west corner of a maze unit
 	
-	for (int i=0; i<nx-2; i++)
-	for (int j=0; j<ny-2; j++)
+	for (int i=0; i<nx; i++)
+	for (int j=0; j<ny; j++)
 	{
 		string cmd_str = "summon armor_stand ";
 		
@@ -191,12 +192,12 @@ int main(int argc, char** argv)
 		cmd_str += "~ ";
 		cmd_str += ("~" + to_string(y) + " ");
 		
-		int id = array_out[i+(nx-2)*j];
-		string name = "mazeunit" + to_string(id);
+		int id = array_out[i+nx*j];
+		string name = "unit" + to_string(id);
 		
 		cmd_str += "{Invisible:1,Marker:1,CustomName:\"\\\""+name+"\\\"\",CustomNameVisible:0}";
 		
-		fctFile << cmd_str << endl;
+		fct_file << cmd_str << endl;
 	}
 }
 

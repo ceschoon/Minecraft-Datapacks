@@ -26,23 +26,3 @@ execute if entity @s[scores={laby_palette=7}] run function laby:build/build7
 execute if entity @s[scores={laby_palette=8}] run function laby:build/build8
 execute if entity @s[scores={laby_palette=9}] run function laby:build/build9
 
-
-# Clean (kill armor stands)
-
-kill @e[type=armor_stand,name="mazeunit400"]
-kill @e[type=armor_stand,name="mazeunit330"]
-kill @e[type=armor_stand,name="mazeunit320"]
-kill @e[type=armor_stand,name="mazeunit310"]
-kill @e[type=armor_stand,name="mazeunit300"]
-kill @e[type=armor_stand,name="mazeunit230"]
-kill @e[type=armor_stand,name="mazeunit220"]
-kill @e[type=armor_stand,name="mazeunit210"]
-kill @e[type=armor_stand,name="mazeunit200"]
-kill @e[type=armor_stand,name="mazeunit110"]
-kill @e[type=armor_stand,name="mazeunit100"]
-kill @e[type=armor_stand,name="mazeunit40"]
-kill @e[type=armor_stand,name="mazeunit30"]
-kill @e[type=armor_stand,name="mazeunit20"]
-kill @e[type=armor_stand,name="mazeunit10"]
-kill @e[type=armor_stand,name="mazeunit0"]
-

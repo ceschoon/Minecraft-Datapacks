@@ -1,8 +1,6 @@
 *.dat
 *.mcfunction
 
-!block_ids.dat
-
-amplifier
 generate_maze
-generate_mcfunction
+mcfunction_maze
+mcfunction_build
