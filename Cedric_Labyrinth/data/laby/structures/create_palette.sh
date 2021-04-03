@@ -12,3 +12,5 @@ then
 		mv $ffile palette$palette_id/${ffile#"$prefix"}
 	done
 fi
+
+echo "Do not forget to update the build function!"

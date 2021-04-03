@@ -23,8 +23,8 @@ execute at @e[type=armor_stand,name=unit231] run setblock ~ ~ ~ structure_block[
 execute at @e[type=armor_stand,name=unit221] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit220"}
 execute at @e[type=armor_stand,name=unit211] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit210"}
 execute at @e[type=armor_stand,name=unit201] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit200"}
-execute at @e[type=armor_stand,name=unit111] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit110"}
-execute at @e[type=armor_stand,name=unit101] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit100"}
+execute at @e[type=armor_stand,name=unit111] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit111"}
+execute at @e[type=armor_stand,name=unit101] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit101"}
 execute at @e[type=armor_stand,name=unit41] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit40"}
 execute at @e[type=armor_stand,name=unit31] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit30"}
 execute at @e[type=armor_stand,name=unit21] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit20"}
@@ -39,8 +39,8 @@ execute at @e[type=armor_stand,name=unit232] run setblock ~ ~ ~ structure_block[
 execute at @e[type=armor_stand,name=unit222] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit220"}
 execute at @e[type=armor_stand,name=unit212] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit210"}
 execute at @e[type=armor_stand,name=unit202] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit200"}
-execute at @e[type=armor_stand,name=unit112] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit110"}
-execute at @e[type=armor_stand,name=unit102] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit100"}
+execute at @e[type=armor_stand,name=unit112] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit112"}
+execute at @e[type=armor_stand,name=unit102] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit102"}
 execute at @e[type=armor_stand,name=unit42] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit40"}
 execute at @e[type=armor_stand,name=unit32] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit30"}
 execute at @e[type=armor_stand,name=unit22] run setblock ~ ~ ~ structure_block[mode=load]{mode:"LOAD",posX:0,posY:0,posZ:0,name:"laby:palette0/unit20"}
