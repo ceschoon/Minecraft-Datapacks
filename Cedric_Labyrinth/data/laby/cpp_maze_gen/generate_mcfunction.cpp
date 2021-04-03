@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <random>
 
@@ -7,58 +8,103 @@ using namespace std;
 
 
 
-
-vector<string> cut_line(string line, char separator=' ')
+int random_offset(double random_number)
 {
-	vector<string> line_elements;
+	double cumul = 0;
+	double proba;
+	/* TODO: uncomment this once you got it working without
+	proba = 1.0/4;
+	if (random_number-cumul<proba) return 1;
+	else cumul += proba;
 	
-	// add spaces to detect first and last element the same way 
-	// we detect the others
-	line = separator + line; 
-	line = line + separator; 
+	proba = 1.0/8;
+	if (random_number-cumul<proba) return 2;
+	else cumul += proba;
 	
-	int pos1 = 0;
-	int pos2 = 0;
+	proba = 1.0/16;
+	if (random_number-cumul<proba) return 3;
+	else cumul += proba;
 	
-	for (int i=1; i<line.size(); i++)
+	proba = 1.0/32;
+	if (random_number-cumul<proba) return 4;
+	else cumul += proba;
+	
+	proba = 1.0/64;
+	if (random_number-cumul<proba) return 5;
+	else cumul += proba;
+	
+	proba = 1.0/128;
+	if (random_number-cumul<proba) return 6;
+	else cumul += proba;
+	
+	proba = 1.0/256;
+	if (random_number-cumul<proba) return 7;
+	else cumul += proba;
+	
+	proba = 1.0/512;
+	if (random_number-cumul<proba) return 8;
+	else cumul += proba;
+	
+	proba = 1.0/1024;
+	if (random_number-cumul<proba) return 9;
+	else cumul += proba;
+	*/
+	return 0; // proba = 1-cumul = 0.5 (approx)
+}
+
+
+
+void dimensions(string maze_in, int &nx, int &ny)
+{
+	ifstream file_in(maze_in);
+	string line;
+	
+	ny = 0;
+	while (getline(file_in,line)) 
 	{
-		if (line[i]==separator)
-		{
-			pos1 = pos2;
-			pos2 = i;
-		}
+		nx = line.size();
+		ny++;
+	}
+}
+
+
+
+void identify_topology(int array_in[], int array_out[], int nx, int ny)
+{
+	for (int i=1; i<nx-1; i++)
+	for (int j=1; j<ny-1; j++)
+	{
+		int c = array_in[i+nx*j];     // center
+		int t = array_in[i+nx*(j-1)]; // top
+		int b = array_in[i+nx*(j+1)]; // bottom
+		int l = array_in[i-1+nx*j];   // left
+		int r = array_in[i+1+nx*j];   // right
 		
-		if (line[i]==separator && line[i-1]!=separator)
-		{
-			string element_str = line.substr(pos1+1,pos2-pos1-1);
-			line_elements.push_back(element_str);
-		}
+		int topo = 0; // default is 0 for filled room (wall)
+		
+		if (c==0 && t==0 && b==1 && l==1 && r==1) topo = 10; // top opening
+		if (c==0 && t==1 && b==0 && l==1 && r==1) topo = 20; // bottom opening
+		if (c==0 && t==1 && b==1 && l==0 && r==1) topo = 30; // left opening
+		if (c==0 && t==1 && b==1 && l==1 && r==0) topo = 40; // right opening
+		
+		if (c==0 && t==0 && b==0 && l==1 && r==1) topo = 100; // top-bottom corridor
+		if (c==0 && t==1 && b==1 && l==0 && r==0) topo = 110; // left-right corridor
+		
+		if (c==0 && t==0 && b==1 && l==0 && r==1) topo = 200; // top-left corner
+		if (c==0 && t==0 && b==1 && l==1 && r==0) topo = 210; // top-right corner
+		if (c==0 && t==1 && b==0 && l==0 && r==1) topo = 220; // bottom-left corner
+		if (c==0 && t==1 && b==0 && l==1 && r==0) topo = 230; // bottom-right corner
+		
+		if (c==0 && t==0 && b==0 && l==0 && r==1) topo = 300; // T-intersection
+		if (c==0 && t==0 && b==0 && l==1 && r==0) topo = 310; // T-intersection
+		if (c==0 && t==0 && b==1 && l==0 && r==0) topo = 320; // T-intersection
+		if (c==0 && t==1 && b==0 && l==0 && r==0) topo = 330; // T-intersection
+		
+		if (c==0 && t==0 && b==0 && l==0 && r==0) topo = 400; // fully open
+		
+		array_out[(i-1)+(nx-2)*(j-1)] = topo;
 	}
-	
-	return line_elements;
 }
-
-
-
-string random_id(vector<string> block_ids_1, vector<double> block_weights_1, 
-                 double random_number)
-{
-	int n = block_ids_1.size();
-	if (block_weights_1.size() != n) throw runtime_error("block_weights_1.size() does not equal block_ids_1.size()");
-	
-	int idx = -1;
-	double cumul = 0.0;
-	
-	while (cumul<random_number && idx<n-1)
-	{
-		idx ++;
-		cumul += block_weights_1[idx];
-	}
-	
-	if (idx<0 || idx>=n) throw runtime_error("Something is wrong with the block_id weights. Do they sum to 1.0?");
-	return block_ids_1[idx];
-}
-
 
 
 
@@ -66,72 +112,95 @@ int main(int argc, char** argv)
 {
 	// Read options and declare files
 	
-	if (argc<2) throw runtime_error("You must give one argument (the maze .dat file)");
+	if (argc<3) throw runtime_error("You must give two arguments (the maze .dat file and an integer for the size of the rooms in the maze)");
 	
-	ifstream structFile(argv[1]);
-	ifstream blockIdsFile("block_ids.dat");
+	string maze_in = argv[1];
+	string maze_out = "maze_topo.dat";
 	ofstream fctFile("out.mcfunction");
 	
-	// Get block ids from file
+	int room_size = stoi(argv[2]);
 	
-	vector<string> block_ids_1;
-	vector<double> block_weights_1;
+	
+	// First, read maze and store in an array
+	
+	int nx,ny; dimensions(maze_in,nx,ny);
+	int array_in[nx*ny];
+	
+	ifstream file_in(maze_in);
+	ofstream file_out(maze_out);
 	
 	string line;
+	int j=0;
 	
-	while (getline(blockIdsFile,line))
+	while (getline(file_in,line))
 	{
-		if (line[0]=='1')
+		for (int i=0; i<line.size(); i++)
 		{
-			vector<string> line_elements = cut_line(line);
-			
-			block_weights_1.push_back(stod(line_elements[1]));
-			block_ids_1.push_back(line_elements[2]);
+			if (line[i]==' ' || line[i]=='0') array_in[i+nx*j]=0;
+			else if (line[i]=='1') array_in[i+nx*j]=1;
 		}
+		
+		j++;
 	}
 	
-	// Random number generator
+	
+	// Second, use the array to identify the topology
+	// Note that we do not copy the walls in the new array
+	
+	int array_out[(nx-2)*(ny-2)];
+	identify_topology(array_in, array_out, nx, ny);
+	
+	
+	// Print topology to file
+	
+	ofstream topo_file("maze_topo.dat");
+	
+	for (int j=0; j<ny-2; j++)
+	{
+		for (int i=0; i<nx-2; i++) topo_file << setw(4) << array_out[i+(nx-2)*j];
+		topo_file << endl;
+	}
+	
+	
+	// Add randomness to the maze
 	
 	random_device true_gen;
 	int seed = true_gen();
 	default_random_engine gen(seed);
 	uniform_real_distribution<double> dist01(0,1);
 	
-	// Generate command for each block placement
-	
-	int linesCounter = 0;
-	
-	while (getline(structFile,line))
+	for (int i=0; i<nx-2; i++)
+	for (int j=0; j<ny-2; j++)
 	{
-		for (int i=0; i<line.size(); i++)
-		{
-			string cmd_str = "setblock ";
-			
-			cmd_str += ("~" + to_string(i+1) + " ");
-			cmd_str += "~ ";
-			cmd_str += ("~" + to_string(linesCounter+1) + " ");
-			
-			switch (line[i])
-			{
-				case ' ': 
-					cmd_str += "air";
-					break;
-					
-				case '0': 
-					cmd_str += "air";
-					break;
-					
-				case '1': 
-					cmd_str += random_id(block_ids_1,block_weights_1,dist01(gen));
-					break;
-					
-				default:  
-					cmd_str += "redstone_block";
-			}
-			
-			fctFile << cmd_str << endl;
-		}
+		array_out[i+(nx-2)*j] += random_offset(dist01(gen));
+	}
+	
+	
+	// Generate commands to place an armor stand
+	// on each north-west corner of a maze unit
+	
+	for (int i=0; i<nx-2; i++)
+	for (int j=0; j<ny-2; j++)
+	{
+		string cmd_str = "summon armor_stand ";
 		
-		linesCounter++;
+		int x = (i+1)*room_size; // add 1 to generate the maze a bit further from player
+		int y = (j+1)*room_size;
+		
+		cmd_str += ("~" + to_string(x) + " ");
+		cmd_str += "~ ";
+		cmd_str += ("~" + to_string(y) + " ");
+		
+		int id = array_out[i+(nx-2)*j];
+		string name = "mazeunit" + to_string(id);
+		
+		cmd_str += "{Invisible:1,Marker:1,CustomName:\"\\\""+name+"\\\"\",CustomNameVisible:0}";
+		
+		fctFile << cmd_str << endl;
 	}
 }
+
+
+
+
+
