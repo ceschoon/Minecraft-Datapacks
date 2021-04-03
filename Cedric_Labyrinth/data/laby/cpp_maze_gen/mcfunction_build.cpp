@@ -63,7 +63,7 @@ int main(int argc, char** argv)
 	// Second the restone block to activate
 	
 	cmd1 = "execute at @e[type=armor_stand,name=unit";
-	cmd2 = "] run setblock ~ ~ ~ redstone_block";
+	cmd2 = "] run setblock ~ ~1 ~ redstone_block";
 	
 	fct_file << endl;
 	for (string unit : units)
