@@ -1,7 +1,7 @@
 
 # Place armor stands
 
-execute if entity @s[scores={laby_maze=0}] run function laby:mazes/example
+execute if entity @s[scores={laby_maze=0}] run function laby:mazes/maze0
 execute if entity @s[scores={laby_maze=1}] run function laby:mazes/maze1
 execute if entity @s[scores={laby_maze=2}] run function laby:mazes/maze2
 execute if entity @s[scores={laby_maze=3}] run function laby:mazes/maze3
@@ -15,7 +15,7 @@ execute if entity @s[scores={laby_maze=9}] run function laby:mazes/maze9
 
 # Build structure
 
-execute if entity @s[scores={laby_palette=0}] run function laby:build/example
+execute if entity @s[scores={laby_palette=0}] run function laby:build/build0
 execute if entity @s[scores={laby_palette=1}] run function laby:build/build1
 execute if entity @s[scores={laby_palette=2}] run function laby:build/build2
 execute if entity @s[scores={laby_palette=3}] run function laby:build/build3
