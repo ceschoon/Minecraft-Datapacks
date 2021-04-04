@@ -11,7 +11,7 @@ execute as @a at @s run spawnpoint @s ~ ~ ~
 
 # indicate that we are playing this game
 scoreboard players set @a tag_rtagxs 1
-tellraw @a [{"text":"rtagxs: First player who is tagged for more than 300 seconds (5 min) wins the game!","color":"gold"}]
+tellraw @a [{"text":"rtagxs: First player who is tagged for more than 600 seconds (10 min) wins the game!","color":"gold"}]
 
 execute as @r at @s run function rtagxs:newrunner
 execute as @a at @s run function rtagxs:giverespawnset

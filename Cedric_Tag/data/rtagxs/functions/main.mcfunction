@@ -17,6 +17,6 @@ execute as @a[scores={tag_On=1,tag_Tag=1,tag_DeathCount=5}] run function rtagxs:
 execute if entity @a[scores={score2=0..}] run function rtagxs:lowrunner
 
 # detect win
-execute as @a[scores={tag_On=1,tag_TimeSec=1200..}] at @s run function tag:win 
+execute as @a[scores={tag_On=1,tag_TimeSec=600..}] at @s run function tag:win 
 
 
