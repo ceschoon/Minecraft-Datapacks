@@ -46,4 +46,6 @@ function rrtag:reload
 function rrtagx:reload
 function stag:reload
 
+function tagrules:reload
+
 say "Cedric Tag: reloaded tag"

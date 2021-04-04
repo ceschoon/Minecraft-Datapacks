@@ -26,3 +26,5 @@ execute as @r[scores={tag_rtagxs=1}] run function rtagxs:main
 execute as @r[scores={tag_rrtag=1}] run function rrtag:main
 execute as @r[scores={tag_rrtagx=1}] run function rrtagx:main
 execute as @r[scores={tag_stag=1}] run function stag:main
+
+execute as @a[scores={tag_On=1}] at @s run function tagrules:main
