@@ -1,4 +1,6 @@
 
+######################## Configuration
+
 scoreboard objectives remove laby_maze
 scoreboard objectives remove laby_palette
 
