@@ -124,6 +124,9 @@ execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_DelayFire
 execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFire=1}] run summon fireball ~ ~1 ~ {ExplosionPower:3}
 execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFire=1}] run scoreboard players add @a pltf_CountFire2 1
 
+# Enforce no fireball rule if activated
+execute if entity @a[scores={pltf_nofireballs=1}] run kill @e[type=fireball]
+
 # detect end of the game
 execute as @a[team=team1,scores={pltf_Score=40..}] run function platforms:win1
 execute as @a[team=team2,scores={pltf_Score=40..}] run function platforms:win2

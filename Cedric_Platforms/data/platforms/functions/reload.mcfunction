@@ -31,6 +31,10 @@ scoreboard objectives remove pltf_rng
 scoreboard objectives add pltf_rng minecraft.custom:minecraft.walk_one_cm
 scoreboard players set @a pltf_rng 0
 
+scoreboard objectives remove pltf_nofireballs
+scoreboard objectives add pltf_nofireballs dummy
+scoreboard players set @a pltf_nofireballs 0
+
 team remove team1
 team remove team2
 team remove team3
