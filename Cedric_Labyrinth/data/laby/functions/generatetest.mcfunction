@@ -13,7 +13,16 @@ execute if entity @s[scores={laby_maze=8}] run function laby:mazes/maze8
 execute if entity @s[scores={laby_maze=9}] run function laby:mazes/maze9
 
 
-# Build structure
+# Place structure blocks
 
 function laby:build/test
 
+
+# Activate structures by powering the structure blocks
+
+function laby:activatestruct
+
+
+# Clean
+
+function laby:killarmorstands

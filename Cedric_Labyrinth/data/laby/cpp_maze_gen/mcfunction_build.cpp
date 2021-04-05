@@ -60,6 +60,9 @@ int main(int argc, char** argv)
 		}
 	}
 	
+	/* uncomment to generate the code that is now moved
+	 * in functions "activatestruct" and 'killarmorstands"
+	
 	// Second the restone block to activate
 	
 	cmd1 = "execute at @e[type=armor_stand,name=unit";
@@ -83,6 +86,7 @@ int main(int argc, char** argv)
 		string cmd = cmd1 + unit + cmd2;
 		fct_file << cmd << endl;
 	}
+	*/
 }
 
 
