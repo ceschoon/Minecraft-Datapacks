@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 	// First the setblock command for the structure blocks
 	
 	string cmd1 = "execute at @e[type=armor_stand,name=unit";
-	string cmd2 = "] run setblock ~ ~ ~ structure_block[mode=load]{mode:\"LOAD\",posX:0,posY:0,posZ:0,name:\"laby:palette"+palette_id+"/unit";
+	string cmd2 = "] run setblock ~ ~ ~ structure_block[mode=load]{mode:\"LOAD\",ignoreEntities:0b,posX:0,posY:0,posZ:0,name:\"laby:palette"+palette_id+"/unit";
 	string cmd3 = "\"}";
 	
 	for (string unit : units)
