@@ -9,7 +9,7 @@
 | **Cedric_Hunt** | Manhunts |
 | **Cedric_Infection** | "Infected" players must hunt and convert "sane" players |
 | **Cedric_Koth** | King of the hill |
-| **Cedric_Labyrinth** | Maze generation for Minecraft (demo world in my Minecraft-Labyrinth repo)|
+| **Cedric_Labyrinth** | (moved to new repo: ceschoon/Minecraft-Labyrinth)|
 | **Cedric_Platforms** | Teams compete for the control of platforms in the sky |
 | **Cedric_Tag** | Suite of various tag games |
 
