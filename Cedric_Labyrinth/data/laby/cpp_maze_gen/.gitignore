@@ -1,6 +1,0 @@
-*.dat
-*.mcfunction
-
-generate_maze
-mcfunction_maze
-mcfunction_build
