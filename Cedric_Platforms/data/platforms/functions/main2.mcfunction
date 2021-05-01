@@ -7,9 +7,6 @@ scoreboard players set @a[scores={pltf_rng=100..}] pltf_rng 0
 # Kill players who fell off the map
 kill @a[x=-1000000,y=0,z=-1000000,dx=2000000,dy=149,dz=2000000,scores={pltf_DeathCount=0}]
 
-# Kill items under the map
-kill @e[type=item,x=-1000000,y=0,z=-1000000,dx=2000000,dy=149,dz=2000000]
-
 # Delay respawn
 scoreboard players set @a[scores={pltf_DeathCount=201..}] pltf_DeathCount 0
 scoreboard players add @a[scores={pltf_DeathCount=1..}] pltf_DeathCount 1
