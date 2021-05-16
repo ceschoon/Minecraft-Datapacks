@@ -1,7 +1,7 @@
 scoreboard players set @a tag_htag 0
 scoreboard players set @a tag_rtag 0
+scoreboard players set @a tag_rtagxs 0
 scoreboard players set @a tag_rrtag 0
-scoreboard players set @a tag_rrtagx 0
 scoreboard players set @a tag_stag 0
 
 scoreboard objectives setdisplay sidebar tag_TimeSec
