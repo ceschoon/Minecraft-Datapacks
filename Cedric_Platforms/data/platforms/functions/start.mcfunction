@@ -40,6 +40,12 @@ execute at @e[type=armor_stand,name=team2] run tp @a[team=team2] ~ ~ ~
 execute at @e[type=armor_stand,name=team3] run tp @a[team=team3] ~ ~ ~
 execute at @e[type=armor_stand,name=team4] run tp @a[team=team4] ~ ~ ~
 
+# Set player spawn on platforms
+execute at @e[type=armor_stand,name=team1] run spawnpoint @a[team=team1] ~ ~ ~
+execute at @e[type=armor_stand,name=team2] run spawnpoint @a[team=team2] ~ ~ ~
+execute at @e[type=armor_stand,name=team3] run spawnpoint @a[team=team3] ~ ~ ~
+execute at @e[type=armor_stand,name=team4] run spawnpoint @a[team=team4] ~ ~ ~
+
 # Effects
 effect clear @a
 effect give @a resistance 10 255
