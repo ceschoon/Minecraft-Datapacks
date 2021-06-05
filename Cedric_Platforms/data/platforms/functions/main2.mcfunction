@@ -109,7 +109,7 @@ execute at @e[type=armor_stand,name=team4] if entity @a[scores={pltf_DelayWool=.
 # Reset delay
 scoreboard players set @a[scores={pltf_DelayEmrld=..0}] pltf_DelayEmrld 100
 scoreboard players set @a[scores={pltf_DelayDiamd=..0}] pltf_DelayDiamd 600
-scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 40
+scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 30
 
 # Keep villagers in place
 execute at @e[type=armor_stand,name=villager1] run tp @e[type=villager,distance=..5] ~ ~ ~
