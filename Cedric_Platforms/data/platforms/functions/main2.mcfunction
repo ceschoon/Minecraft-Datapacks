@@ -45,6 +45,23 @@ clear @a[team=team1] yellow_wool
 clear @a[team=team2] yellow_wool
 clear @a[team=team3] yellow_wool
 
+# Clear inventories from other team's terracotta color
+clear @a[team=team2] lime_terracotta
+clear @a[team=team3] lime_terracotta
+clear @a[team=team4] lime_terracotta
+clear @a[team=team1] red_terracotta
+clear @a[team=team3] red_terracotta
+clear @a[team=team4] red_terracotta
+clear @a[team=team1] blue_terracotta
+clear @a[team=team2] blue_terracotta
+clear @a[team=team4] blue_terracotta
+clear @a[team=team1] yellow_terracotta
+clear @a[team=team2] yellow_terracotta
+clear @a[team=team3] yellow_terracotta
+
+# Convert freshly bought terracotta to player's team color
+execute as @a run function platforms:terracottacolor
+
 # Clear diamonds from inventory and increment score
 scoreboard players set @a pltf_AddScore 0
 execute at @e[type=armor_stand,name=team1] as @a[team=team1,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
@@ -95,8 +112,8 @@ scoreboard players set @a[scores={pltf_DelayDiamd=..0}] pltf_DelayDiamd 600
 scoreboard players set @a[scores={pltf_DelayWool=..0}] pltf_DelayWool 40
 
 # Keep villagers in place
-execute at @e[type=armor_stand,name=villager1] run tp @e[type=villager,distance=..2] ~ ~ ~
-execute at @e[type=armor_stand,name=villager2] run tp @e[type=villager,distance=..2] ~ ~ ~
+execute at @e[type=armor_stand,name=villager1] run tp @e[type=villager,distance=..5] ~ ~ ~
+execute at @e[type=armor_stand,name=villager2] run tp @e[type=villager,distance=..5] ~ ~ ~
 
 # Summon fireballs from fire_charge
 #function platforms:summonfireball
