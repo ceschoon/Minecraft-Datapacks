@@ -1,0 +1,12 @@
+summon villager ~ ~ ~ {VillagerData:{profession:farmer,level:5,type:savanna},NoAI:0,Invulnerable:1,Offers:{Recipes:[{buy:{id:carrot,Count:16},sell:{id:amethyst_shard,Count:1},xp:1,maxUses:8}]}}
+summon villager ~ ~ ~ {VillagerData:{profession:farmer,level:5,type:savanna},NoAI:0,Invulnerable:1,Offers:{Recipes:[{buy:{id:carrot,Count:16},sell:{id:amethyst_shard,Count:1,tag:{display:{Lore:["\"Coin\""]}}},xp:1,maxUses:8}]}}
+summon villager ~ ~ ~ {VillagerData:{profession:farmer,level:5,type:savanna},NoAI:0,Invulnerable:1,Offers:{Recipes:[{sell:{id:arrow,Count:16},buy:{id:amethyst_shard,Count:8,tag:{display:{Lore:["\"Coin\""]}}},xp:1,maxUses:8}]}}
+
+give @p amethyst_shard{display:{Name:'{"text":"","color":"dark_purple"}',Lore:["\"Amethyst Coin\""]}}
+give @p amethyst_shard{display:{Lore:["\"Coin\""]}}
+
+summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"tower_platform\"",CustomNameVisible:0}
+summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"tower_generator\"",CustomNameVisible:0}
+summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"tower_chest\"",CustomNameVisible:0}
+summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"villager_house\"",CustomNameVisible:0}
+

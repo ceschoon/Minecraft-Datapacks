@@ -1,0 +1,27 @@
+
+Code dev:
+---------
+
+random respawn location (spreadplayers)
+random gifts for low score players
+tp back if stuck in adventure mode
+reward for killing players
+penalty for dying
+
+
+Structures:
+-----------
+
+entonnoir void autour structures
+check to avoid entrance in a cliff
+better integration in cliff side?
+
+
+Gameplay:
+---------
+
+random chest contents?
+random villager trades? (renew villager as players arrives)
+winner celebration?
+
+

@@ -12,6 +12,7 @@
 | **Cedric_Labyrinth** | (moved to new repo: ceschoon/Minecraft-Labyrinth)|
 | **Cedric_Platforms** | Teams compete for the control of platforms in the sky |
 | **Cedric_Tag** | Suite of various tag games |
+| **Cedric_Shot** | Share or Take: a game of trust and betrayals, plus a bit of man hunting... |
 
 
 ## Installation
