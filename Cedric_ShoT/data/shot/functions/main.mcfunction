@@ -16,7 +16,7 @@ scoreboard players add @a shot_TicksInSec 1
 scoreboard players set @a[scores={shot_TicksInSec=20..}] shot_TicksInSec 0
 
 # rng max value
-scoreboard players set @a[scores={shot_rng=10..}] shot_rng 0
+scoreboard players set @a[scores={shot_rng=100..}] shot_rng 0
 
 # delay and reset death detection
 scoreboard players set @a[scores={shot_DeathCount=5}] shot_DeathCount 0

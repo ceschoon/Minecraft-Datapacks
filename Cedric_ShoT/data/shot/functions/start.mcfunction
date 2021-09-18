@@ -16,6 +16,7 @@ time set 0
 clear @a
 gamemode survival @a
 effect give @a saturation 10 10
+effect give @a regeneration 10 10
 
 spreadplayers ~ ~ 200 200 false @a 
 execute as @a at @s run spawnpoint @s ~ ~ ~ 
