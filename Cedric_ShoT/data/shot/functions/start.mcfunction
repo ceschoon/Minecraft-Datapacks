@@ -10,11 +10,12 @@ worldborder set 400
 gamerule keepInventory false
 gamerule mobGriefing false
 gamerule doImmediateRespawn true
-gamerule doDayNightCycle true
+gamerule doDaylightCycle true
 
 time set 0
 clear @a
 gamemode survival @a
+effect give @a saturation 10 10
 
 spreadplayers ~ ~ 200 200 false @a 
 execute as @a at @s run spawnpoint @s ~ ~ ~ 
