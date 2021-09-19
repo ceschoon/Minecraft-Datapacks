@@ -1,14 +1,9 @@
 
-# detect death and give respawn kit (implemented in derived games)
+# permanent effects
+effect give @a[scores={tag_On=1,tag_rtagxs=1}] strength 20 255
 
-# detect death of runner and select new runner (implemented in derived game)
-
-# delay and reset death detection
-scoreboard players set @a[scores={tag_DeathCount=5}] tag_DeathCount 0
-scoreboard players set @a[scores={tag_DeathCount=4}] tag_DeathCount 5
-scoreboard players set @a[scores={tag_DeathCount=3}] tag_DeathCount 4
-scoreboard players set @a[scores={tag_DeathCount=2}] tag_DeathCount 3
-scoreboard players set @a[scores={tag_DeathCount=1}] tag_DeathCount 2
+# death mechanics
+execute if entity @a[scores={tag_On=1}] run function tag:deathmechanics
 
 # increment time
 scoreboard players add @a[scores={tag_On=1,tag_Tag=1}] tag_TimeTicks 1
@@ -16,13 +11,10 @@ scoreboard players add @a[scores={tag_On=1,tag_Tag=1}] tag_TimeTotal 1
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard players add @s tag_TimeSec 1
 execute as @a[scores={tag_On=1,tag_Tag=1,tag_TimeTicks=20..}] run scoreboard players set @s tag_TimeTicks 0
 
-# detect win (implemented in derived games)
+# detect win (depend on game variant!)
+execute as @a[scores={tag_On=1,tag_rtag=1,tag_TimeSec=1200..}] at @s run function tag:win
+execute as @a[scores={tag_On=1,tag_rtagxs=1,tag_TimeSec=600..}] at @s run function tag:win
 
-# run main function form derived games
-execute as @r[scores={tag_htag=1}] run function htag:main
-execute as @r[scores={tag_rtag=1}] run function rtag:main
-execute as @r[scores={tag_rtagxs=1}] run function rtagxs:main
-execute as @r[scores={tag_rrtag=1}] run function rrtag:main
-execute as @r[scores={tag_stag=1}] run function stag:main
-
+# enforce additional rules
 execute as @a[scores={tag_On=1}] at @s run function tagrules:main
+

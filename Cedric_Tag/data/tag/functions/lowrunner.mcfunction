@@ -3,5 +3,6 @@
 ## It works be progressively reducing the scores until it finds a player
 ## close to zero.
 
-execute as @r[scores={score2=0..29}] run function rtag:newrunner
+execute as @r[scores={score2=0..29}] run function tag:newrunner
 scoreboard players remove @a score2 30
+

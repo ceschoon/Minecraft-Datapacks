@@ -1,8 +1,6 @@
-scoreboard players set @a tag_htag 0
+
 scoreboard players set @a tag_rtag 0
 scoreboard players set @a tag_rtagxs 0
-scoreboard players set @a tag_rrtag 0
-scoreboard players set @a tag_stag 0
 
 scoreboard objectives setdisplay sidebar tag_TimeSec
 
@@ -19,12 +17,7 @@ gamerule naturalRegeneration true
 
 time set 0
 
-worldborder center ~ ~
-worldborder set 400
-setworldspawn ~ ~ ~
-
-spreadplayers ~ ~ 150 150 false @a
-execute as @a at @s run spawnpoint @s ~ ~ ~
+gamemode survival @a
 
 effect clear @a
 effect give @a resistance 10 255
@@ -34,7 +27,7 @@ effect give @a saturation 10 10
 clear @a
 give @a compass
 
-execute as @r[scores={tag_Tag=0}] at @s run function tag:newrunner
+execute as @r at @s run function tag:newrunner
 
 title @a title {"text":"Tag Game Starts Now!","color":"gold"}
 
