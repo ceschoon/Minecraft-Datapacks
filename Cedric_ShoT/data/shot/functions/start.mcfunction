@@ -1,6 +1,9 @@
 
 scoreboard players set @a shot_On 1
 
+scoreboard objectives setdisplay sidebar shot_Score
+scoreboard objectives setdisplay list shot_NumCycles
+
 execute at @s run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"map_centre\"",CustomNameVisible:0}
 setworldspawn ~ ~ ~
 
@@ -21,4 +24,5 @@ effect give @a regeneration 10 10
 spreadplayers ~ ~ 200 200 false @a 
 execute as @a at @s run spawnpoint @s ~ ~ ~ 
 execute as @a at @s run function shot:giverespawnset
+
 

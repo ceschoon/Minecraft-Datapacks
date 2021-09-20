@@ -142,8 +142,8 @@ execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFir
 execute if entity @a[scores={pltf_nofireballs=1}] run kill @e[type=fireball]
 
 # detect end of the game
-execute as @a[team=pltf_team1,scores={pltf_Score=40..}] run function platforms:win1
-execute as @a[team=pltf_team2,scores={pltf_Score=40..}] run function platforms:win2
-execute as @a[team=pltf_team3,scores={pltf_Score=40..}] run function platforms:win3
-execute as @a[team=pltf_team4,scores={pltf_Score=40..}] run function platforms:win4
+execute as @a[team=pltf_team1,scores={pltf_Score=30..}] run function platforms:win1
+execute as @a[team=pltf_team2,scores={pltf_Score=30..}] run function platforms:win2
+execute as @a[team=pltf_team3,scores={pltf_Score=30..}] run function platforms:win3
+execute as @a[team=pltf_team4,scores={pltf_Score=30..}] run function platforms:win4
 

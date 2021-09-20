@@ -15,7 +15,7 @@ scoreboard objectives add tag_kbhunter3 killedByTeam.blue
 scoreboard objectives add tag_kbhunter4 killedByTeam.dark_blue
 scoreboard objectives add tag_kbhunter5 killedByTeam.aqua
 scoreboard objectives add tag_kbhunter6 killedByTeam.dark_aqua
-scoreboard objectives add tag_kbhunter7 killedByTeam.purple
+scoreboard objectives add tag_kbhunter7 killedByTeam.light_purple
 scoreboard objectives add tag_kbhunter8 killedByTeam.dark_purple
 
 team remove tag_runner
@@ -45,7 +45,7 @@ team modify tag_hunter3 color blue
 team modify tag_hunter4 color dark_blue
 team modify tag_hunter5 color aqua
 team modify tag_hunter6 color dark_aqua
-team modify tag_hunter7 color purple
+team modify tag_hunter7 color light_purple
 team modify tag_hunter8 color dark_purple
 
 say "Cedric Tag: reloaded teams"

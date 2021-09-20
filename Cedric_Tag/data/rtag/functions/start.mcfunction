@@ -18,6 +18,7 @@ effect give @a saturation 10 10
 
 clear @a
 give @a compass
+function tag:giverespawnset
 
 worldborder center ~ ~
 worldborder set 400

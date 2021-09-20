@@ -1,5 +1,7 @@
-# detect death and give respawn kit
-execute as @a[scores={tag_DeathCount=5}] at @s run function tag:giverespawnset
+
+# detect death and give respawn kit (depending on variants)
+execute as @a[scores={tag_rtag=1,tag_DeathCount=5}] at @s run function tag:giverespawnset
+execute as @a[scores={tag_rtagxs=1,tag_DeathCount=5}] at @s run function tag:giverespawnset
 
 # detect death of runner and select new runner
 execute as @a[scores={tag_Tag=1,tag_kbhunter1=1}] run execute as @a[team=tag_hunter1] run function tag:newrunner
@@ -21,4 +23,3 @@ scoreboard players set @a[scores={tag_DeathCount=1}] tag_DeathCount 2
 # player with lowest score becomes runner in case of death from pve
 execute as @a[scores={tag_Tag=1,tag_DeathCount=5}] run function tag:copyscores
 execute if entity @a[scores={score2=0..}] run function tag:lowrunner
-

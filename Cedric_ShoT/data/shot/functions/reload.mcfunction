@@ -43,9 +43,6 @@ scoreboard objectives add shot_genhouse3 dummy
 scoreboard objectives add shot_gentower1 dummy
 scoreboard objectives add shot_gentower2 dummy
 
-scoreboard objectives setdisplay sidebar shot_Score
-scoreboard objectives setdisplay list shot_NumCycles
-
 scoreboard players set @a shot_Score 0
 scoreboard players set @a shot_ScoreCopy 0
 scoreboard players set @a shot_Common 0

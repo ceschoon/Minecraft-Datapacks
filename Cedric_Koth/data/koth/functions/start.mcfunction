@@ -44,7 +44,7 @@ give @a lime_bed
 execute as @a at @s run function koth:giverespawnset
 
 # Game starts message
-execute as @r[scores={koth_On=1}] at @s run title @a title {"text":"Go!","color":"gold"}
-execute as @r[scores={koth_On=1}] at @s run tellraw @a {"text":"King of the Hill starts Now!","color":"gold"}
-
+title @a title {"text":"Go!","color":"gold"}
+tellraw @a {"text":"King of the Hill starts Now!","color":"gold"}
+tellraw @a [{"text":"First player who stays on the platform for more than 1200 seconds (20 min) wins the game!","color":"gold"}]
 

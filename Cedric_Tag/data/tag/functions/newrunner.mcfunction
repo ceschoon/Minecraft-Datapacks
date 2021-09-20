@@ -21,7 +21,7 @@ scoreboard objectives add temp_innoteam dummy
 scoreboard players set @a temp_innoteam 1
 
 # define runner
-team join runner @s
+team join tag_runner @s
 scoreboard players set @s temp_innoteam 0
 
 # define hunter1
