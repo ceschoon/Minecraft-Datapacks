@@ -5,12 +5,8 @@ Minecraft datapack: Cedric_Tag
 ------------------------------------ Plan ----------------------------------
 
 Game modes: (each has its own namespace)
-	stag 	simple tag: 1 player must tag someone else to get rid of tag (victim gets the tag)
 	rtag	reverse tag: keep tag as long as possible (killer gets the tag)
-	rrtag	randomized reverse tag: random selection of tag holder (current mode)
-	htag	hitman tag: one player tagged and game stops when he dies
-
-+ closely related "x" version of each game where hunters have strength 255
+	rtagxs	reverse tag on extra small map + one hit kill
 
 
 ------------------------------------ Usage ---------------------------------
@@ -25,7 +21,7 @@ Game modes: (each has its own namespace)
 4. Use the "/function <tag game>:start" command to start the game,
    where <tag game> is the name of the tag game variant you want to play.
    
-   Example: /function rrtag:start
+   Example: /function rtag:start
 
 5. If you want to stop the game prematurely, you can simply /reload
 
@@ -35,15 +31,6 @@ also want to reload this datapack individually right after executing the
 "/reload" command to be sure this one is reloaded last.
 
 ----------------------------------- Dev TODO -------------------------------
-
-stag:
-	Remain to be tested.
-
-stagx:
-	better version to implement ?
-
-rtagx:
-	would be very nice to add.
 
 
 

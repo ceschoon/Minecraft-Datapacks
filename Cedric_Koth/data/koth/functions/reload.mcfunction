@@ -3,7 +3,7 @@ scoreboard objectives remove koth_DeathCount
 scoreboard objectives remove koth_TimeTicks
 scoreboard objectives remove koth_TimeSec
 scoreboard objectives remove koth_timeTotal
-scoreboard objectives remove hunt_On
+scoreboard objectives remove koth_On
 
 scoreboard objectives add koth_DeathCount deathCount
 scoreboard objectives add koth_TimeTicks dummy
@@ -16,8 +16,8 @@ scoreboard objectives remove koth_rng
 scoreboard objectives add koth_rng minecraft.custom:minecraft.walk_one_cm
 scoreboard players set @a koth_rng 0
 
-team remove team_nohill
-team remove team_hill
+team remove offhill
+team remove onhill
 
 team add offhill
 team add onhill
