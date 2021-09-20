@@ -1,22 +1,22 @@
 #### Initialisation function for the wizard
 
-title @s[team=team1] actionbar [{"text":"You are a wizard Harry!","color":"green"}]
-title @s[team=team2] actionbar [{"text":"You are a wizard Harry!","color":"red"}]
+title @s[team=ls_team1] actionbar [{"text":"You are a wizard Harry!","color":"green"}]
+title @s[team=ls_team2] actionbar [{"text":"You are a wizard Harry!","color":"red"}]
 
-tellraw @s[team=team1] [{"text":"You are a wizard! The wizard can hold wands that give him special abilities. Other wands can be found in dungeons spread on the map below y=64.","color":"green"}]
-tellraw @s[team=team2] [{"text":"You are a wizard! The wizard can hold wands that give him special abilities. Other wands can be found in dungeons spread on the map below y=64.","color":"red"}]
+tellraw @s[team=ls_team1] [{"text":"You are a wizard! The wizard can hold wands that give him special abilities. Other wands can be found in dungeons spread on the map below y=64.","color":"green"}]
+tellraw @s[team=ls_team2] [{"text":"You are a wizard! The wizard can hold wands that give him special abilities. Other wands can be found in dungeons spread on the map below y=64.","color":"red"}]
 
-execute if entity @s[team=team1] run replaceitem entity @s armor.head leather_helmet{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team1] run replaceitem entity @s armor.head leather_helmet{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team2] run replaceitem entity @s armor.head leather_helmet{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
-execute if entity @s[team=team1] run replaceitem entity @s armor.chest leather_chestplate{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute if entity @s[team=team2] run replaceitem entity @s armor.chest leather_chestplate{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team1] run replaceitem entity @s armor.chest leather_chestplate{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team2] run replaceitem entity @s armor.chest leather_chestplate{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
-execute if entity @s[team=team1] run replaceitem entity @s armor.legs leather_leggings{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute if entity @s[team=team2] run replaceitem entity @s armor.legs leather_leggings{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team1] run replaceitem entity @s armor.legs leather_leggings{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team2] run replaceitem entity @s armor.legs leather_leggings{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
-execute if entity @s[team=team1] run replaceitem entity @s armor.feet leather_boots{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
-execute if entity @s[team=team2] run replaceitem entity @s armor.feet leather_boots{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team1] run replaceitem entity @s armor.feet leather_boots{display:{color:8439583}, Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
+execute if entity @s[team=ls_team2] run replaceitem entity @s armor.feet leather_boots{display:{color:11546150},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"}]}
 
 # give wand according to rng2
 execute if entity @s[scores={gotl_rng2=0..9}] run give @s stick{display:{Lore:["\"Levitation Wand\""]},Enchantments:[{lvl:1s,id:"minecraft:binding_curse"}]}
