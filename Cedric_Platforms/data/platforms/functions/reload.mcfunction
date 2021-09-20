@@ -35,19 +35,19 @@ scoreboard objectives remove pltf_nofireballs
 scoreboard objectives add pltf_nofireballs dummy
 scoreboard players set @a pltf_nofireballs 0
 
-team remove team1
-team remove team2
-team remove team3
-team remove team4
+team remove pltf_team1
+team remove pltf_team2
+team remove pltf_team3
+team remove pltf_team4
 
-team add team1
-team add team2
-team add team3
-team add team4
+team add pltf_team1
+team add pltf_team2
+team add pltf_team3
+team add pltf_team4
 
-team modify team1 color green
-team modify team2 color red
-team modify team3 color blue
-team modify team4 color yellow
+team modify pltf_team1 color green
+team modify pltf_team2 color red
+team modify pltf_team3 color blue
+team modify pltf_team4 color yellow
 
 say "Cedric Platforms: reloaded"

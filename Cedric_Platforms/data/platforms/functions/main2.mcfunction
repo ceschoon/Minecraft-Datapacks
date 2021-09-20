@@ -19,59 +19,59 @@ title @a[scores={pltf_DeathCount=2}] subtitle [{"text":"You will respawn in 10 s
 gamemode survival @a[scores={pltf_DeathCount=200}]
 
 # Tp players who respawned back to team platform
-execute at @e[type=armor_stand,name=team1] run tp @a[scores={pltf_DeathCount=200},team=team1] ~ ~ ~
-execute at @e[type=armor_stand,name=team2] run tp @a[scores={pltf_DeathCount=200},team=team2] ~ ~ ~
-execute at @e[type=armor_stand,name=team3] run tp @a[scores={pltf_DeathCount=200},team=team3] ~ ~ ~
-execute at @e[type=armor_stand,name=team4] run tp @a[scores={pltf_DeathCount=200},team=team4] ~ ~ ~
+execute at @e[type=armor_stand,name=team1] run tp @a[scores={pltf_DeathCount=200},team=pltf_team1] ~ ~ ~
+execute at @e[type=armor_stand,name=team2] run tp @a[scores={pltf_DeathCount=200},team=pltf_team2] ~ ~ ~
+execute at @e[type=armor_stand,name=team3] run tp @a[scores={pltf_DeathCount=200},team=pltf_team3] ~ ~ ~
+execute at @e[type=armor_stand,name=team4] run tp @a[scores={pltf_DeathCount=200},team=pltf_team4] ~ ~ ~
 
 # Force players to wear team colors (except if player invisible)
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team1] run replaceitem entity @s armor.head leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team2] run replaceitem entity @s armor.head leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team3] run replaceitem entity @s armor.head leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team4] run replaceitem entity @s armor.head leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=pltf_team1] run replaceitem entity @s armor.head leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=pltf_team2] run replaceitem entity @s armor.head leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=pltf_team3] run replaceitem entity @s armor.head leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=pltf_team4] run replaceitem entity @s armor.head leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
 execute as @a if entity @s[nbt={ActiveEffects:[{Id:14b}]}] run replaceitem entity @s armor.head air
 
 # Clear inventories from other team's wool color
-clear @a[team=team2] lime_wool
-clear @a[team=team3] lime_wool
-clear @a[team=team4] lime_wool
-clear @a[team=team1] red_wool
-clear @a[team=team3] red_wool
-clear @a[team=team4] red_wool
-clear @a[team=team1] blue_wool
-clear @a[team=team2] blue_wool
-clear @a[team=team4] blue_wool
-clear @a[team=team1] yellow_wool
-clear @a[team=team2] yellow_wool
-clear @a[team=team3] yellow_wool
+clear @a[team=pltf_team2] lime_wool
+clear @a[team=pltf_team3] lime_wool
+clear @a[team=pltf_team4] lime_wool
+clear @a[team=pltf_team1] red_wool
+clear @a[team=pltf_team3] red_wool
+clear @a[team=pltf_team4] red_wool
+clear @a[team=pltf_team1] blue_wool
+clear @a[team=pltf_team2] blue_wool
+clear @a[team=pltf_team4] blue_wool
+clear @a[team=pltf_team1] yellow_wool
+clear @a[team=pltf_team2] yellow_wool
+clear @a[team=pltf_team3] yellow_wool
 
 # Clear inventories from other team's terracotta color
-clear @a[team=team2] lime_terracotta
-clear @a[team=team3] lime_terracotta
-clear @a[team=team4] lime_terracotta
-clear @a[team=team1] red_terracotta
-clear @a[team=team3] red_terracotta
-clear @a[team=team4] red_terracotta
-clear @a[team=team1] blue_terracotta
-clear @a[team=team2] blue_terracotta
-clear @a[team=team4] blue_terracotta
-clear @a[team=team1] yellow_terracotta
-clear @a[team=team2] yellow_terracotta
-clear @a[team=team3] yellow_terracotta
+clear @a[team=pltf_team2] lime_terracotta
+clear @a[team=pltf_team3] lime_terracotta
+clear @a[team=pltf_team4] lime_terracotta
+clear @a[team=pltf_team1] red_terracotta
+clear @a[team=pltf_team3] red_terracotta
+clear @a[team=pltf_team4] red_terracotta
+clear @a[team=pltf_team1] blue_terracotta
+clear @a[team=pltf_team2] blue_terracotta
+clear @a[team=pltf_team4] blue_terracotta
+clear @a[team=pltf_team1] yellow_terracotta
+clear @a[team=pltf_team2] yellow_terracotta
+clear @a[team=pltf_team3] yellow_terracotta
 
 # Convert freshly bought terracotta to player's team color
 execute as @a run function platforms:terracottacolor
 
 # Clear diamonds from inventory and increment score
 scoreboard players set @a pltf_AddScore 0
-execute at @e[type=armor_stand,name=team1] as @a[team=team1,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
-execute at @e[type=armor_stand,name=team2] as @a[team=team2,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
-execute at @e[type=armor_stand,name=team3] as @a[team=team3,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
-execute at @e[type=armor_stand,name=team4] as @a[team=team4,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
-execute as @a[scores={pltf_AddScore=1},team=team1] run scoreboard players add @a[team=team1] pltf_Score 1
-execute as @a[scores={pltf_AddScore=1},team=team2] run scoreboard players add @a[team=team2] pltf_Score 1
-execute as @a[scores={pltf_AddScore=1},team=team3] run scoreboard players add @a[team=team3] pltf_Score 1
-execute as @a[scores={pltf_AddScore=1},team=team4] run scoreboard players add @a[team=team4] pltf_Score 1
+execute at @e[type=armor_stand,name=team1] as @a[team=pltf_team1,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
+execute at @e[type=armor_stand,name=team2] as @a[team=pltf_team2,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
+execute at @e[type=armor_stand,name=team3] as @a[team=pltf_team3,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
+execute at @e[type=armor_stand,name=team4] as @a[team=pltf_team4,distance=..2] store success score @s pltf_AddScore run clear @s diamond 1
+execute as @a[scores={pltf_AddScore=1},team=pltf_team1] run scoreboard players add @a[team=pltf_team1] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=pltf_team2] run scoreboard players add @a[team=pltf_team2] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=pltf_team3] run scoreboard players add @a[team=pltf_team3] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=pltf_team4] run scoreboard players add @a[team=pltf_team4] pltf_Score 1
 
 # Reset platforms
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
@@ -142,8 +142,8 @@ execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFir
 execute if entity @a[scores={pltf_nofireballs=1}] run kill @e[type=fireball]
 
 # detect end of the game
-execute as @a[team=team1,scores={pltf_Score=40..}] run function platforms:win1
-execute as @a[team=team2,scores={pltf_Score=40..}] run function platforms:win2
-execute as @a[team=team3,scores={pltf_Score=40..}] run function platforms:win3
-execute as @a[team=team4,scores={pltf_Score=40..}] run function platforms:win4
+execute as @a[team=pltf_team1,scores={pltf_Score=40..}] run function platforms:win1
+execute as @a[team=pltf_team2,scores={pltf_Score=40..}] run function platforms:win2
+execute as @a[team=pltf_team3,scores={pltf_Score=40..}] run function platforms:win3
+execute as @a[team=pltf_team4,scores={pltf_Score=40..}] run function platforms:win4
 
