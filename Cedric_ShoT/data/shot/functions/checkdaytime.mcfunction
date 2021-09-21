@@ -16,8 +16,8 @@ execute as @a[scores={shot_Daytime=1}] run scoreboard players add @s shot_NumCyc
 execute as @a[scores={shot_Daytime=12001}] run scoreboard players add @s shot_NumCycles 1
 
 # Random chance of entering the last cycle (one tick delay so the title overwrites the share or take title)
-execute as @r[scores={shot_LastCycle=0,shot_Daytime=1}] if entity @s[scores={shot_NumCycles=3..,shot_rng=0..49}] run scoreboard players set @a shot_LastCycle 2
-execute as @r[scores={shot_LastCycle=0,shot_Daytime=12001}] if entity @s[scores={shot_NumCycles=3..,shot_rng=0..49}] run scoreboard players set @a shot_LastCycle 2
+execute as @r[scores={shot_LastCycle=0,shot_Daytime=1}] if entity @s[scores={shot_NumCycles=3..,shot_rng=0..33}] run scoreboard players set @a shot_LastCycle 2
+execute as @r[scores={shot_LastCycle=0,shot_Daytime=12001}] if entity @s[scores={shot_NumCycles=3..,shot_rng=0..33}] run scoreboard players set @a shot_LastCycle 2
 tellraw @a[scores={shot_LastCycle=2}] [{"text":"The game is entering the last cycle","color":"gold"}]
 title @a[scores={shot_LastCycle=2}] title [{"text":"The last cycle...","color":"gold"}]
 playsound minecraft:entity.wither.spawn master @a[scores={shot_LastCycle=2}] ~ ~ ~

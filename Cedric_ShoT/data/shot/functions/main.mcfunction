@@ -33,8 +33,12 @@ execute as @a[scores={shot_On=1,shot_DeathCount=5}] at @s run function shot:give
 # penalty for dying
 scoreboard players remove @a[scores={shot_On=1,shot_DeathCount=5}] shot_Score 20
 
-# reward for killing someone (equal or lower than death penalty or it can be exploited)
-scoreboard players add @a[scores={shot_On=1,shot_KillCount=1..}] shot_Score 20
-scoreboard players set @a[scores={shot_On=1,shot_KillCount=1..}] shot_KillCount 0
+# penalty for killing someone in build phase
+scoreboard players remove @a[scores={shot_On=1,shot_Phase=0,shot_KillCount=1..}] shot_Score 20
+scoreboard players set @a[scores={shot_On=1,shot_Phase=0,shot_KillCount=1..}] shot_KillCount 0
 
+# reward for killing someone in collection phase
+# must be equal or lower than death penalty or it can be exploited
+scoreboard players add @a[scores={shot_On=1,shot_Phase=1,shot_KillCount=1..}] shot_Score 20
+scoreboard players set @a[scores={shot_On=1,shot_Phase=1,shot_KillCount=1..}] shot_KillCount 0
 

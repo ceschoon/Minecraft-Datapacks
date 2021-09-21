@@ -43,20 +43,6 @@ scoreboard objectives add shot_genhouse3 dummy
 scoreboard objectives add shot_gentower1 dummy
 scoreboard objectives add shot_gentower2 dummy
 
-scoreboard players set @a shot_Score 0
-scoreboard players set @a shot_ScoreCopy 0
-scoreboard players set @a shot_Common 0
-scoreboard players set @a shot_Phase 0
-scoreboard players set @a shot_NumCycles 0
-scoreboard players set @a shot_LastCycle 0
-scoreboard players set @a shot_CoinDelay 0
-scoreboard players set @a shot_Countdown 0
-scoreboard players set @a shot_TicksInSec 0
-scoreboard players set @a shot_DeathCount 0
-scoreboard players set @a shot_KillCount 0
-scoreboard players set @a shot_Winner 0
-scoreboard players set @a shot_On 0
-
 # Scoreboard variables for random number generation
 scoreboard objectives remove shot_rng
 scoreboard objectives add shot_rng minecraft.custom:minecraft.walk_one_cm
