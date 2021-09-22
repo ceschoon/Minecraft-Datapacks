@@ -20,6 +20,7 @@ scoreboard objectives remove shot_genhouse2
 scoreboard objectives remove shot_genhouse3
 scoreboard objectives remove shot_gentower1
 scoreboard objectives remove shot_gentower2
+scoreboard objectives remove shot_genhidden
 
 scoreboard objectives add shot_Score dummy "Score"
 scoreboard objectives add shot_ScoreCopy dummy
@@ -42,6 +43,21 @@ scoreboard objectives add shot_genhouse2 dummy
 scoreboard objectives add shot_genhouse3 dummy
 scoreboard objectives add shot_gentower1 dummy
 scoreboard objectives add shot_gentower2 dummy
+scoreboard objectives add shot_genhidden dummy
+
+scoreboard players set @a shot_Score 0
+scoreboard players set @a shot_ScoreCopy 0
+scoreboard players set @a shot_Common 0
+scoreboard players set @a shot_Phase 0
+scoreboard players set @a shot_NumCycles 0
+scoreboard players set @a shot_LastCycle 0
+scoreboard players set @a shot_CoinDelay 0
+scoreboard players set @a shot_Countdown 0
+scoreboard players set @a shot_TicksInSec 0
+scoreboard players set @a shot_DeathCount 0
+scoreboard players set @a shot_KillCount 0
+scoreboard players set @a shot_Winner 0
+scoreboard players set @a shot_On 0
 
 # Scoreboard variables for random number generation
 scoreboard objectives remove shot_rng

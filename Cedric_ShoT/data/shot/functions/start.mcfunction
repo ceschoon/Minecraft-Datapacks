@@ -16,7 +16,7 @@ scoreboard players set @a shot_On 1
 scoreboard objectives setdisplay sidebar shot_Score
 scoreboard objectives setdisplay list shot_NumCycles
 
-execute at @s run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"map_centre\"",CustomNameVisible:0}
+execute at @e[type=armor_stand,name=map_centre] run tp @s ~ ~ ~
 setworldspawn ~ ~ ~
 
 worldborder center ~ ~
