@@ -6,6 +6,9 @@ kill @e[type=armor_stand]
 scoreboard players set @a shot_genmaster 0
 scoreboard players set @s shot_genmaster 1
 
+###### set max number of attempts at generation
+scoreboard players set @s shot_gentrials 100
+
 ###### trigger building of the following structures
 scoreboard players set @s shot_genhouse1 1
 scoreboard players set @s shot_genhouse2 1

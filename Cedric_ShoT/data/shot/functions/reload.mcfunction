@@ -15,6 +15,7 @@ scoreboard objectives remove shot_On
 scoreboard objectives remove shot_temp
 
 scoreboard objectives remove shot_genmaster
+scoreboard objectives remove shot_gentrials
 scoreboard objectives remove shot_genhouse1
 scoreboard objectives remove shot_genhouse2
 scoreboard objectives remove shot_genhouse3
@@ -38,6 +39,7 @@ scoreboard objectives add shot_On dummy
 scoreboard objectives add shot_temp dummy
 
 scoreboard objectives add shot_genmaster dummy
+scoreboard objectives add shot_gentrials dummy
 scoreboard objectives add shot_genhouse1 dummy
 scoreboard objectives add shot_genhouse2 dummy
 scoreboard objectives add shot_genhouse3 dummy
