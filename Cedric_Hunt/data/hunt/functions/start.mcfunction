@@ -24,10 +24,9 @@ effect clear @a
 effect give @a resistance 10 255
 effect give @a regeneration 10
 effect give @a saturation 10 10
-#effect give @a slowness 10 10
-
-clear @a
-give @a compass
+effect give @a slowness 10 10
 
 function hunt:newrunner
 
+clear @a
+give @a[scores={hunt_Hunted=0}] compass

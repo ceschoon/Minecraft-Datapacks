@@ -19,4 +19,10 @@ team remove infected
 team add infected
 team modify infected color red
 
-say "Cedric Infection: reloaded!"
+tellraw @a [" "]
+tellraw @a [{"text":"[Infection: start with me]","color":"gold", "clickEvent":{"action":"run_command","value":"/function infection:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: Infection (First infected is the one who clicks)"}}}]
+tellraw @a [{"text":"[Infection: start with random player]","color":"gold", "clickEvent":{"action":"run_command","value":"/execute as @r run function infection:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: Infection (First infected selected at random)"}}}]
+tellraw @a [" "]
+
+#say "Cedric Infection: reloaded!"
+

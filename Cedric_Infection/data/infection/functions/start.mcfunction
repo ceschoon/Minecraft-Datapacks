@@ -11,6 +11,8 @@ gamerule doImmediateRespawn true
 gamerule doDaylightCycle true
 gamerule naturalRegeneration true
 
+gamemode survival @a
+
 time set 0
 
 # note: worldborder does not work well in nether/end
@@ -36,7 +38,7 @@ clear @a
 team empty infected
 team empty sane
 team join sane @a
-team join infected @r
+team join infected @s
 
 title @a title {"text":"Infection Game Starts Now!","color":"red"}
 title @a[team=sane] subtitle {"text":"You will become infected if you die","color":"red"}

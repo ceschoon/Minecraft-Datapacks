@@ -18,4 +18,4 @@ team modify ls_team2 color red
 function lodestones:compassreload
 
 # Messages 
-say "Cedric Gotl: reloaded lodestones module!"
+#say "Cedric Gotl: reloaded lodestones module!"

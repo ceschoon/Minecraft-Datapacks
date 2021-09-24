@@ -13,6 +13,8 @@ gamerule doImmediateRespawn true
 gamerule doDaylightCycle true
 gamerule naturalRegeneration true
 
+gamemode survival @a
+
 # Store position to target hill with compass
 execute store result score @a X run data get entity @s Pos[0] 1
 execute store result score @a Y run data get entity @s Pos[1] 1

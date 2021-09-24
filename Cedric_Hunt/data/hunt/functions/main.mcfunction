@@ -1,5 +1,15 @@
 
 # Game starts 10 seconds after start function is executed
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=0}] at @s run title @a title {"text":"10","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=20}] at @s run title @a title {"text":"9","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=40}] at @s run title @a title {"text":"8","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=60}] at @s run title @a title {"text":"7","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=80}] at @s run title @a title {"text":"6","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=100}] at @s run title @a title {"text":"5","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=120}] at @s run title @a title {"text":"4","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=140}] at @s run title @a title {"text":"3","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=160}] at @s run title @a title {"text":"2","color":"gold"}
+execute as @r[scores={hunt_On=0,hunt_TimeTotal=180}] at @s run title @a title {"text":"1","color":"gold"}
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run title @a title {"text":"Go!","color":"gold"}
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run tellraw @a {"text":"Hunt starts now!","color":"gold"}
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=200}] at @s run scoreboard players set @a hunt_On 1

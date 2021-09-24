@@ -15,4 +15,43 @@ scoreboard objectives add Z dummy
 
 scoreboard players set @a target 0
 
-say "Cedric Compass: reloaded"
+# Add blanks spaces because this is the first datapack
+# to be loaded and the spaces make things look cleaner
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+tellraw @a [" "]
+
+tellraw @a [" "]
+tellraw @a [{"text":"[Compass: track me]","color":"gold", "clickEvent":{"action":"run_command","value":"/function compass:trackme"},"hoverEvent":{"action":"show_text","value":{"text":"Make compasses point to the player who clicks"}}}]
+tellraw @a [" "]
+
+#say "Cedric Compass: reloaded"

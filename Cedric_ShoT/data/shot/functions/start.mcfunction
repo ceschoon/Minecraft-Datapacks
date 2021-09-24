@@ -37,4 +37,6 @@ spreadplayers ~ ~ 200 200 false @a
 execute as @a at @s run spawnpoint @s ~ ~ ~ 
 execute as @a at @s run function shot:giverespawnset
 
+tellraw @a {"text":"ShoT: Game starts now!","color":"gold"}
+
 

@@ -24,4 +24,4 @@ scoreboard objectives add gotl_rng2 minecraft.custom:minecraft.walk_one_cm
 scoreboard players set @a gotl_rng2 0
 
 # Messages 
-say "Cedric Gotl: reloaded roles module!"
+#say "Cedric Gotl: reloaded roles module!"

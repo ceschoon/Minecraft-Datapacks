@@ -25,6 +25,10 @@ team add onhill
 team modify offhill color gray
 team modify onhill color gold
 
-say "Cedric Koth: reloaded"
+tellraw @a [" "]
+tellraw @a [{"text":"[King of the Hill: start]","color":"gold", "clickEvent":{"action":"run_command","value":"/function koth:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: King of the Hill (Koth)"}}}]
+tellraw @a [" "]
+
+#say "Cedric Koth: reloaded"
 
 function koth:compassreload

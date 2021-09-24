@@ -27,4 +27,9 @@ scoreboard players set @a tag_rtagxs 0
 function tag:reloadteams
 function tagrules:reload
 
-say "Cedric Tag: reloaded!"
+tellraw @a [{"text":"[Tag: start (basic)]","color":"gold", "clickEvent":{"action":"run_command","value":"/function tag:start"},"hoverEvent":{"action":"show_text","value":{"text":"Basic tag: No modification of map or player inventory/effects"}}}]
+tellraw @a [{"text":"[Tag: start rtag]","color":"gold", "clickEvent":{"action":"run_command","value":"/function rtag:start"},"hoverEvent":{"action":"show_text","value":{"text":"Proper Tag: Set worldborders, etc."}}}]
+tellraw @a [{"text":"[Tag: start rtagxs]","color":"gold", "clickEvent":{"action":"run_command","value":"/function rtagxs:start"},"hoverEvent":{"action":"show_text","value":{"text":"Mini Tag: Extra small map and one puch kill"}}}]
+tellraw @a [" "]
+
+#say "Cedric Tag: reloaded!"

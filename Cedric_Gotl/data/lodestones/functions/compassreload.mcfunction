@@ -11,4 +11,4 @@ scoreboard objectives add X dummy
 scoreboard objectives add Y dummy
 scoreboard objectives add Z dummy
 
-say "Cedric Gotl: reloaded compass module"
+#say "Cedric Gotl: reloaded compass module"

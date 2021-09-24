@@ -52,3 +52,14 @@ execute if entity @s[scores={shot_genhidden=0..}] at @s if block ~ ~-1 ~ grass_b
 execute if entity @s[scores={shot_genhidden=0..}] at @e[type=armor_stand,name=map_centre] run tp @s ~ ~ ~
 
 
+####### actions when generation is over
+scoreboard players set @a shot_temp 0
+execute if entity @s[scores={shot_genhouse1=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhouse2=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhouse3=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_gentower1=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_gentower2=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhidden=-1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genmaster=1,shot_temp=0}] run tellraw @a {"text":"ShoT: Map generated!","color":"gold"}
+execute if entity @s[scores={shot_genmaster=1,shot_temp=0}] run scoreboard players set @a shot_genmaster 0
+

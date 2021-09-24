@@ -18,6 +18,7 @@ gamerule keepInventory false
 gamerule doImmediateRespawn true
 gamerule doDaylightCycle false
 gamerule naturalRegeneration false
+gamerule mobGriefing true
 
 # World
 worldborder center ~ ~

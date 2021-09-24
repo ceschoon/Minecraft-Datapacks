@@ -27,4 +27,4 @@ scoreboard players set @a srn_griefing 0
 
 summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"sauronpos\"",CustomNameVisible:0}
 
-say "Cedric Sauron: reloaded"
+#say "Cedric Sauron: reloaded"
