@@ -14,8 +14,9 @@ scoreboard objectives add hunt_Hunted dummy
 scoreboard objectives add hunt_On dummy
 
 tellraw @a [" "]
-tellraw @a [{"text":"[Manhunt: start with me]","color":"gold", "clickEvent":{"action":"run_command","value":"/function hunt:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: Manhunt (Player who clicks is hunted)"}}}]
-tellraw @a [{"text":"[Manhunt: start with random player]","color":"gold", "clickEvent":{"action":"run_command","value":"/execute as @r run function hunt:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: Manhunt (Hunted player slected at random)"}}}]
+tellraw @a [{"text":"=== Manhunt ===","color":"gold","bold":true}]
+tellraw @a [{"text":"[Start with me]","color":"green", "clickEvent":{"action":"run_command","value":"/function hunt:start"},"hoverEvent":{"action":"show_text","value":{"text":"Player who clicks is hunted"}}}]
+tellraw @a [{"text":"[Start with random player]","color":"green", "clickEvent":{"action":"run_command","value":"/execute as @r run function hunt:start"},"hoverEvent":{"action":"show_text","value":{"text":"Hunted player is selected at random"}}}]
 tellraw @a [" "]
 
 #say "Cedric Hunt: reloaded hunt"

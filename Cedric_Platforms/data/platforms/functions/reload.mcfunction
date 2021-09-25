@@ -51,12 +51,13 @@ team modify pltf_team3 color blue
 team modify pltf_team4 color yellow
 
 tellraw @a [" "]
-tellraw @a [{"text":"[Platforms: generate map 1]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap1"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
-tellraw @a [{"text":"[Platforms: generate map 2]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap2"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 4 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
-tellraw @a [{"text":"[Platforms: generate map 3]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap3"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 3 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
-tellraw @a [{"text":"[Platforms: generate map 4]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap4"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
-tellraw @a [{"text":"[Platforms: generate map 5]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap5"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and platforms in the middle (Warning: There must be enough land around you for a proper generation)"}}}]
-tellraw @a [{"text":"[Platforms: start]","color":"gold", "clickEvent":{"action":"run_command","value":"/function platforms:start"},"hoverEvent":{"action":"show_text","value":{"text":"Start minigame: Platforms (Warning: generate map first)"}}}]
+tellraw @a [{"text":"=== Platforms ===","color":"gold","bold":true}]
+tellraw @a [{"text":"[Generate map 1]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap1"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
+tellraw @a [{"text":"[Generate map 2]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap2"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 4 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
+tellraw @a [{"text":"[Generate map 3]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap3"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 3 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
+tellraw @a [{"text":"[Generate map 4]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap4"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 6 platforms (Warning: There must be enough land around you for a proper generation)"}}}]
+tellraw @a [{"text":"[Generate map 5]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap5"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and platforms in the middle (Warning: There must be enough land around you for a proper generation)"}}}]
+tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function platforms:start"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: generate map first"}}}]
 tellraw @a [" "]
 
 #say "Cedric Platforms: reloaded"
