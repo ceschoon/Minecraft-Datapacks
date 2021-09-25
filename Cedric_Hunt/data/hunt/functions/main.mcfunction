@@ -31,5 +31,7 @@ execute as @a[scores={hunt_On=1,hunt_Hunted=1,hunt_TimeTicks=20..}] run scoreboa
 execute as @a[scores={hunt_On=1,hunt_Hunted=1,hunt_TimeTicks=20..}] run scoreboard players set @s hunt_TimeTicks 0
 
 # detect end of the game
+execute as @a[scores={hunt_On=1,hunt_Hunted=1,hunt_DeathCount=5}] run title @a title [{"text":"Game over!","color":"gold"}]
+execute as @a[scores={hunt_On=1,hunt_Hunted=1,hunt_DeathCount=5}] run tellraw @a [{"text":"Game over! The hunted player died","color":"gold"}]
 execute as @a[scores={hunt_On=1,hunt_Hunted=1,hunt_DeathCount=5}] run scoreboard players set @a hunt_On 0
 
