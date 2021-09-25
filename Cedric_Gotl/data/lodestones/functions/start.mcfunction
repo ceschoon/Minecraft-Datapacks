@@ -6,6 +6,8 @@ gamerule doImmediateRespawn true
 gamerule doDaylightCycle true
 gamerule naturalRegeneration true
 
+gamemode survival @a
+
 # Init scoreboard variables
 scoreboard players set @a ls_On 1
 
