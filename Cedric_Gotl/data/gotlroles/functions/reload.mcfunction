@@ -16,7 +16,7 @@ scoreboard objectives add gotl_role dummy
 # after the execution of this function.
 
 scoreboard objectives remove gotl_rng
-scoreboard objectives add gotl_rng minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add gotl_rng minecraft.custom:minecraft.play_time
 scoreboard players set @a gotl_rng 0
 
 scoreboard objectives remove gotl_rng2
