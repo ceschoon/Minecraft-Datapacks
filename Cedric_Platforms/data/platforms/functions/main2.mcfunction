@@ -72,6 +72,10 @@ execute as @a[scores={pltf_AddScore=1},team=pltf_team1] run scoreboard players a
 execute as @a[scores={pltf_AddScore=1},team=pltf_team2] run scoreboard players add @a[team=pltf_team2] pltf_Score 1
 execute as @a[scores={pltf_AddScore=1},team=pltf_team3] run scoreboard players add @a[team=pltf_team3] pltf_Score 1
 execute as @a[scores={pltf_AddScore=1},team=pltf_team4] run scoreboard players add @a[team=pltf_team4] pltf_Score 1
+execute as @a[scores={pltf_AddScore=1},team=pltf_team1] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={pltf_AddScore=1},team=pltf_team2] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={pltf_AddScore=1},team=pltf_team3] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={pltf_AddScore=1},team=pltf_team4] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
 
 # Reset platforms
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
