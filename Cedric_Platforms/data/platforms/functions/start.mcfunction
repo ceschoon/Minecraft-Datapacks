@@ -50,7 +50,7 @@ execute at @e[type=armor_stand,name=team4] run spawnpoint @a[team=pltf_team4] ~ 
 # Effects
 effect clear @a
 effect give @a resistance 10 255
-effect give @a regeneration 10
+effect give @a regeneration 10 10
 effect give @a saturation 10 10
 
 # Inventory and gamemode

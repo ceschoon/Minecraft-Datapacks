@@ -22,7 +22,7 @@ execute as @a at @s run spawnpoint @s ~ ~ ~
 
 effect clear @a
 effect give @a resistance 10 255
-effect give @a regeneration 10
+effect give @a regeneration 10 10
 effect give @a saturation 10 10
 effect give @a slowness 10 10
 
