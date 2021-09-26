@@ -1,8 +1,4 @@
 
-####### record current position
-execute at @s run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"map_centre\"",CustomNameVisible:0}
-
-
 ####### build villager house (hut)
 execute if entity @s[scores={shot_genhouse1=1}] at @s run spreadplayers ~ ~ 180 180 false @s
 execute if entity @s[scores={shot_genhouse1=1}] at @s if block ~ ~-1 ~ grass_block run scoreboard players set @a shot_genhouse1 2
@@ -60,11 +56,11 @@ execute if entity @s[scores={shot_gentrials=0,shot_genmaster=1}] run scoreboard 
 
 ####### actions when generation is over
 scoreboard players set @a shot_temp 0
-execute if entity @s[scores={shot_genhouse1=1}] run scoreboard players set @a shot_temp 1
-execute if entity @s[scores={shot_genhouse2=1}] run scoreboard players set @a shot_temp 1
-execute if entity @s[scores={shot_genhouse3=1}] run scoreboard players set @a shot_temp 1
-execute if entity @s[scores={shot_gentower1=1}] run scoreboard players set @a shot_temp 1
-execute if entity @s[scores={shot_gentower2=1}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhouse1=1..2}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhouse2=1..2}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_genhouse3=1..2}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_gentower1=1..2}] run scoreboard players set @a shot_temp 1
+execute if entity @s[scores={shot_gentower2=1..2}] run scoreboard players set @a shot_temp 1
 execute if entity @s[scores={shot_genhidden=-1}] run scoreboard players set @a shot_temp 1
 execute if entity @s[scores={shot_genmaster=1,shot_temp=0}] run tellraw @a {"text":"ShoT: Map generated!","color":"gold"}
 execute if entity @s[scores={shot_genmaster=1,shot_temp=0}] run scoreboard players set @s shot_genmaster 0

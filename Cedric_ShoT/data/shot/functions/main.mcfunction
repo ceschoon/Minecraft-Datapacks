@@ -16,7 +16,7 @@ execute as @r[scores={shot_On=0,shot_genmaster=1}] run function shot:generatestr
 execute as @r[scores={shot_On=0,shot_genmaster=1}] run function shot:populatestructures
 
 # commands to execute every second rather than every tick
-execute as @a[scores={shot_On=1,shot_TicksInSec=0}] run function shot:showcountdown
+#execute as @a[scores={shot_On=1,shot_TicksInSec=0}] run <command here>
 
 # keep track of seconds
 scoreboard players add @a shot_TicksInSec 1
@@ -55,3 +55,11 @@ scoreboard players set @a[scores={shot_Score=..-1}] shot_Score 0
 # proper end if all score copies are negative (we finished the analysis)
 execute unless entity @a[scores={shot_ScoreCopy=0..}] run scoreboard players set @a shot_On 0
 
+# keep villagers in place
+execute at @e[type=armor_stand,name=villager_house1] run tp @e[type=villager,distance=5..8] ~ ~ ~
+execute at @e[type=armor_stand,name=villager_house2] run tp @e[type=villager,distance=5..8] ~ ~ ~
+execute at @e[type=armor_stand,name=villager_house3] run tp @e[type=villager,distance=5..8] ~ ~ ~
+
+# keep potion of harming in last inventory slot in case the player is stuck in a hole in adventure mode
+# TODO: additional penalty for using it (otherwise player would drink it not to let another have the kill)
+item replace entity @a hotbar.8 with potion{Potion:"strong_harming",display:{Lore:["\"Suicide bottle\""]}}
