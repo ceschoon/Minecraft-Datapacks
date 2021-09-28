@@ -62,4 +62,4 @@ execute at @e[type=armor_stand,name=villager_house3] run tp @e[type=villager,dis
 
 # keep potion of harming in last inventory slot in case the player is stuck in a hole in adventure mode
 # TODO: additional penalty for using it (otherwise player would drink it not to let another have the kill)
-item replace entity @a hotbar.8 with potion{Potion:"strong_harming",display:{Lore:["\"Suicide bottle\""]}}
+item replace entity @a[scores={shot_On=1}] hotbar.8 with potion{Potion:"strong_harming",display:{Lore:["\"Suicide bottle\""]}}
