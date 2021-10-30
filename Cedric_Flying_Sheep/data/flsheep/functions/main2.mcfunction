@@ -30,10 +30,10 @@ execute as @a if entity @s[team=flsheep_team2] run item replace entity @s armor.
 item replace entity @a armor.chest with elytra
 
 # Kill sheep in team bases and increment score
-execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @a[team=flsheep_team1] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @a[team=flsheep_team2] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @a[team=flsheep_team1] flsheep_AddScore 3
-execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @a[team=flsheep_team2] flsheep_AddScore 3
+execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team1] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team2] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team1] flsheep_AddScore 3
+execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team2] flsheep_AddScore 3
 execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team1] run scoreboard players add @a[team=flsheep_team1] flsheep_Score 1
 execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team2] run scoreboard players add @a[team=flsheep_team2] flsheep_Score 1
 execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team1] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
@@ -45,6 +45,7 @@ execute at @e[type=armor_stand,name=team2] run kill @e[type=sheep,distance=..3]
 # Clear sheep loot from the map
 kill @e[type=item,nbt={Item:{id:"minecraft:mutton"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:cooked_mutton"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:lead"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:black_wool"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:blue_wool"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:brown_wool"}}]
@@ -88,7 +89,7 @@ execute at @e[type=armor_stand,name=centre] if entity @r[scores={flsheep_rng=90.
 scoreboard players set @a[scores={flsheep_Delay=..0}] flsheep_Delay 300
 
 # detect end of the game
-execute as @a[team=flsheep_team1,scores={flsheep_Score=10..}] run function flsheep:win1
-execute as @a[team=flsheep_team2,scores={flsheep_Score=10..}] run function flsheep:win2
+execute as @a[team=flsheep_team1,scores={flsheep_Score=20..}] run function flsheep:win1
+execute as @a[team=flsheep_team2,scores={flsheep_Score=20..}] run function flsheep:win2
 
 

@@ -7,7 +7,7 @@ scoreboard objectives remove flsheep_On
 
 scoreboard objectives add flsheep_DeathCnt deathCount
 scoreboard objectives add flsheep_AddScore dummy
-scoreboard objectives add flsheep_Score dummy "Diamonds"
+scoreboard objectives add flsheep_Score dummy "Sheep delivered"
 scoreboard objectives add flsheep_Delay dummy
 scoreboard objectives add flsheep_On dummy
 
