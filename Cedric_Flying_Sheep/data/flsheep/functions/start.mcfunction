@@ -48,7 +48,7 @@ gamemode adventure @a
 
 # Game starts message
 title @a title {"text":"Go!","color":"gold"}
-tellraw @a {"text":"Flying Sheep: Bring 10 sheep to your base to win.","color":"gold"}
+tellraw @a {"text":"Flying Sheep: Bring 20 sheep to your base to win.","color":"gold"}
 tellraw @a {"text":"Flying Sheep: Game starts now!","color":"gold"}
 
 
