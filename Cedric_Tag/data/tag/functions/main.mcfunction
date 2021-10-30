@@ -1,6 +1,7 @@
 
 # permanent effects
 effect give @a[scores={tag_On=1,tag_rtagxs=1}] strength 20 255
+effect give @a[scores={tag_On=1}] night_vision 20 255
 
 # death mechanics
 execute if entity @a[scores={tag_On=1}] run function tag:deathmechanics
