@@ -3,7 +3,7 @@ gamemode creative
 
 # Build central platform
 kill @e[type=armor_stand]
-execute at @s run summon armor_stand ~ 220 ~ {Invisible:1,Marker:1,CustomName:"\"centre\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 225 ~ {Invisible:1,Marker:1,CustomName:"\"centre\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=centre] run function flsheep:buildcentre
 
 # Build team1 platform
