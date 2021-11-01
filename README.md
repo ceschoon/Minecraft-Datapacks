@@ -14,7 +14,7 @@
 | **Cedric_Tag** | Suite of various tag games |
 | **Cedric_Shot** | Share or Take: a game of trust and betrayals, plus a bit of man hunting... |
 | **Cedric_Flying_Sheep** | Bring sheep to your team's skybase using a leash and elytra |
-
+| **Cedric_Compass** | Shared module for team management |
 
 ## Installation
 
