@@ -27,20 +27,20 @@ execute if entity @r[scores={flsheep_NumTeams=4}] run function flsheep:generatem
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if all teams are empty
-execute if entity @r[scores={flsheep_NumTeams=2}] unless entity @r[team=flsheep_team1] unless entity @r[team=flsheep_team2] run function flsheep:dorandomteams2
-execute if entity @r[scores={flsheep_NumTeams=4}] unless entity @r[team=flsheep_team1] unless entity @r[team=flsheep_team2] unless entity @r[team=flsheep_team3] unless entity @r[team=flsheep_team4] run function flsheep:dorandomteams4
+execute if entity @r[scores={flsheep_NumTeams=2}] unless entity @r[team=team1] unless entity @r[team=team2] run function teams:dorandomteams2
+execute if entity @r[scores={flsheep_NumTeams=4}] unless entity @r[team=team1] unless entity @r[team=team2] unless entity @r[team=team3] unless entity @r[team=team4] run function teams:dorandomteams4
 
 # Tp players on their platform
-execute at @e[type=armor_stand,name=team1] run tp @a[team=flsheep_team1] ~ ~ ~
-execute at @e[type=armor_stand,name=team2] run tp @a[team=flsheep_team2] ~ ~ ~
-execute at @e[type=armor_stand,name=team3] run tp @a[team=flsheep_team3] ~ ~ ~
-execute at @e[type=armor_stand,name=team4] run tp @a[team=flsheep_team4] ~ ~ ~
+execute at @e[type=armor_stand,name=team1] run tp @a[team=team1] ~ ~ ~
+execute at @e[type=armor_stand,name=team2] run tp @a[team=team2] ~ ~ ~
+execute at @e[type=armor_stand,name=team3] run tp @a[team=team3] ~ ~ ~
+execute at @e[type=armor_stand,name=team4] run tp @a[team=team4] ~ ~ ~
 
 # Set player spawn on platforms
-execute at @e[type=armor_stand,name=team1] run spawnpoint @a[team=flsheep_team1] ~ ~ ~
-execute at @e[type=armor_stand,name=team2] run spawnpoint @a[team=flsheep_team2] ~ ~ ~
-execute at @e[type=armor_stand,name=team3] run spawnpoint @a[team=flsheep_team3] ~ ~ ~
-execute at @e[type=armor_stand,name=team4] run spawnpoint @a[team=flsheep_team4] ~ ~ ~
+execute at @e[type=armor_stand,name=team1] run spawnpoint @a[team=team1] ~ ~ ~
+execute at @e[type=armor_stand,name=team2] run spawnpoint @a[team=team2] ~ ~ ~
+execute at @e[type=armor_stand,name=team3] run spawnpoint @a[team=team3] ~ ~ ~
+execute at @e[type=armor_stand,name=team4] run spawnpoint @a[team=team4] ~ ~ ~
 
 # Effects
 effect clear @a

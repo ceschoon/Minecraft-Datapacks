@@ -20,21 +20,6 @@ scoreboard objectives remove flsheep_rng
 scoreboard objectives add flsheep_rng minecraft.custom:minecraft.walk_one_cm
 scoreboard players set @a flsheep_rng 0
 
-team remove flsheep_team1
-team remove flsheep_team2
-team remove flsheep_team3
-team remove flsheep_team4
-
-team add flsheep_team1
-team add flsheep_team2
-team add flsheep_team3
-team add flsheep_team4
-
-team modify flsheep_team1 color green
-team modify flsheep_team2 color red
-team modify flsheep_team3 color blue
-team modify flsheep_team4 color yellow
-
 tellraw @a [" "]
 tellraw @a [{"text":"=== Flying Sheep ===","color":"gold","bold":true}]
 tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function flsheep:info"}}]

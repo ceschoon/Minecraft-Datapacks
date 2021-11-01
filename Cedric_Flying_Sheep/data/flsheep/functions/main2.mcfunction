@@ -19,35 +19,35 @@ title @a[scores={flsheep_DeathCnt=2}] subtitle [{"text":"You will respawn in 10 
 gamemode survival @a[scores={flsheep_DeathCnt=200}]
 
 # Tp players who respawned back to team platform
-execute at @e[type=armor_stand,name=team1] run tp @a[scores={flsheep_DeathCnt=200},team=flsheep_team1] ~ ~ ~
-execute at @e[type=armor_stand,name=team2] run tp @a[scores={flsheep_DeathCnt=200},team=flsheep_team2] ~ ~ ~
-execute at @e[type=armor_stand,name=team3] run tp @a[scores={flsheep_DeathCnt=200},team=flsheep_team3] ~ ~ ~
-execute at @e[type=armor_stand,name=team4] run tp @a[scores={flsheep_DeathCnt=200},team=flsheep_team4] ~ ~ ~
+execute at @e[type=armor_stand,name=team1] run tp @a[scores={flsheep_DeathCnt=200},team=team1] ~ ~ ~
+execute at @e[type=armor_stand,name=team2] run tp @a[scores={flsheep_DeathCnt=200},team=team2] ~ ~ ~
+execute at @e[type=armor_stand,name=team3] run tp @a[scores={flsheep_DeathCnt=200},team=team3] ~ ~ ~
+execute at @e[type=armor_stand,name=team4] run tp @a[scores={flsheep_DeathCnt=200},team=team4] ~ ~ ~
 
 # Force players to wear team colors + elytra
-execute as @a if entity @s[team=flsheep_team1] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=flsheep_team2] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=flsheep_team3] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=flsheep_team4] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team1] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team2] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team3] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team4] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
 item replace entity @a armor.chest with elytra
 
 # Kill sheep in team bases and increment score
-execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team1] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team2] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team3] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team3] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team4] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=flsheep_team4] flsheep_AddScore 1
-execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team1] flsheep_AddScore 3
-execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team2] flsheep_AddScore 3
-execute at @e[type=armor_stand,name=team3] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team3] flsheep_AddScore 3
-execute at @e[type=armor_stand,name=team4] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=flsheep_team4] flsheep_AddScore 3
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team1] run scoreboard players add @a[team=flsheep_team1] flsheep_Score 1
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team2] run scoreboard players add @a[team=flsheep_team2] flsheep_Score 1
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team3] run scoreboard players add @a[team=flsheep_team3] flsheep_Score 1
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team4] run scoreboard players add @a[team=flsheep_team4] flsheep_Score 1
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team1] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team2] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team3] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
-execute as @a[scores={flsheep_AddScore=1..},team=flsheep_team4] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=team1] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=team2] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team3] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=team3] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team4] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=team4] flsheep_AddScore 1
+execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=team1] flsheep_AddScore 3
+execute at @e[type=armor_stand,name=team2] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=team2] flsheep_AddScore 3
+execute at @e[type=armor_stand,name=team3] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=team3] flsheep_AddScore 3
+execute at @e[type=armor_stand,name=team4] if entity @e[type=sheep,nbt={Color:6b},distance=..3] run scoreboard players add @r[team=team4] flsheep_AddScore 3
+execute as @a[scores={flsheep_AddScore=1..},team=team1] run scoreboard players add @a[team=team1] flsheep_Score 1
+execute as @a[scores={flsheep_AddScore=1..},team=team2] run scoreboard players add @a[team=team2] flsheep_Score 1
+execute as @a[scores={flsheep_AddScore=1..},team=team3] run scoreboard players add @a[team=team3] flsheep_Score 1
+execute as @a[scores={flsheep_AddScore=1..},team=team4] run scoreboard players add @a[team=team4] flsheep_Score 1
+execute as @a[scores={flsheep_AddScore=1..},team=team1] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={flsheep_AddScore=1..},team=team2] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={flsheep_AddScore=1..},team=team3] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
+execute as @a[scores={flsheep_AddScore=1..},team=team4] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
 execute at @e[type=armor_stand,name=team1] run kill @e[type=sheep,distance=..3]
 execute at @e[type=armor_stand,name=team2] run kill @e[type=sheep,distance=..3]
 execute at @e[type=armor_stand,name=team3] run kill @e[type=sheep,distance=..3]
@@ -108,8 +108,8 @@ execute at @e[type=armor_stand,name=centre] if entity @r[scores={flsheep_rng=90.
 scoreboard players set @a[scores={flsheep_Delay=..0}] flsheep_Delay 300
 
 # detect end of the game
-execute as @a[team=flsheep_team1,scores={flsheep_Score=20..}] run function flsheep:win1
-execute as @a[team=flsheep_team2,scores={flsheep_Score=20..}] run function flsheep:win2
-execute as @a[team=flsheep_team3,scores={flsheep_Score=20..}] run function flsheep:win3
-execute as @a[team=flsheep_team4,scores={flsheep_Score=20..}] run function flsheep:win4
+execute as @a[team=team1,scores={flsheep_Score=20..}] run function flsheep:win1
+execute as @a[team=team2,scores={flsheep_Score=20..}] run function flsheep:win2
+execute as @a[team=team3,scores={flsheep_Score=20..}] run function flsheep:win3
+execute as @a[team=team4,scores={flsheep_Score=20..}] run function flsheep:win4
 
