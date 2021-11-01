@@ -16,7 +16,6 @@ team modify team4 color yellow
 
 tellraw @a [" "]
 tellraw @a [{"text":"=== Create Teams ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function flsheep:info"}}]
 tellraw @a [{"text":"[Empty all teams]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function teams:empty"}}]
 tellraw @a [{"text":"[Click to join team 1]","color":"green", "clickEvent":{"action":"run_command","value":"/team join team1 @s"}}]
 tellraw @a [{"text":"[Click to join team 2]","color":"red", "clickEvent":{"action":"run_command","value":"/team join team2 @s"}}]
