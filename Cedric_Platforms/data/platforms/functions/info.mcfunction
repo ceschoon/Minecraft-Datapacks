@@ -5,7 +5,7 @@ tellraw @s [{"text":" In this minigame 4 teams or less compete to bring diamonds
 tellraw @s [" "]
 tellraw @s [{"text":" One or two platforms host an emarald generator. The emeralds can be traded on nearby villager platforms for useful items, weapons and armor. ","color":"aqua"}]
 tellraw @s [" "]
-tellraw @s [{"text":" The game can be played by up to 16 players. The teams are filled randomly by default but you are free to create them in advance. The game preserves the existing teams if they are not empty. ","color":"aqua"}]
+tellraw @s [{"text":" The teams are filled randomly by default but you are free to create them in advance. The game preserves the existing teams if they are not empty. ","color":"aqua"}]
 tellraw @s [" "]
 tellraw @s [{"text":" The map must be generated before the start button is clicked! ","color":"aqua"}]
 tellraw @s [" "]

@@ -35,21 +35,6 @@ scoreboard objectives remove pltf_nofireballs
 scoreboard objectives add pltf_nofireballs dummy
 scoreboard players set @a pltf_nofireballs 0
 
-team remove pltf_team1
-team remove pltf_team2
-team remove pltf_team3
-team remove pltf_team4
-
-team add pltf_team1
-team add pltf_team2
-team add pltf_team3
-team add pltf_team4
-
-team modify pltf_team1 color green
-team modify pltf_team2 color red
-team modify pltf_team3 color blue
-team modify pltf_team4 color yellow
-
 tellraw @a [" "]
 tellraw @a [{"text":"=== Platforms ===","color":"gold","bold":true}]
 tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:info"}}]
