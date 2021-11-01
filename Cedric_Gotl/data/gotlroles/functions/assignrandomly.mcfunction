@@ -16,4 +16,3 @@ execute if entity @s[scores={gotl_role=2}] run function gotlroles:initknight
 execute if entity @s[scores={gotl_role=3}] run function gotlroles:inittower
 execute if entity @s[scores={gotl_role=4}] run function gotlroles:initminer
 execute if entity @s[scores={gotl_role=5}] run function gotlroles:initwizard
-

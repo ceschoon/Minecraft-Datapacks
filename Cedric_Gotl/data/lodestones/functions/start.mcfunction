@@ -22,16 +22,16 @@ time set 0
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if both teams are empty
-execute unless entity @r[team=ls_team1] unless entity @r[team=ls_team2] run function lodestones:dorandomteams
+execute unless entity @r[team=team1] unless entity @r[team=team2] run function teams:dorandomteams2
 
 # Spread Players in teams
 spreadplayers ~ ~ 200 200 true @a
-execute as @a[team=ls_team1] at @s run spawnpoint @s ~ ~2 ~
-execute as @a[team=ls_team2] at @s run spawnpoint @s ~ ~2 ~
+execute as @a[team=team1] at @s run spawnpoint @s ~ ~2 ~
+execute as @a[team=team2] at @s run spawnpoint @s ~ ~2 ~
 
 # Place lodestone at the feet of a random player in each team
-execute as @r[team=ls_team1] at @s run function lodestones:placelodestone1
-execute as @r[team=ls_team2] at @s run function lodestones:placelodestone2
+execute as @r[team=team1] at @s run function lodestones:placelodestone1
+execute as @r[team=team2] at @s run function lodestones:placelodestone2
 
 # Effects
 effect clear @a

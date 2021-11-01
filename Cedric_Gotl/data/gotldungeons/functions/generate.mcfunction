@@ -12,7 +12,7 @@ execute as @s at @s run function gotldungeons:build
 
 # teleport player back to its original location (lodestone)
 
-execute if entity @s[team=ls_team1] at @e[type=armor_stand,name=team1] run tp @s ~ ~ ~
-execute if entity @s[team=ls_team2] at @e[type=armor_stand,name=team2] run tp @s ~ ~ ~
+execute if entity @s[team=team1] at @e[type=armor_stand,name=team1] run tp @s ~ ~ ~
+execute if entity @s[team=team2] at @e[type=armor_stand,name=team2] run tp @s ~ ~ ~
 
 
