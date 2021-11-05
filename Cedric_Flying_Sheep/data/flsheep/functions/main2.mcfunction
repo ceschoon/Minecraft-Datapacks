@@ -104,10 +104,11 @@ execute at @e[type=armor_stand,name=centre] if entity @r[scores={flsheep_rng=70.
 execute at @e[type=armor_stand,name=centre] if entity @r[scores={flsheep_rng=80..89}] if entity @a[scores={flsheep_Delay=..0}] run summon sheep ~ ~2 ~ {Color:6}
 execute at @e[type=armor_stand,name=centre] if entity @r[scores={flsheep_rng=90..99}] if entity @a[scores={flsheep_Delay=..0}] run summon wolf ~ ~2 ~
 
-# Reset delay
-scoreboard players set @a[scores={flsheep_Delay=..0}] flsheep_Delay 300
+# Reset delay for sheep spawning
+execute if entity @r[scores={flsheep_NumTeams=2}] run scoreboard players set @a[scores={flsheep_Delay=..0}] flsheep_Delay 300
+execute if entity @r[scores={flsheep_NumTeams=4}] run scoreboard players set @a[scores={flsheep_Delay=..0}] flsheep_Delay 150
 
-# detect end of the game
+# Detect end of the game
 execute as @a[team=team1,scores={flsheep_Score=20..}] run function flsheep:win1
 execute as @a[team=team2,scores={flsheep_Score=20..}] run function flsheep:win2
 execute as @a[team=team3,scores={flsheep_Score=20..}] run function flsheep:win3
