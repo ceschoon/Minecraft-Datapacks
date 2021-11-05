@@ -10,6 +10,7 @@ scoreboard objectives remove pltf_DelayFire2
 scoreboard objectives remove pltf_CountFire1
 scoreboard objectives remove pltf_CountFire2
 scoreboard objectives remove pltf_SummonFire
+scoreboard objectives remove pltf_NumTeams
 scoreboard objectives remove pltf_On
 
 scoreboard objectives add pltf_DeathCount deathCount
@@ -23,8 +24,10 @@ scoreboard objectives add pltf_DelayFire2 dummy
 scoreboard objectives add pltf_CountFire1 dummy
 scoreboard objectives add pltf_CountFire2 dummy
 scoreboard objectives add pltf_SummonFire dummy
+scoreboard objectives add pltf_NumTeams dummy
 scoreboard objectives add pltf_On dummy
 
+scoreboard players set @a pltf_NumTeams 4
 scoreboard players set @a pltf_On 0
 
 scoreboard objectives remove pltf_rng

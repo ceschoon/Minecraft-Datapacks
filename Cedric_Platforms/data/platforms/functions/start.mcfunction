@@ -33,7 +33,9 @@ weather clear 999999
 
 # Fill teams randomly if teams have not been manually set up
 # This is called only if all teams are empty
-execute unless entity @r[team=team1] unless entity @r[team=team2] unless entity @r[team=team3] unless entity @r[team=team4] run function teams:dorandomteams4
+execute if entity @r[scores={pltf_NumTeams=2}] unless entity @r[team=team1] unless entity @r[team=team2] run function teams:dorandomteams2
+execute if entity @r[scores={pltf_NumTeams=3}] unless entity @r[team=team1] unless entity @r[team=team2] unless entity @r[team=team3] run function teams:dorandomteams3
+execute if entity @r[scores={pltf_NumTeams=4}] unless entity @r[team=team1] unless entity @r[team=team2] unless entity @r[team=team3] unless entity @r[team=team4] run function teams:dorandomteams4
 
 # Tp players on their platform
 execute at @e[type=armor_stand,name=team1] run tp @a[team=team1] ~ ~ ~
