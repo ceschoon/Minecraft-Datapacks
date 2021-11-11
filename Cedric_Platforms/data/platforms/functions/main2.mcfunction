@@ -25,10 +25,10 @@ execute at @e[type=armor_stand,name=team3] run tp @a[scores={pltf_DeathCount=200
 execute at @e[type=armor_stand,name=team4] run tp @a[scores={pltf_DeathCount=200},team=team4] ~ ~ ~
 
 # Force players to wear team colors (except if player invisible)
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team1] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team2] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team3] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team4] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team1] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team2] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team3] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={ActiveEffects:[{Id:14b}]}] if entity @s[team=team4] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
 execute as @a if entity @s[nbt={ActiveEffects:[{Id:14b}]}] run item replace entity @s armor.head with air
 
 # Clear inventories from other team's wool color

@@ -25,11 +25,11 @@ execute at @e[type=armor_stand,name=team3] run tp @a[scores={flsheep_DeathCnt=20
 execute at @e[type=armor_stand,name=team4] run tp @a[scores={flsheep_DeathCnt=200},team=team4] ~ ~ ~
 
 # Force players to wear team colors + elytra
-execute as @a if entity @s[team=team1] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=team2] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=team3] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-execute as @a if entity @s[team=team4] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
-item replace entity @a armor.chest with elytra
+execute as @a if entity @s[team=team1] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:65280},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team2] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:16711680},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team3] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:255},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a if entity @s[team=team4] unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run item replace entity @s armor.head with leather_helmet{display:{color:16776960},Enchantments:[{lvl:1s,id:"minecraft:vanishing_curse"},{lvl:1s,id:"minecraft:binding_curse"}]}
+execute as @a unless entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run item replace entity @s armor.chest with elytra
 
 # Kill sheep in team bases and increment score
 execute at @e[type=armor_stand,name=team1] if entity @e[type=sheep,nbt={Color:0b},distance=..3] run scoreboard players add @r[team=team1] flsheep_AddScore 1
