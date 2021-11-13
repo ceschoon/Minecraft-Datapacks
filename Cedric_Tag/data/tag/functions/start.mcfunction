@@ -1,4 +1,5 @@
 
+scoreboard players set @a tag_stag 0
 scoreboard players set @a tag_rtag 0
 scoreboard players set @a tag_rtagxs 0
 
@@ -8,6 +9,7 @@ scoreboard players set @a tag_On 1
 scoreboard players set @a tag_TimeTicks 0
 scoreboard players set @a tag_TimeSec 0
 scoreboard players set @a tag_TimeTotal 0
+scoreboard players set @a tag_ScoreCopy 0
 scoreboard players set @a tag_Tag 0
 
 execute as @r at @s run function tag:newrunner
