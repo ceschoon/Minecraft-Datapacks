@@ -9,7 +9,9 @@ gamerule naturalRegeneration true
 gamemode survival @a
 
 # Init scoreboard variables
+# Note: 6000 ticks of prep time = 5 minutes
 scoreboard players set @a ls_On 1
+scoreboard players set @a ls_PrepTime 6000
 
 # Kill all armorstands
 kill @e[type=armor_stand]
@@ -26,12 +28,6 @@ execute unless entity @r[team=team1] unless entity @r[team=team2] run function t
 
 # Spread Players in teams
 spreadplayers ~ ~ 200 200 true @a
-execute as @a[team=team1] at @s run spawnpoint @s ~ ~2 ~
-execute as @a[team=team2] at @s run spawnpoint @s ~ ~2 ~
-
-# Place lodestone at the feet of a random player in each team
-execute as @r[team=team1] at @s run function lodestones:placelodestone1
-execute as @r[team=team2] at @s run function lodestones:placelodestone2
 
 # Effects
 effect clear @a
