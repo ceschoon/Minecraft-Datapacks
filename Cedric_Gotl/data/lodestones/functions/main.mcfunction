@@ -4,25 +4,31 @@
 scoreboard players remove @a[scores={ls_PrepTime=0..}] ls_PrepTime 1
 
 # warn players of remaining time before game starts
-execute if entity @a[scores={ls_PrepTime=1200}] run tellraw @a [{"text":"WARNING: One minute left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=600}] run tellraw @a [{"text":"WARNING: 30 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=200}] run tellraw @a [{"text":"WARNING: 10 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=180}] run tellraw @a [{"text":"WARNING: 9 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=160}] run tellraw @a [{"text":"WARNING: 8 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=140}] run tellraw @a [{"text":"WARNING: 7 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=120}] run tellraw @a [{"text":"WARNING: 6 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=100}] run tellraw @a [{"text":"WARNING: 5 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=80}] run tellraw @a [{"text":"WARNING: 4 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=60}] run tellraw @a [{"text":"WARNING: 3 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=40}] run tellraw @a [{"text":"WARNING: 2 seconds left before lodestone placement!","color":"gold"}]
-execute if entity @a[scores={ls_PrepTime=20}] run tellraw @a [{"text":"WARNING: 1 seconds left before lodestone placement!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=1200}] run tellraw @a [{"text":"WARNING: One minute left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=600}] run tellraw @a [{"text":"WARNING: 30 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=200}] run tellraw @a [{"text":"WARNING: 10 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=180}] run tellraw @a [{"text":"WARNING: 9 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=160}] run tellraw @a [{"text":"WARNING: 8 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=140}] run tellraw @a [{"text":"WARNING: 7 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=120}] run tellraw @a [{"text":"WARNING: 6 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=100}] run tellraw @a [{"text":"WARNING: 5 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=80}] run tellraw @a [{"text":"WARNING: 4 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=60}] run tellraw @a [{"text":"WARNING: 3 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=40}] run tellraw @a [{"text":"WARNING: 2 seconds left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=20}] run tellraw @a [{"text":"WARNING: 1 seconds left before lodestones are automatically placed!","color":"gold"}]
+
+# place lodestone where banner is grounded
+execute as @a[scores={ls_On=1,ls_PrepTime=0..,ls_LsPlaced=0},team=team1] at @s if block ~ ~ ~ lime_banner run function lodestones:placelodestone1
+execute as @a[scores={ls_On=1,ls_PrepTime=0..,ls_LsPlaced=0},team=team1] at @s if block ~ ~ ~ lime_banner run scoreboard players set @a[team=team1] ls_LsPlaced 1
+execute as @a[scores={ls_On=1,ls_PrepTime=0..,ls_LsPlaced=0},team=team2] at @s if block ~ ~ ~ red_banner run function lodestones:placelodestone2
+execute as @a[scores={ls_On=1,ls_PrepTime=0..,ls_LsPlaced=0},team=team2] at @s if block ~ ~ ~ red_banner run scoreboard players set @a[team=team2] ls_LsPlaced 1
 
 # start actual game at the end of prep time
 execute as @a[scores={ls_PrepTime=0}] at @s run give @s compass
 execute as @a[scores={ls_PrepTime=0},team=team1] at @s run spawnpoint @s ~ ~2 ~
 execute as @a[scores={ls_PrepTime=0},team=team2] at @s run spawnpoint @s ~ ~2 ~
-execute as @r[scores={ls_PrepTime=0},team=team1] at @s run function lodestones:placelodestone1
-execute as @r[scores={ls_PrepTime=0},team=team2] at @s run function lodestones:placelodestone2
+execute as @r[scores={ls_PrepTime=0,ls_LsPlaced=0},team=team1] at @s run function lodestones:placelodestone1
+execute as @r[scores={ls_PrepTime=0,ls_LsPlaced=0},team=team2] at @s run function lodestones:placelodestone2
 
 # compass
 execute if entity @a[scores={ls_On=1,ls_PrepTime=..0}] run function lodestones:compassdetect

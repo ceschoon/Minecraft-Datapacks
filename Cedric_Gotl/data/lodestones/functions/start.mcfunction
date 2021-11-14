@@ -12,6 +12,11 @@ gamemode survival @a
 # Note: 6000 ticks of prep time = 5 minutes
 scoreboard players set @a ls_On 1
 scoreboard players set @a ls_PrepTime 6000
+scoreboard players set @a ls_LsPlaced 0
+scoreboard players set @a ls_Kills 0
+scoreboard players set @a ls_KilledBy1 0
+scoreboard players set @a ls_KilledBy2 0
+scoreboard players set @a ls_DeathCount 0
 
 # Kill all armorstands
 kill @e[type=armor_stand]
@@ -37,5 +42,7 @@ effect give @a saturation 10 10
 
 # Starter Items
 clear @a
+give @r[team=team1] lime_banner
+give @r[team=team2] red_banner
 execute as @a at @s run function lodestones:givestarterset
 
