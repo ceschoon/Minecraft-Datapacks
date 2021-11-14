@@ -7,5 +7,5 @@ tellraw @s [{"text":" When the game starts the players are spread on the map alo
 tellraw @s [" "]
 tellraw @s [{"text":" For the duration of the game, each player is randomly assigned a role/character. Each role comes with special abilities, items and an armor piece that signals the role to other players. The full list of roles is scout, knight, miner, tower and magician. The magician is the only character than can remove his armor piece in order to hide his true identity. ","color":"aqua"}]
 tellraw @s [" "]
-tellraw @s [{"text":" Right before the game starts, loot chests are randomly generated on the map in a little structure. They may contain useful items such as enderpearls, obsidian or wands. The wand is an item that can only be used by the magician and give him specific abilities. However, the magician can only carry a limited number of wands otherwise he recieves a weakness effect. ","color":"aqua"}]
+tellraw @s [{"text":" Right before the game starts, loot chests are randomly generated on the map, below y=60. They may contain useful items such as enderpearls, obsidian or wands. The wand is an item that can only be used by the magician and give him specific abilities. However, the magician can only carry a limited number of wands otherwise he recieves a weakness effect. ","color":"aqua"}]
 tellraw @s [" "]

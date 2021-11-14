@@ -4,7 +4,7 @@
 # is generated -> not necessary ?
 
 #effect give @s blindness 5
-spreadplayers ~ ~ 150 150 under 64 false @s
+spreadplayers ~ ~ 150 150 under 60 false @s
 
 # build structure
 
