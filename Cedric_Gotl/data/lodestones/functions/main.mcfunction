@@ -25,8 +25,6 @@ execute as @a[scores={ls_On=1,ls_PrepTime=0..,ls_LsPlaced=0},team=team2] at @s i
 
 # start actual game at the end of prep time
 execute as @a[scores={ls_PrepTime=0}] at @s run give @s compass
-execute as @a[scores={ls_PrepTime=0},team=team1] at @s run spawnpoint @s ~ ~2 ~
-execute as @a[scores={ls_PrepTime=0},team=team2] at @s run spawnpoint @s ~ ~2 ~
 execute as @r[scores={ls_PrepTime=0,ls_LsPlaced=0},team=team1] at @s run function lodestones:placelodestone1
 execute as @r[scores={ls_PrepTime=0,ls_LsPlaced=0},team=team2] at @s run function lodestones:placelodestone2
 
@@ -53,7 +51,11 @@ scoreboard players remove @a[scores={ls_Kills=1..}] ls_Kills 1
 scoreboard players remove @a[scores={ls_KilledBy1=1..}] ls_KilledBy1 1
 scoreboard players remove @a[scores={ls_KilledBy2=1..}] ls_KilledBy2 1
 
+# clear spawn area above lodestones
+execute at @e[type=armor_stand,name=team1] run fill ~ ~2 ~ ~ ~3 ~ air
+execute at @e[type=armor_stand,name=team2] run fill ~ ~2 ~ ~ ~3 ~ air
+
 # detect win
-execute at @e[type=armor_stand,name=team1] if entity @r[scores={ls_On=1,ls_PrepTime=..0}] unless block ~ ~-1 ~ lodestone run function lodestones:win2
-execute at @e[type=armor_stand,name=team2] if entity @r[scores={ls_On=1,ls_PrepTime=..0}] unless block ~ ~-1 ~ lodestone run function lodestones:win1
+execute at @e[type=armor_stand,name=team1] if entity @r[scores={ls_On=1}] unless block ~ ~-1 ~ lodestone run function lodestones:win2
+execute at @e[type=armor_stand,name=team2] if entity @r[scores={ls_On=1}] unless block ~ ~-1 ~ lodestone run function lodestones:win1
 

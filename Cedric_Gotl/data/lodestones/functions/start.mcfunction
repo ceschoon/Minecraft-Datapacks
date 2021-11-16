@@ -32,7 +32,12 @@ time set 0
 execute unless entity @r[team=team1] unless entity @r[team=team2] run function teams:dorandomteams2
 
 # Spread Players in teams
-spreadplayers ~ ~ 200 200 true @a
+spreadplayers ~ ~ 200 200 true @a[team=team1]
+spreadplayers ~ ~ 200 200 true @a[team=team2]
+execute at @r[team=team1] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"initteam1\"",CustomNameVisible:0}
+execute at @r[team=team2] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"initteam2\"",CustomNameVisible:0}
+execute at @r[team=team1] run spawnpoint @a[team=team1] ~ ~ ~
+execute at @r[team=team2] run spawnpoint @a[team=team2] ~ ~ ~
 
 # Effects
 effect clear @a
