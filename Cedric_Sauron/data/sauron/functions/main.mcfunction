@@ -20,6 +20,8 @@ execute as @a[scores={srn_deathcount=0,srn_trackpos=1}] at @s unless entity @s[s
 execute as @a[scores={srn_deathcount=1,srn_sound=1}] at @e[type=armor_stand,name=sauronpos] run playsound entity.wither.death master @a ~ ~ ~ 50.0 0.0
 execute as @a[scores={srn_deathcount=1,srn_particles=1}] at @e[type=armor_stand,name=sauronpos] run particle explosion_emitter ~ ~ ~ 0.05 0.05 0.05 1 1 normal
 execute as @a[scores={srn_deathcount=1,srn_lightning=1}] at @e[type=armor_stand,name=sauronpos] run summon lightning_bolt ~ ~ ~
+execute as @a[scores={srn_deathcount=5}] at @s run kill @e[type=armor_stand,name=sauronpos]
+execute as @a[scores={srn_deathcount=5}] at @s run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"sauronpos\"",CustomNameVisible:0}
 
 # Death detection
 scoreboard players set @a[scores={srn_deathcount=5}] srn_deathcount 0
@@ -31,3 +33,8 @@ scoreboard players set @a[scores={srn_deathcount=1}] srn_deathcount 2
 # Griefing
 execute at @a[scores={srn_griefing=1}] run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 dirt replace grass_block
 execute at @a[scores={srn_griefing=1}] run fill ~ ~-1 ~ ~ ~-1 ~ coarse_dirt replace dirt
+
+# Effect surrounding entities
+execute at @a[scores={srn_griefing=1}] run effect give @e[type=!player,distance=..5] poison 3 3
+execute at @a[scores={srn_griefing=1}] run effect give @a[scores={srn_griefing=0},distance=..5] poison 1
+
