@@ -24,7 +24,6 @@ scoreboard players set @a tag_distInBoat 0
 tellraw @a [{"text":"[Toggle gamemode]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tagrules:togglegamemode"},"hoverEvent":{"action":"show_text","value":{"text":"Change the game objective: keep the tag as long as possible or get rid of it"}}}]
 tellraw @a [{"text":"[Add rule no boats]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tagrules:setnoboats"},"hoverEvent":{"action":"show_text","value":{"text":"Tag rule: poison effect to players travelling by boat"}}}]
 tellraw @a [{"text":"[Add rule no tunnels]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tagrules:setnotunnels"},"hoverEvent":{"action":"show_text","value":{"text":"Tag rule: poison effect to players in 1 by 1 tunnels"}}}]
-tellraw @a [{"text":"[Add rule no towers]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tagrules:setnotowers"},"hoverEvent":{"action":"show_text","value":{"text":"Tag rule: poison effect to players building towers"}}}]
 tellraw @a [{"text":"[Add rule y limit]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tagrules:setylimit"},"hoverEvent":{"action":"show_text","value":{"text":"Tag rule: adventure mode above y=90"}}}]
 
 #say "Cedric Tag: reloaded tag rules"
