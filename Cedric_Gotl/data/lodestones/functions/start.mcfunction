@@ -42,7 +42,7 @@ effect give @a saturation 10 10
 
 # Starter Items
 clear @a
-give @r[team=team1] lime_banner
-give @r[team=team2] red_banner
+give @r[team=team1] lime_banner{display:{Name:"\"Place the banner on the block where you want your lodestone and stand on it!\""}}
+give @r[team=team2] red_banner{display:{Name:"\"Place the banner on the block where you want your lodestone and stand on it!\""}}
 execute as @a at @s run function lodestones:givestarterset
 
