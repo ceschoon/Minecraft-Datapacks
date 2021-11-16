@@ -55,6 +55,10 @@ scoreboard players remove @a[scores={ls_KilledBy2=1..}] ls_KilledBy2 1
 execute at @e[type=armor_stand,name=team1] run fill ~ ~2 ~ ~ ~3 ~ air
 execute at @e[type=armor_stand,name=team2] run fill ~ ~2 ~ ~ ~3 ~ air
 
+# tp players who died and have their spawn obstructed back op top of their lodestone
+execute at @e[type=armor_stand,name=mapcentre] as @a[team=team1,scores={ls_On=1,ls_DeathCount=5},distance=..16] run execute at @e[type=armor_stand,name=team1] run tp ~ ~ ~
+execute at @e[type=armor_stand,name=mapcentre] as @a[team=team2,scores={ls_On=1,ls_DeathCount=5},distance=..16] run execute at @e[type=armor_stand,name=team2] run tp ~ ~ ~
+
 # detect win
 execute at @e[type=armor_stand,name=team1] if entity @r[scores={ls_On=1}] unless block ~ ~-1 ~ lodestone run function lodestones:win2
 execute at @e[type=armor_stand,name=team2] if entity @r[scores={ls_On=1}] unless block ~ ~-1 ~ lodestone run function lodestones:win1

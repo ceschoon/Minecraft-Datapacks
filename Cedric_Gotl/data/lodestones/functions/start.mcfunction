@@ -25,6 +25,7 @@ kill @e[type=armor_stand]
 worldborder center ~ ~
 worldborder set 400
 setworldspawn ~ ~ ~
+summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"mapcentre\"",CustomNameVisible:0}
 time set 0
 
 # Fill teams randomly if teams have not been manually set up
