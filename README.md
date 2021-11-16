@@ -26,5 +26,3 @@ After "/reload" a menu appears in chat with the minigames. You can simply click 
 
 You can always end a game prematurely using the "/reload" command.
 
-(Outdated) More specific installation instructions are given in the "Notes.txt" file within each datapack's folder.
-
