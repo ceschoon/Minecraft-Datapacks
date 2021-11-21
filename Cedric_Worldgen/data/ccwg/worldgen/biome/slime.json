@@ -1,0 +1,38 @@
+{
+  "name": "ccwg:slime",
+  "surface_builder": "minecraft:grass",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "category": "plains",
+  "effects": {
+    "sky_color": 6465109,
+    "fog_color": 8636278,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "starts": [
+    "minecraft:village_plains",
+    "minecraft:pillager_outpost"
+  ],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:slime",
+        "weight": 100,
+        "minCount": 1,
+        "maxCount": 4
+      }
+    ]
+  },
+  "spawn_costs": {
+    "minecraft:slime": {
+      "energy_budget": 0.15,
+      "charge": 0.7
+    }
+  },
+  "carvers": {},
+  "features": []
+}
