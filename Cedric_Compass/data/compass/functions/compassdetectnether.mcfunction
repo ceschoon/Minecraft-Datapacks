@@ -6,8 +6,8 @@ execute if entity @p[scores={target=1},nbt={Dimension:"minecraft:the_nether"}] s
 execute if entity @p[scores={target=1},nbt={Dimension:"minecraft:the_nether"}] store result score @p[scores={target=1}] Z run data get entity @p[scores={target=1}] Pos[2] 1
 
 kill @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b},PickupDelay:40s}]
-execute at @a[scores={drop=1..}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:compass",Count:1b}}
-execute at @a[scores={drop=1..}] run give @s compass
+execute at @a[scores={drop=1..}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:compass",Count:1b,tag:{display:{Lore:["\"Dimension: Nether\""]}}}}
+#execute at @a[scores={drop=1..}] run give @s compass
 execute if entity @a[scores={drop=1..}] run scoreboard players set @a drop 0
 
 data merge entity @e[type=item,nbt={Item:{id:"minecraft:compass"}},limit=1] {Item:{tag:{LodestoneDimension:"minecraft:the_nether", LodestoneTracked:0b}}}

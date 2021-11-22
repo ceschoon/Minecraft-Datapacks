@@ -4,7 +4,7 @@
 # Detect compass drop and summon new compass -> is it really necessary ??
 kill @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b},PickupDelay:40s}]
 execute at @a[scores={drop=1..}] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:compass",Count:1b}}
-execute at @a[scores={drop=1..}] run give @s compass
+execute at @a[scores={drop=1..}] run give @s compass{display:{Lore:["\"Koth compass\""]}}
 execute if entity @a[scores={drop=1..}] run scoreboard players set @a drop 0
 data merge entity @e[type=item,nbt={Item:{id:"minecraft:compass"}},limit=1] {Item:{tag:{LodestoneDimension:"minecraft:overworld", LodestoneTracked:0b}}}
 
