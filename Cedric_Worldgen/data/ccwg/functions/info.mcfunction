@@ -1,3 +1,5 @@
 tellraw @s [" "]
 tellraw @s [{"text":" Worldgen Datapack: Info ","color":"aqua"}]
 tellraw @s [" "]
+tellraw @s [{"text":" (No description yet) ","color":"aqua"}]
+tellraw @s [" "]
