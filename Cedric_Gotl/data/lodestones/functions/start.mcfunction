@@ -22,8 +22,8 @@ scoreboard players set @a ls_DeathCount 0
 kill @e[type=armor_stand]
 
 # World Properties
-worldborder center ~ ~
-worldborder set 400
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 400
 setworldspawn ~ ~ ~
 summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"mapcentre\"",CustomNameVisible:0}
 time set 0

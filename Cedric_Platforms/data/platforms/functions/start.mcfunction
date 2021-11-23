@@ -21,8 +21,8 @@ gamerule naturalRegeneration false
 gamerule mobGriefing true
 
 # World
-worldborder center ~ ~
-worldborder set 1000000
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 1000000
 setworldspawn ~ 0 ~
 time set 0
 weather clear 999999

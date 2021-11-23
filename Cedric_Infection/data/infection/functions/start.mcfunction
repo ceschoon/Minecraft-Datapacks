@@ -16,8 +16,8 @@ gamemode survival @a
 time set 0
 
 # note: worldborder does not work well in nether/end
-worldborder center ~ ~
-worldborder set 400
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 400
 setworldspawn ~ ~ ~
 
 tp @a @s

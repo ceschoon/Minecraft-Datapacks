@@ -19,8 +19,8 @@ scoreboard objectives setdisplay list shot_NumCycles
 execute at @e[type=armor_stand,name=map_centre] run tp @s ~ ~ ~
 setworldspawn ~ ~ ~
 
-worldborder center ~ ~
-worldborder set 400
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 400
 
 gamerule keepInventory false
 gamerule mobGriefing false

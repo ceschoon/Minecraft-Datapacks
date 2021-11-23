@@ -20,8 +20,8 @@ clear @a
 give @a compass
 function tag:giverespawnset
 
-worldborder center ~ ~
-worldborder set 100
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 100
 setworldspawn ~ ~ ~
 
 spreadplayers ~ ~ 50 50 false @a

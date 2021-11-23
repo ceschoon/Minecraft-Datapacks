@@ -7,6 +7,7 @@
 
 tellraw @a [" "]
 tellraw @a [{"text":"=== Custom Dimensions ===","color":"gold","bold":true}]
+tellraw @a [{"text":"[Reset Worldborder]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function ccwg:resetworldborder"}}]
 tellraw @a [{"text":"[Tp Overworld]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpoverworld"}}]
 tellraw @a [{"text":"[Tp Nether]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpnether"}}]
 tellraw @a [{"text":"[Tp End]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpend"}}]

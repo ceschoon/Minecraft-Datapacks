@@ -26,8 +26,8 @@ kill @e[type=armor_stand]
 summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"hill\"",CustomNameVisible:0}
 
 # World
-worldborder center ~ ~
-worldborder set 1000000
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 1000000
 time set 0
 
 # Spread players + set spawn (world spawn too, should not be close to platform)

@@ -14,8 +14,8 @@ gamerule naturalRegeneration true
 
 time set 0
 
-worldborder center ~ ~
-worldborder set 1000000
+execute in minecraft:overworld run worldborder center ~ ~
+execute in minecraft:overworld run worldborder set 1000000
 setworldspawn ~ ~ ~
 
 execute as @a at @s run spawnpoint @s ~ ~ ~
