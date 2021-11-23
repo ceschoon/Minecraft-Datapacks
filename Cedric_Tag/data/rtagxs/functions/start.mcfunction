@@ -24,7 +24,9 @@ execute in minecraft:overworld run worldborder center ~ ~
 execute in minecraft:overworld run worldborder set 100
 setworldspawn ~ ~ ~
 
-spreadplayers ~ ~ 50 50 false @a
+# Spread Players (use dimroof variable from compass module)
+execute if entity @s[scores={dimroof=0}] run spreadplayers ~ ~ 50 50 false @a
+execute if entity @s[scores={dimroof=1}] run spreadplayers ~ ~ 50 50 under 127 false @a
 execute as @a at @s run spawnpoint @s ~ ~ ~
 
 scoreboard players set @a tag_rtagxs 1

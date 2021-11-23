@@ -32,9 +32,11 @@ time set 0
 # This is called only if both teams are empty
 execute unless entity @r[team=team1] unless entity @r[team=team2] run function teams:dorandomteams2
 
-# Spread Players in teams
-spreadplayers ~ ~ 200 200 true @a[team=team1]
-spreadplayers ~ ~ 200 200 true @a[team=team2]
+# Spread Players in teams (use dimroof variable from compass module)
+execute if entity @s[scores={dimroof=0}] run spreadplayers ~ ~ 200 200 true @a
+execute if entity @s[scores={dimroof=1}] run spreadplayers ~ ~ 200 200 under 127 true @a
+
+# Mark spawn location
 execute at @r[team=team1] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"initteam1\"",CustomNameVisible:0}
 execute at @r[team=team2] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"initteam2\"",CustomNameVisible:0}
 execute at @r[team=team1] run spawnpoint @a[team=team1] ~ ~ ~

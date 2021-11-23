@@ -157,8 +157,6 @@
     [],
     [
       "ccwg:sparse_dark_forest_vegetation",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin",
       "minecraft:spring_water",
       "minecraft:spring_lava"
     ],

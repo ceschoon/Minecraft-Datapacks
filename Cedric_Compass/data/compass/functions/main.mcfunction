@@ -13,3 +13,10 @@ execute as @a[nbt={Dimension:"minecraft:overworld"}] if entity @a[scores={target
 execute as @a[nbt={Dimension:"minecraft:the_nether"}] if entity @a[scores={target=1..}] run function compass:pointinnether
 execute as @a[nbt={Dimension:"minecraft:the_end"}] if entity @a[scores={target=1..}] run function compass:pointinend
 
+# Detect if the player is in a dimension with a roof (used to spreadplayers)
+
+scoreboard players set @a[nbt={Dimension:"minecraft:overworld"}] dimroof 0
+scoreboard players set @a[nbt={Dimension:"minecraft:the_nether"}] dimroof 1
+scoreboard players set @a[nbt={Dimension:"minecraft:the_end"}] dimroof 0
+
+

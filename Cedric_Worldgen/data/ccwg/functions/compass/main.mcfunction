@@ -15,3 +15,10 @@ execute as @a[nbt={Dimension:"ccwg:slime"}] if entity @a[scores={target=1..}] ru
 execute as @a[nbt={Dimension:"ccwg:void"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoid
 execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoidpopulated
 
+# Detect if the player is in a dimension with a roof (used to spreadplayers)
+
+scoreboard players set @a[nbt={Dimension:"ccwg:floating_islands"}] dimroof 0
+scoreboard players set @a[nbt={Dimension:"ccwg:slime"}] dimroof 0
+scoreboard players set @a[nbt={Dimension:"ccwg:void"}] dimroof 0
+scoreboard players set @a[nbt={Dimension:"ccwg:void_populated"}] dimroof 0
+

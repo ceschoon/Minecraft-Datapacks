@@ -46,6 +46,10 @@
           {
             "chance": 0.05,
             "feature": "minecraft:oak"
+          },
+          {
+            "chance": 0.01,
+            "feature": "minecraft:patch_pumpkin"
           }
         ],
         "default": "minecraft:patch_grass_plain"

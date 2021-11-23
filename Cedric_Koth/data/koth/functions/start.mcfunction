@@ -30,8 +30,11 @@ execute in minecraft:overworld run worldborder center ~ ~
 execute in minecraft:overworld run worldborder set 1000000
 time set 0
 
-# Spread players + set spawn (world spawn too, should not be close to platform)
-spreadplayers ~ ~ 300 300 false @a
+# Spread Players (use dimroof variable from compass module)
+execute if entity @s[scores={dimroof=0}] run spreadplayers ~ ~ 300 300 false @a
+execute if entity @s[scores={dimroof=1}] run spreadplayers ~ ~ 300 300 under 127 false @a
+
+# Set spawn (world spawn too, should not be close to platform)
 execute as @a at @s run spawnpoint @s ~ ~ ~
 execute at @r run setworldspawn ~ ~ ~
 
