@@ -1,9 +1,6 @@
 # Rng
 scoreboard players set @a[scores={koth_rng=100..}] koth_rng 0
 
-# Compass
-execute as @a[scores={koth_On=1}] run function koth:compassdetect
-
 # Reset platform (obsidian is looks better than bedrock)
 execute at @e[type=armor_stand,name=hill] run fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 obsidian
 

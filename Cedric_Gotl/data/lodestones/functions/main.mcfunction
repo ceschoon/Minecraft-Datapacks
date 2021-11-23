@@ -1,8 +1,5 @@
 #### Lodestones game: main function (executed every tick)
 
-# compass
-execute if entity @a[scores={ls_On=1}] run function lodestones:compassdetect
-
 # detect death and give respawn kit
 execute as @a[scores={ls_On=1,ls_DeathCount=5}] at @s run function lodestones:giverespawnset
 

@@ -1,6 +1,17 @@
 
-execute if entity @p[scores={target=1},nbt={Dimension:"ccwg:void"}] run function ccwg:compass/compassdetectvoid
-execute if entity @p[scores={target=1},nbt={Dimension:"ccwg:void_populated"}] run function ccwg:compass/compassdetectvoidpopulated
-execute if entity @p[scores={target=1},nbt={Dimension:"ccwg:slime"}] run function ccwg:compass/compassdetectslime
-execute if entity @p[scores={target=1},nbt={Dimension:"ccwg:floating_islands"}] run function ccwg:compass/compassdetectfloatingislands
+# Detect targeted players in the same dimension
+
+execute as @a[nbt={Dimension:"ccwg:floating_islands"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:floating_islands"}] run function compass:detect
+execute as @a[nbt={Dimension:"ccwg:slime"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:slime"}] run function compass:detect
+execute as @a[nbt={Dimension:"ccwg:void"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:void"}] run function compass:detect
+execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:void_populated"}] run function compass:detect
+
+# Point to targeted player if there is one
+# Note: we can also set the target scoreboard to a higher number in order to use the 
+# pointing functions without refreshing the target coordinates using a player's location
+
+execute as @a[nbt={Dimension:"ccwg:floating_islands"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinfloatingislands
+execute as @a[nbt={Dimension:"ccwg:slime"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinslime
+execute as @a[nbt={Dimension:"ccwg:void"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoid
+execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoidpopulated
 
