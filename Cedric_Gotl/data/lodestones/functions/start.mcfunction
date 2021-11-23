@@ -9,9 +9,9 @@ gamerule naturalRegeneration true
 gamemode survival @a
 
 # Init scoreboard variables
-# Note: 6000 ticks of prep time = 5 minutes
+# Note: 12000 ticks of prep time = 10 minutes
 scoreboard players set @a ls_On 1
-scoreboard players set @a ls_PrepTime 6000
+scoreboard players set @a ls_PrepTime 12000
 scoreboard players set @a ls_LsPlaced 0
 scoreboard players set @a ls_Kills 0
 scoreboard players set @a ls_KilledBy1 0

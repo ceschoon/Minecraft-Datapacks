@@ -4,7 +4,8 @@
 scoreboard players remove @a[scores={ls_PrepTime=0..}] ls_PrepTime 1
 
 # warn players of remaining time before game starts
-execute if entity @a[scores={ls_PrepTime=1200}] run tellraw @a [{"text":"WARNING: One minute left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=6000}] run tellraw @a [{"text":"WARNING: 5 minutes left before lodestones are automatically placed!","color":"gold"}]
+execute if entity @a[scores={ls_PrepTime=1200}] run tellraw @a [{"text":"WARNING: 1 minute left before lodestones are automatically placed!","color":"gold"}]
 execute if entity @a[scores={ls_PrepTime=600}] run tellraw @a [{"text":"WARNING: 30 seconds left before lodestones are automatically placed!","color":"gold"}]
 execute if entity @a[scores={ls_PrepTime=200}] run tellraw @a [{"text":"WARNING: 10 seconds left before lodestones are automatically placed!","color":"gold"}]
 execute if entity @a[scores={ls_PrepTime=180}] run tellraw @a [{"text":"WARNING: 9 seconds left before lodestones are automatically placed!","color":"gold"}]
