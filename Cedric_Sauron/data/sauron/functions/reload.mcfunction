@@ -1,5 +1,3 @@
-# Compass Module reload
-# Credits to the author of the huntpack-e1750 datapack
 
 scoreboard objectives remove srn_deathcount
 scoreboard objectives remove srn_timer
@@ -24,7 +22,5 @@ scoreboard players set @a srn_sound 0
 scoreboard players set @a srn_particles 0
 scoreboard players set @a srn_lightning 0
 scoreboard players set @a srn_griefing 0
-
-summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"sauronpos\"",CustomNameVisible:0}
 
 #say "Cedric Sauron: reloaded"

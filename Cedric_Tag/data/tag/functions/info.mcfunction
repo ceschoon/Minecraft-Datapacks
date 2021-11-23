@@ -11,4 +11,6 @@ tellraw @s [{"text":" In the third variant (mini) the map is only 100x100 blocks
 tellraw @s [" "]
 tellraw @s [{"text":" Each player gets a compass to track the runner. You must drop the compass on the ground to record the current location of the runner. You need to drop the compass each time you want to update his position. ","color":"aqua"}]
 tellraw @s [" "]
+tellraw @s [{"text":" All variants of the tag game can be played in one of two gamemodes: The first consists in keeping the tag for as long as possible and in the second you must get rid of the tag as quick as you can. The winner in the second gamemode (simple tag) is the last player tagged less than 20 minutes (or 10 depending on the variant).","color":"aqua"}]
+tellraw @s [" "]
 

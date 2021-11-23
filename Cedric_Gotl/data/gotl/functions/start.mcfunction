@@ -6,6 +6,11 @@ execute as @a run function gotlroles:assignrandomly
 execute as @r[team=team1] run function gotldungeons:generate
 execute as @r[team=team1] run function gotldungeons:generate
 execute as @r[team=team1] run function gotldungeons:generate
+execute as @r[team=team1] run function gotldungeons:generate
+execute as @r[team=team1] run function gotldungeons:generate
+
+execute as @r[team=team2] run function gotldungeons:generate
+execute as @r[team=team2] run function gotldungeons:generate
 execute as @r[team=team2] run function gotldungeons:generate
 execute as @r[team=team2] run function gotldungeons:generate
 execute as @r[team=team2] run function gotldungeons:generate

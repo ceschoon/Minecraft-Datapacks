@@ -4,8 +4,9 @@
 # Place lodestone
 setblock ~ ~-1 ~ lodestone
 
+spawnpoint @a[team=team2] ~ ~2 ~
+
 # Save position in scoreboard for the compasses to point to
-function compass:trackxyz
 execute store result score @a[team=team2] X run data get entity @s Pos[0] 1
 execute store result score @a[team=team2] Y run data get entity @s Pos[1] 1
 execute store result score @a[team=team2] Z run data get entity @s Pos[2] 1

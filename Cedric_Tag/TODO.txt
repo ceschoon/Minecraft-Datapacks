@@ -1,0 +1,2 @@
+>	Keep same team colors in simple tag gamemode
+>	Sort out the names: be more consistent + make simple tag the default gamemode?

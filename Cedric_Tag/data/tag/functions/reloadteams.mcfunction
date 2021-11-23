@@ -1,5 +1,6 @@
 # Currently no specific reload action to take besides those in base game "tag"
 
+scoreboard objectives remove tag_kbrunner
 scoreboard objectives remove tag_kbhunter1
 scoreboard objectives remove tag_kbhunter2
 scoreboard objectives remove tag_kbhunter3
@@ -9,6 +10,7 @@ scoreboard objectives remove tag_kbhunter6
 scoreboard objectives remove tag_kbhunter7
 scoreboard objectives remove tag_kbhunter8
 
+scoreboard objectives add tag_kbrunner killedByTeam.gold
 scoreboard objectives add tag_kbhunter1 killedByTeam.green
 scoreboard objectives add tag_kbhunter2 killedByTeam.dark_green
 scoreboard objectives add tag_kbhunter3 killedByTeam.blue
