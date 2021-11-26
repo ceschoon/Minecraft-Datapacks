@@ -11,7 +11,13 @@
     "sky_color": 6465109,
     "fog_color": 8636278,
     "water_color": 4159204,
-    "water_fog_color": 329011
+    "water_fog_color": 329011,
+    "particle": {
+      "options": {
+        "type": "spore_blossom_air"
+      },
+      "probability": 0.01
+    }
   },
   "starts": [
     "minecraft:village_plains",
