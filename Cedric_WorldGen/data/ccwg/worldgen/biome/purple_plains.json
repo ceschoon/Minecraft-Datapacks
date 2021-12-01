@@ -1,21 +1,16 @@
 {
-  "name": "ccwg:purple_plains",
-  "surface_builder": "minecraft:grass",
-  "depth": -0.1,
-  "scale": 0.3,
   "temperature": 0.7,
   "downfall": 0.8,
   "precipitation": "none",
   "category": "forest",
-  "player_spawn_friendly": true,
   "effects": {
     "sky_color": 13190267,
     "fog_color": 14245007,
     "water_color": 8470208,
     "water_fog_color": 3935847,
     "grass_color": 12550464,
-    "grass_color_modifier": "dark_forest",
     "foliage_color": 5333767,
+    "grass_color_modifier": "dark_forest",
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
@@ -29,9 +24,6 @@
       "probability": 0.001
     }
   },
-  "starts": [
-    "minecraft:mineshaft"
-  ],
   "spawners": {
     "monster": [
       {
@@ -138,8 +130,7 @@
   "features": [
     [],
     [
-      "minecraft:lake_water",
-      "minecraft:lake_lava"
+      "minecraft:lake_lava_surface"
     ],
     [],
     [],
@@ -148,12 +139,12 @@
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
-      "minecraft:ore_granite",
-      "minecraft:ore_diorite",
-      "minecraft:ore_andesite",
-      "minecraft:ore_coal",
-      "minecraft:ore_iron",
-      "minecraft:ore_gold",
+      "minecraft:ore_granite_lower",
+      "minecraft:ore_diorite_lower",
+      "minecraft:ore_andesite_lower",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_gold_lower",
       "minecraft:ore_redstone",
       "minecraft:ore_diamond",
       "minecraft:ore_lapis",
@@ -162,9 +153,11 @@
     ],
     [],
     [
-      "ccwg:sparse_dark_forest_vegetation",
       "minecraft:spring_water",
       "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:trees_birch_and_oak"
     ],
     []
   ]
