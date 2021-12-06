@@ -6,6 +6,7 @@ tellraw @a [{"text":"[Tp Overworld]","color":"green", "clickEvent":{"action":"ru
 tellraw @a [{"text":"[Tp Nether]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpnether"}}]
 tellraw @a [{"text":"[Tp End]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpend"}}]
 tellraw @a [{"text":"[Tp Floating Islands]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpfloatingislands"}}]
+tellraw @a [{"text":"[Tp Floating Nether]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpfloatingnether"}}]
 tellraw @a [{"text":"[Tp Slime]","color":"green", "clickEvent":{"action":"run_command","value":"/function ccwg:tpslime"}}]
 tellraw @a [" "]
 
