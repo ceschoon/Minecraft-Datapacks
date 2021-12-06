@@ -1,8 +1,4 @@
 {
-  "name": "ccwg:slime",
-  "surface_builder": "minecraft:grass",
-  "depth": 0.125,
-  "scale": 0.05,
   "temperature": 0.8,
   "downfall": 0.4,
   "precipitation": "none",
@@ -19,10 +15,6 @@
       "probability": 0.01
     }
   },
-  "starts": [
-    "minecraft:village_plains",
-    "minecraft:pillager_outpost"
-  ],
   "spawners": {
     "monster": [
       {
@@ -42,3 +34,4 @@
   "carvers": {},
   "features": []
 }
+
