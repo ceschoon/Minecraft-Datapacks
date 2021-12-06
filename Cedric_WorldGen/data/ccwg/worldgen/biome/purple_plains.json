@@ -12,10 +12,10 @@
     "foliage_color": 5333767,
     "grass_color_modifier": "dark_forest",
     "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
+      "sound": "minecraft:particle.soul_escape",
+      "tick_delay": 120,
+      "block_search_extent": 10,
+      "offset": 0
     },
     "particle": {
       "options": {
