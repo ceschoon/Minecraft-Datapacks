@@ -4,6 +4,7 @@
 execute as @a[nbt={Dimension:"ccwg:floating_islands"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:floating_islands"}] run function compass:detect
 execute as @a[nbt={Dimension:"ccwg:floating_nether"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:floating_nether"}] run function compass:detect
 execute as @a[nbt={Dimension:"ccwg:slime"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:slime"}] run function compass:detect
+execute as @a[nbt={Dimension:"ccwg:space"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:space"}] run function compass:detect
 execute as @a[nbt={Dimension:"ccwg:void"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:void"}] run function compass:detect
 execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target=1},nbt={Dimension:"ccwg:void_populated"}] run function compass:detect
 
@@ -14,6 +15,7 @@ execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target
 execute as @a[nbt={Dimension:"ccwg:floating_islands"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinfloatingislands
 execute as @a[nbt={Dimension:"ccwg:floating_nether"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinfloatingnether
 execute as @a[nbt={Dimension:"ccwg:slime"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinslime
+execute as @a[nbt={Dimension:"ccwg:space"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinspace
 execute as @a[nbt={Dimension:"ccwg:void"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoid
 execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target=1..}] run function ccwg:compass/pointinvoidpopulated
 
@@ -22,6 +24,7 @@ execute as @a[nbt={Dimension:"ccwg:void_populated"}] if entity @a[scores={target
 scoreboard players set @a[nbt={Dimension:"ccwg:floating_islands"}] dimroof 0
 scoreboard players set @a[nbt={Dimension:"ccwg:floating_nether"}] dimroof 0
 scoreboard players set @a[nbt={Dimension:"ccwg:slime"}] dimroof 0
+scoreboard players set @a[nbt={Dimension:"ccwg:space"}] dimroof 0
 scoreboard players set @a[nbt={Dimension:"ccwg:void"}] dimroof 0
 scoreboard players set @a[nbt={Dimension:"ccwg:void_populated"}] dimroof 0
 
