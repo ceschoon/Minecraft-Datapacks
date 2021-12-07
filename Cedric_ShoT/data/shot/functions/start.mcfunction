@@ -22,6 +22,9 @@ setworldspawn ~ ~ ~
 execute in minecraft:overworld run worldborder center ~ ~
 execute in minecraft:overworld run worldborder set 400
 
+# Tp all players to bring them in the correct dimension
+tp @a @s
+
 gamerule keepInventory false
 gamerule mobGriefing false
 gamerule doImmediateRespawn true

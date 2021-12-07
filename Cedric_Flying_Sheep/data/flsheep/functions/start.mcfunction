@@ -21,6 +21,9 @@ setworldspawn ~ 0 ~
 time set 18000
 weather clear 999999
 
+# Tp all players to bring them in the correct dimension
+tp @a @s
+
 # Generate map
 execute if entity @r[scores={flsheep_NumTeams=2}] run function flsheep:generatemap2
 execute if entity @r[scores={flsheep_NumTeams=4}] run function flsheep:generatemap4

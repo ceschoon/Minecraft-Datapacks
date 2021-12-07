@@ -24,6 +24,9 @@ execute in minecraft:overworld run worldborder center ~ ~
 execute in minecraft:overworld run worldborder set 100
 setworldspawn ~ ~ ~
 
+# Tp all players to bring them in the correct dimension
+tp @a @s
+
 # Spread Players (use dimroof variable from compass module)
 execute if entity @s[scores={dimroof=0}] run spreadplayers ~ ~ 50 50 false @a
 execute if entity @s[scores={dimroof=1}] run spreadplayers ~ ~ 50 50 under 127 false @a

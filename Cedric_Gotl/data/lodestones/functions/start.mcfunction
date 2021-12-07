@@ -21,6 +21,9 @@ scoreboard players set @a ls_DeathCount 0
 # Kill all armorstands
 kill @e[type=armor_stand]
 
+# Tp all players to bring them in the correct dimension
+tp @a @s
+
 # World Properties
 execute in minecraft:overworld run worldborder center ~ ~
 execute in minecraft:overworld run worldborder set 400

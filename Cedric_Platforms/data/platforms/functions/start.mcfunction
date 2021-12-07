@@ -27,6 +27,9 @@ setworldspawn ~ 0 ~
 time set 0
 weather clear 999999
 
+# Tp all players to bring them in the correct dimension
+tp @a @s
+
 # Generate map
 #function platforms:generatemap1
 #function platforms:generatemap2
