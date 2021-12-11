@@ -18,6 +18,9 @@ item replace entity @a[nbt={Dimension:"ccwg:void_populated"}] hotbar.0 with fire
 execute in ccwg:void run fill -2 63 -2 2 63 2 obsidian
 execute in ccwg:space run fill -2 63 -2 2 63 2 obsidian
 
+# Portals
+execute if entity @a[scores={ccwg_setup_portal=1..}] run function ccwg:portal_link
+
 # Extension of compass datapack to make it work with new dimensions
 function ccwg:compass/main
 
