@@ -7,5 +7,5 @@ execute at @e[type=armor_stand,name=ccwg_portal_void_populated,distance=..32] ru
 execute at @e[type=armor_stand,name=ccwg_portal_space,distance=..32] run particle enchant ~ ~ ~ 0.5 0.5 0.5 0.1 1
 execute at @e[type=armor_stand,name=ccwg_portal_slime,distance=..32] run particle spore_blossom_air ~ ~ ~ 0.5 0.5 0.5 0.1 1
 execute at @e[type=armor_stand,name=ccwg_portal_floating_islands,distance=..32] run particle crimson_spore ~ ~ ~ 0.5 0.5 0.5 0.1 1
-execute at @e[type=armor_stand,name=ccwg_portal_floating_nether,distance=..32] run particle ash ~ ~ ~ 0.5 0.5 0.5 0.1 1
+execute at @e[type=armor_stand,name=ccwg_portal_floating_nether,distance=..32] run particle white_ash ~1 ~1 ~1 0.5 0.5 0.5 0.01 1
 

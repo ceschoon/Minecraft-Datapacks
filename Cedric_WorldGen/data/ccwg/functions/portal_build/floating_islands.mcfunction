@@ -9,5 +9,5 @@ execute at @e[type=armor_stand,name=ccwg_portal,distance=..100] run summon armor
 
 ## Tp player to exact coordinates and kill temporary armor stand
 execute at @s run execute at @e[type=armor_stand,name=ccwg_portal,distance=..100] run tp @s ~ ~ ~
-kill @e[type=armor_stand,name=ccwg_portal,distance=..100]
+execute at @s run kill @e[type=armor_stand,name=ccwg_portal,distance=..100]
 

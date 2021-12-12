@@ -13,4 +13,8 @@ scoreboard objectives remove ccwg_portal_cooldown
 scoreboard objectives add ccwg_portal_cooldown dummy
 scoreboard players set @a ccwg_portal_cooldown 0
 
+scoreboard objectives remove ccwg_portal_sound_ambient
+scoreboard objectives add ccwg_portal_sound_ambient dummy
+scoreboard players set @a ccwg_portal_sound_ambient 0
+
 function ccwg:menu

@@ -36,3 +36,5 @@ execute if entity @s[scores={temp=7}] run scoreboard players set @s ccwg_setup_p
 execute if entity @s[scores={temp=8}] run scoreboard players set @s ccwg_setup_portal 8
 execute if entity @s[scores={temp=9}] run scoreboard players set @s ccwg_setup_portal 9
 
+execute if entity @s[scores={temp=1..}] run say "Detected portal"
+
