@@ -28,6 +28,11 @@ scoreboard players remove @a[scores={ccwg_portal_cooldown=1..}] ccwg_portal_cool
 ## I need this to remove remaining armor stand markers. Why are they not removed automatically?
 execute if entity @a[scores={ccwg_setup_portal=0}] run kill @e[type=armor_stand,name=ccwg_portal]
 
+## Portal remove effects if player stepped out of portal
+#execute as @a[scores={ccwg_portal_cooldown=1..}] at @s unless block ~ ~-1 ~ repeating_command_block run stopsound @s block minecraft:block.portal.trigger
+#execute as @a[scores={ccwg_portal_cooldown=1..}] at @s unless block ~ ~-1 ~ repeating_command_block run stopsound @s block minecraft:block.portal.travel
+#execute as @a[scores={ccwg_portal_cooldown=1..}] at @s unless block ~ ~-1 ~ repeating_command_block run effect clear @s nausea
+
 ## Extension of compass datapack to make it work with new dimensions
 function ccwg:compass/main
 

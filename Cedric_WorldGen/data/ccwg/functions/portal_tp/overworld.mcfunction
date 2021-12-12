@@ -1,6 +1,6 @@
 
 execute if entity @s[scores={ccwg_portal_cooldown=180}] run playsound minecraft:block.portal.trigger block @s ~ ~ ~
-execute if entity @s[scores={ccwg_portal_cooldown=90}] run playsound minecraft:block.portal.travel block @s ~ ~ ~
+execute if entity @s[scores={ccwg_portal_cooldown=80}] run playsound minecraft:block.portal.travel block @s ~ ~ ~
 
 execute if entity @s[scores={ccwg_portal_cooldown=0}] run effect give @s nausea 10 1 true
 execute if entity @s[scores={ccwg_portal_cooldown=0}] run scoreboard players set @s ccwg_portal_cooldown 200

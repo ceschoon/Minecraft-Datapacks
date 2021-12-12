@@ -26,6 +26,7 @@ execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ ancient_debris run score
 
 ## Summon armor stand and set score to trigger portal building
 execute if entity @s[scores={temp=1..}] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"ccwg_portal\"",CustomNameVisible:0}
+execute if entity @s[scores={temp=1..}] run playsound minecraft:block.end_portal.spawn block @s ~ ~ ~
 execute if entity @s[scores={temp=1}] run scoreboard players set @s ccwg_setup_portal 1
 execute if entity @s[scores={temp=2}] run scoreboard players set @s ccwg_setup_portal 2
 execute if entity @s[scores={temp=3}] run scoreboard players set @s ccwg_setup_portal 3
@@ -35,6 +36,4 @@ execute if entity @s[scores={temp=6}] run scoreboard players set @s ccwg_setup_p
 execute if entity @s[scores={temp=7}] run scoreboard players set @s ccwg_setup_portal 7
 execute if entity @s[scores={temp=8}] run scoreboard players set @s ccwg_setup_portal 8
 execute if entity @s[scores={temp=9}] run scoreboard players set @s ccwg_setup_portal 9
-
-execute if entity @s[scores={temp=1..}] run say "Detected portal"
 
