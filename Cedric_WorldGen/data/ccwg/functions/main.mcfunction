@@ -21,6 +21,7 @@ execute in ccwg:space run fill -2 63 -2 2 63 2 obsidian
 # Portals
 execute if entity @a[scores={ccwg_setup_portal=1..}] run function ccwg:portal_link
 execute as @a at @s run function ccwg:portal_detect
+execute as @a at @s run function ccwg:portal_particles
 scoreboard players remove @a[scores={ccwg_portal_cooldown=1..}] ccwg_portal_cooldown 1
 
 # Extension of compass datapack to make it work with new dimensions
