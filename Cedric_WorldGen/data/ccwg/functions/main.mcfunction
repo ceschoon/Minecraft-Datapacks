@@ -21,6 +21,7 @@ execute in ccwg:space run fill -2 63 -2 2 63 2 obsidian
 ## Portals
 execute if entity @a[scores={ccwg_setup_portal=1..}] run function ccwg:portal_link
 execute as @a[scores={ccwg_setup_portal=0}] at @s run function ccwg:portal_detect
+execute as @a at @s run function ccwg:portal_clear_armor_stands
 execute as @a at @s run function ccwg:portal_particles
 execute as @a at @s run function ccwg:portal_sound/main
 scoreboard players remove @a[scores={ccwg_portal_cooldown=1..}] ccwg_portal_cooldown 1
