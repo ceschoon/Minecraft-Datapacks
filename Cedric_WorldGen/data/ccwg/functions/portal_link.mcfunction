@@ -93,5 +93,5 @@ execute in ccwg:floating_nether as @a[nbt={Dimension:"ccwg:floating_nether"},sco
 execute in ccwg:floating_nether as @a[nbt={Dimension:"ccwg:floating_nether"},scores={ccwg_setup_portal=9}] at @s run function ccwg:portal_build/floating_nether
 
 ## Reset the scoreboard once the platform has been built
-execute as @a[scores={ccwg_setup_portal=1..}] at @s if block ~ ~-1 ~ command_block run scoreboard players set @s ccwg_setup_portal 0
+execute as @a[scores={ccwg_setup_portal=1..}] at @s if block ~ ~-1 ~ repeating_command_block run scoreboard players set @s ccwg_setup_portal 0
 

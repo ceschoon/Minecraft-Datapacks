@@ -9,3 +9,4 @@ execute if entity @s[nbt={Dimension:"ccwg:slime"}] run scoreboard players set @s
 execute if entity @s[nbt={Dimension:"ccwg:floating_islands"}] run scoreboard players set @s ccwg_setup_portal 8
 execute if entity @s[nbt={Dimension:"ccwg:floating_nether"}] run scoreboard players set @s ccwg_setup_portal 9
 
+say "Recorded dimension!"

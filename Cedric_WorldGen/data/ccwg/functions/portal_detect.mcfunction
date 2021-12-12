@@ -17,9 +17,9 @@ execute unless block ~1 ~-1 ~1 crying_obsidian run scoreboard players set @s tem
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ grass_block run scoreboard players set @s temp 1
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ netherrack run scoreboard players set @s temp 2
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ end_stone run scoreboard players set @s temp 3
-execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ air if predicate ccwg:is_wearing_elytra run scoreboard players set @s temp 5
-execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ air run scoreboard players set @s temp 4
-execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ crying_obsidian run scoreboard players set @s temp 6
+execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ glass if predicate ccwg:is_wearing_elytra run scoreboard players set @s temp 5
+execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ glass run scoreboard players set @s temp 4
+execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ netherite_block run scoreboard players set @s temp 6
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ slime_block run scoreboard players set @s temp 7
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ spawner{SpawnData:{entity:{id:"minecraft:cave_spider"}}} run scoreboard players set @s temp 8
 execute if entity @s[scores={temp=-1}] if block ~ ~-1 ~ ancient_debris run scoreboard players set @s temp 9
