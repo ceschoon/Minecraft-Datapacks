@@ -1,4 +1,7 @@
 
+effect give @a[scores={ccwg_setup_portal=1..}] slow_falling 1 1 true
+effect give @a[scores={ccwg_setup_portal=1..}] resistance 1 255 true
+
 execute in minecraft:overworld as @a[nbt={Dimension:"minecraft:overworld"},scores={ccwg_setup_portal=1}] at @s run function ccwg:portal_build/overworld
 execute in minecraft:overworld as @a[nbt={Dimension:"minecraft:overworld"},scores={ccwg_setup_portal=2}] at @s run function ccwg:portal_build/nether
 execute in minecraft:overworld as @a[nbt={Dimension:"minecraft:overworld"},scores={ccwg_setup_portal=3}] at @s run function ccwg:portal_build/end
