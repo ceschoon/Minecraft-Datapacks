@@ -1,0 +1,9 @@
+{"text":"Space dimension\\n\\n","color":"blue","underlined":true}
+{"text":"The most extreme type of void, where nothing can spawn at all.\\n\\n","underlined":false}
+#{"text":"The sky is completely dark and there is no day/\\n","color":"blue","underlined":false}
+#{"text":"night cycle.\\n","color":"blue","underlined":false}
+{"text":"An interesting feature is that 1 block travel-\\n","color":"blue","underlined":false}
+{"text":"led there amounts to 16 in the overworld. \\n\\n","color":"blue","underlined":false}
+{"text":"The portal is built with ","color":"blue","underlined":false}
+{"text":"block of netherite","color":"light_purple","underlined":false}
+{"text":".\\n","color":"blue","underlined":false}

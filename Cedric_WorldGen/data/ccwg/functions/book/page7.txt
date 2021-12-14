@@ -1,0 +1,5 @@
+{"text":"Void dimension (1)\\n\\n","color":"blue","underlined":true}
+{"text":"There are two variants of a void dimension based on the overworld type.","color":"blue","underlined":false}
+{"text":"The first is a pure void with nothing in it and can be accessed using ","color":"blue","underlined":false}
+{"text":"glass","color":"light_purple","underlined":false}
+{"text":" in the centre of the portal.\\n","color":"blue","underlined":false}

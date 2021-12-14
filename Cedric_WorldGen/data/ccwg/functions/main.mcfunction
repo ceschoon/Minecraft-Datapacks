@@ -14,10 +14,6 @@ execute at @a[nbt={Dimension:"ccwg:space"}] run effect give @e[distance=..128] s
 item replace entity @a[nbt={Dimension:"ccwg:void_populated"}] armor.chest with elytra
 item replace entity @a[nbt={Dimension:"ccwg:void_populated"}] hotbar.0 with firework_rocket
 
-## Platforms
-execute in ccwg:void run fill -2 63 -2 2 63 2 obsidian
-execute in ccwg:space run fill -2 63 -2 2 63 2 obsidian
-
 ## Portals
 execute if entity @a[scores={ccwg_setup_portal=1..}] run function ccwg:portal_link
 execute as @a[scores={ccwg_setup_portal=0}] at @s run function ccwg:portal_detect

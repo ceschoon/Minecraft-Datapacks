@@ -1,0 +1,7 @@
+{"text":"Parts of the text in [brackets] can be clicked to execute a command.\\n\\nMost, in ","color":"blue"}
+{"text":"green","color":"dark_green"}
+{"text":", can only be executed by players in creative mode, not to ruin the survival experience.","color":"blue"}
+{"text":"\\n\\nThose available in survival mode are highlighted in ","color":"blue"}
+{"text":"red","color":"red"}
+{"text":".\\n","color":"blue"}
+

@@ -1,0 +1,8 @@
+{"text":"Void dimension (2)\\n\\n","color":"blue","underlined":true}
+{"text":"This void dimension is populated with struc-\\n","color":"blue","underlined":false}
+{"text":"tures from the over-\\n","color":"blue","underlined":false}
+{"text":"world and you will permanently wear elytra to navigate the sky with ease.\\n\\n","color":"blue","underlined":false}
+{"text":"Its portal can also be build using ","color":"blue","underlined":false}
+{"text":"glass","color":"light_purple","underlined":false}
+{"text":", but you near to wear elytra to activate it.\\n","color":"blue","underlined":false}
+#{"text":"This could be used for an interesting skyblock experience...","color":"blue","underlined":false}

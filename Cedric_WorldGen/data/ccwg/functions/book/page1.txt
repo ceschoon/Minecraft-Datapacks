@@ -1,0 +1,11 @@
+{"text":"\\n\\n\\n"}
+{"text":"================\\n","color":"blue","bold":true,"obfuscated":true}
+{"text":"\\n"}
+{"text":"    The ultimate\\n","color":"blue","bold":true}
+{"text":"      guide to\\n","color":"blue","bold":true}
+{"text":"  interdimensional\\n","color":"blue","bold":true}
+{"text":"        travel\\n ","color":"blue","bold":true}
+{"text":"\\n"}
+{"text":"================\\n","color":"blue","bold":true,"obfuscated":true}
+{"text":"\\n"}
+
