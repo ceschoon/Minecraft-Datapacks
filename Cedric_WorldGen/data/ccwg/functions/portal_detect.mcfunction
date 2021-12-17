@@ -3,6 +3,9 @@ scoreboard objectives remove temp
 scoreboard objectives add temp dummy
 scoreboard players set @s temp -1
 
+## Check that player owns the Book in their inventory
+execute unless predicate ccwg:owns_book run scoreboard players set @s temp 0
+
 ## Detect portal frame
 execute unless block ~-1 ~-1 ~-1 crying_obsidian run scoreboard players set @s temp 0
 execute unless block ~-1 ~-1 ~ crying_obsidian run scoreboard players set @s temp 0
