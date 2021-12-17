@@ -15,6 +15,7 @@
 | **Cedric_Shot** | Share or Take: a game of trust and betrayals, plus a bit of man hunting... |
 | **Cedric_Flying_Sheep** | Bring sheep to your team's skybase using a leash and elytra |
 | **Cedric_Teams** | Shared module for team management |
+| **Cedric_WorldGen** | Experimenting with custom dimensions etc. |
 
 ## Installation
 
