@@ -2,6 +2,10 @@
 # effect glowing to all sane players
 effect give @a[scores={inf_On=1},team=sane] glowing 10
 
+# give food as reward for kills
+give @a[scores={inf_On=1,inf_Kills=1..}] cooked_beef 3
+scoreboard players remove @a[scores={inf_On=1,inf_Kills=1..}] inf_Kills 1
+
 # tell sane players when an infected is nearby + play sound
 execute as @a[team=sane,scores={inf_WarnDelay=60..}] at @s if entity @a[team=infected,distance=..30] run playsound minecraft:entity.zombie.infect master @s ~ ~ ~
 execute as @a[team=sane,scores={inf_WarnDelay=60..}] at @s if entity @a[team=infected,distance=..30] run tellraw @s [{"text":"An infected player is nearby...","color":"red"}]
