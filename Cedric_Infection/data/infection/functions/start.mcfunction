@@ -39,12 +39,23 @@ clear @a
 team empty infected
 team empty sane
 team join sane @a
-team join infected @s
+
+# One is an infected player (Unused -> start with a mole instead)
+#team join infected @s
+
+# All sane at the start but one of them is a mole whose goal is to kill his 
+# teammates and spread the "infection"
+scoreboard players set @a inf_Mole 0
+scoreboard players set @s inf_Mole 1
+item replace entity @s hotbar.8 with black_banner{display:{Lore:["\"Remove the banner from this slot to join the infected team.\""]},BlockEntityTag:{Patterns:[{Pattern:"sku",Color:13}]}} 1
+
 
 title @a title {"text":"Infection Game Starts Now!","color":"red"}
-title @a[team=sane] subtitle {"text":"You will become infected if you die","color":"red"}
+title @a[team=sane,scores={inf_Mole=0}] subtitle {"text":"You will become infected if you die","color":"red"}
+title @a[team=sane,scores={inf_Mole=1}] subtitle {"text":"You are a mole. Your goal is to kill your teammates.","color":"red"}
 title @a[team=infected] subtitle {"text":"You are infected","color":"red"}
-tellraw @a[team=sane] [{"text":"Infection Game Starts Now! You will become infected if you die","color":"red"}]
+tellraw @a[team=sane,scores={inf_Mole=0}] [{"text":"Infection Game Starts Now! You will become infected if you die","color":"red"}]
+tellraw @a[team=sane,scores={inf_Mole=1}] [{"text":"Infection Game Starts Now! You are a mole. Your goal is to kill your teammates.","color":"red"}]
 tellraw @a[team=infected] [{"text":"Infection Game Starts Now! You are infected","color":"red"}]
 
 
