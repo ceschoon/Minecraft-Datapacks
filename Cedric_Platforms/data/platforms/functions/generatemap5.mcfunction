@@ -6,63 +6,53 @@ execute at @s run summon armor_stand ~ 201 ~ {Invisible:1,Marker:1,CustomName:"\
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
 
 # Build emerald platform 1
-spreadplayers ~ ~-10 0 5 false @s
-execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"emerald1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 200 ~-10 {Invisible:1,Marker:1,CustomName:"\"emerald1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=emerald1] run function platforms:buildemerald
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build emerald platform 2
-spreadplayers ~ ~10 0 5 false @s
-execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"emerald2\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 200 ~10 {Invisible:1,Marker:1,CustomName:"\"emerald2\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=emerald2] run function platforms:buildemerald
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build villager platform 1
-spreadplayers ~-10 ~ 0 5 false @s
-execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~-10 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
 execute at @e[type=armor_stand,name=villager1] run function platforms:buildvillager
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build villager platform 2
-spreadplayers ~10 ~ 0 5 false @s
-execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager2\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~10 200 ~ {Invisible:1,Marker:1,CustomName:"\"villager2\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=villager2] run function platforms:summonvillager
 execute at @e[type=armor_stand,name=villager2] run function platforms:buildvillager
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build cannon platform 1
-spreadplayers ~-45 ~ 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"cannon1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~-45 204 ~ {Invisible:1,Marker:1,CustomName:"\"cannon1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=cannon1] run function platforms:buildmagma
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build cannon platform 2
-spreadplayers ~45 ~ 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"cannon2\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~45 204 ~ {Invisible:1,Marker:1,CustomName:"\"cannon2\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=cannon2] run function platforms:buildmagma
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team1 platform
-spreadplayers ~-20 ~40 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"team1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~-20 204 ~40 {Invisible:1,Marker:1,CustomName:"\"team1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=team1] run function platforms:buildteam1
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team2 platform
-spreadplayers ~20 ~40 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"team2\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~20 204 ~40 {Invisible:1,Marker:1,CustomName:"\"team2\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=team2] run function platforms:buildteam2
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team3 platform
-spreadplayers ~-20 ~-40 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"team3\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~-20 204 ~-40 {Invisible:1,Marker:1,CustomName:"\"team3\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=team3] run function platforms:buildteam3
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team4 platform
-spreadplayers ~20 ~-40 0 5 false @s
-execute at @s run summon armor_stand ~ 204 ~ {Invisible:1,Marker:1,CustomName:"\"team4\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~20 204 ~-40 {Invisible:1,Marker:1,CustomName:"\"team4\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=team4] run function platforms:buildteam4
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
