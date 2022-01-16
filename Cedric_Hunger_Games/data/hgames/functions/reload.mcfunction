@@ -19,7 +19,7 @@ scoreboard players set @a hgames_On 0
 scoreboard players set @a hgames_DeathCount 0
 scoreboard players set @a hgames_TimeTicks 0
 scoreboard players set @a hgames_LootDropDelay 0
-scoreboard players set @s hgames_WarnDelay 0
+scoreboard players set @a hgames_WarnDelay 0
 scoreboard players set @a hgames_Kills 0
 scoreboard players set @a hgames_Score 0
 

@@ -16,11 +16,11 @@ execute as @r[scores={hgames_TimeTicks=180}] at @s run title @a title {"text":"1
 execute as @r[scores={hgames_TimeTicks=200}] at @s run title @a title {"text":"Go!","color":"gold"}
 
 # loot drops
-scoreboard players set @a[scores={hgames_LootDropDelay=2400..}] hgames_LootDropDelay 0
+scoreboard players set @a[scores={hgames_LootDropDelay=3600..}] hgames_LootDropDelay 0
 execute if entity @a[scores={hgames_LootDropDelay=0}] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"lootdrop\"",CustomNameVisible:0}
 execute if entity @a[scores={hgames_LootDropDelay=0}] run spreadplayers ~ ~ 150 150 false @e[type=armor_stand,name=lootdrop]
 execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run function hgames:genlootdrop
-execute if entity @a[scores={hgames_LootDropDelay=0}] run tellraw @a [{"text":"Loot as been dropped on the map! Look around for a beacon beam.","color":"green"}]
+execute if entity @a[scores={hgames_LootDropDelay=0}] run tellraw @a [{"text":"Loot has been dropped on the map! Look around for a beacon beam.","color":"green"}]
 execute if entity @a[scores={hgames_LootDropDelay=5}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
 execute if entity @a[scores={hgames_LootDropDelay=10}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
 execute if entity @a[scores={hgames_LootDropDelay=15}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
@@ -39,6 +39,7 @@ execute if entity @a[scores={hgames_LootDropDelay=2180}] at @e[type=armor_stand,
 execute if entity @a[scores={hgames_LootDropDelay=2200}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~4 ~
 execute if entity @a[scores={hgames_LootDropDelay=2220}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~4 ~
 execute if entity @a[scores={hgames_LootDropDelay=2240}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~2 ~
+execute if entity @a[scores={hgames_LootDropDelay=2399}] run kill @e[type=armor_stand,name=lootdrop]
 
 # reward for kills
 scoreboard players add @a[scores={hgames_Kills=1..}] hgames_Score 10
@@ -58,11 +59,12 @@ item replace entity @a hotbar.8 with potion{Potion:"strong_harming",display:{Lor
 # increment time
 scoreboard players add @a hgames_TimeTicks 1
 scoreboard players add @a hgames_LootDropDelay 1
+scoreboard players add @a hgames_WarnDelay 1
 
 # tell players when another is nearby + play sound
-execute as @a[scores={hgames_WarnDelay=60..}] at @s if entity @a[distance=..20] run playsound minecraft:entity.zombie.infect master @s ~ ~ ~
-execute as @a[scores={hgames_WarnDelay=60..}] at @s if entity @a[distance=..20] run tellraw @s [{"text":"A player is nearby...","color":"red"}]
-execute as @a[scores={hgames_WarnDelay=60..}] at @s if entity @a[distance=..20] run scoreboard players set @s hgames_WarnDelay 0
+execute as @a[scores={hgames_WarnDelay=600..}] at @s if entity @a[distance=15..20] run playsound minecraft:entity.zombie.infect master @s ~ ~ ~
+execute as @a[scores={hgames_WarnDelay=600..}] at @s if entity @a[distance=15..20] run tellraw @s [{"text":"A player is nearby...","color":"red"}]
+execute as @a[scores={hgames_WarnDelay=600..}] at @s if entity @a[distance=15..20] run scoreboard players set @s hgames_WarnDelay 0
 
 # delay and reset death detection
 scoreboard players set @a[scores={hgames_DeathCount=5}] hgames_DeathCount 0
@@ -72,9 +74,10 @@ scoreboard players set @a[scores={hgames_DeathCount=2}] hgames_DeathCount 3
 scoreboard players set @a[scores={hgames_DeathCount=1}] hgames_DeathCount 2
 
 # spread players after death and reset spawn point (use dimroof variable from compass module)
-execute if entity @s[scores={dimroof=0}] run spreadplayers ~ ~ 200 200 false @a[scores={hgames_DeathCount=1}]
-execute if entity @s[scores={dimroof=1}] run spreadplayers ~ ~ 200 200 under 127 false @a[scores={hgames_DeathCount=1}]
-execute as @a[scores={hgames_DeathCount=1}] at @s run spawnpoint @s ~ ~ ~
+execute if entity @a[scores={dimroof=0}] run spreadplayers ~ ~ 200 200 false @a[scores={hgames_DeathCount=2}]
+execute if entity @a[scores={dimroof=1}] run spreadplayers ~ ~ 200 200 under 127 false @a[scores={hgames_DeathCount=2}]
+execute as @a[scores={hgames_DeathCount=2}] at @s run spawnpoint @s ~ ~ ~
 
 # detect end of the game
-#execute if entity @a[scores={hgames_On=1}] unless entity @a[team=sane] run function infection:win
+execute as @a[scores={hgames_Score=100..}] run function hgames:win
+
