@@ -13,7 +13,7 @@ gamerule doDaylightCycle true
 gamerule naturalRegeneration true
 
 gamemode survival @a
-
+kill @e[type=armor_stand]
 time set 0
 
 execute in minecraft:overworld run worldborder center ~ ~
@@ -33,6 +33,7 @@ effect clear @a
 effect give @a resistance 10 255
 effect give @a regeneration 10 10
 effect give @a saturation 10 10
+effect give @a slowness 10 10
 
 clear @a
 # give nothing to start, the sane players must struggle to survive
