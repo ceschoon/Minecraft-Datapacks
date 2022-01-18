@@ -15,10 +15,10 @@ fill ~ ~1 ~2 ~ ~2 ~2 ladder[facing=south] replace air
 fill ~ ~1 ~-2 ~ ~2 ~-2 ladder[facing=north] replace air
 
 ## Chests with loot
-setblock ~1 ~3 ~ chest[facing=east]{LootTable:"hgames:chests/tier1_melee"}
-setblock ~-1 ~3 ~ chest[facing=west]{LootTable:"hgames:chests/tier1_melee"}
-setblock ~ ~3 ~1 chest[facing=south]{LootTable:"hgames:chests/tier1_melee"}
-setblock ~ ~3 ~-1 chest[facing=north]{LootTable:"hgames:chests/tier1_melee"}
+setblock ~1 ~3 ~ chest[facing=east]{LootTable:"hgames:chests/select_tier"}
+setblock ~-1 ~3 ~ chest[facing=west]{LootTable:"hgames:chests/select_tier"}
+setblock ~ ~3 ~1 chest[facing=south]{LootTable:"hgames:chests/select_tier"}
+setblock ~ ~3 ~-1 chest[facing=north]{LootTable:"hgames:chests/select_tier"}
 
 ## Summon invisible armorstand for targeting in commands
 #summon armor_stand ~ ~4 ~ {Invisible:1,Marker:1,CustomName:"\"lootdrop\"",CustomNameVisible:0}
