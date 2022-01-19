@@ -3,6 +3,8 @@ tellraw @s [{"text":" Hunger Games Datapack: Info ","color":"aqua"}]
 tellraw @s [" "]
 tellraw @s [{"text":" In this minigame, players are set loose on a small map and must kill each other for points.","color":"aqua"}]
 tellraw @s [" "]
+tellraw @s [{"text":" Weapons, food and other supplies are dropped every 3 minutes at a random location marked by a beacon beam. Hurry to get there before your adversaries! You have only 2 minutes before the supply drop vanishes...","color":"aqua"}]
+tellraw @s [" "]
 tellraw @s [{"text":" ","color":"aqua"}]
 tellraw @s [" "]
 

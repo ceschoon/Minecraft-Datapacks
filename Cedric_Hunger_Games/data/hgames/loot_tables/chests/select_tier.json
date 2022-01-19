@@ -5,8 +5,36 @@
 			"rolls": 1,
 			"entries": [
 				{
-				"type": "loot_table",
-				"name": "hgames:chests/tier1"
+					"type": "loot_table",
+					"name": "hgames:chests/tier1",
+					"conditions": [
+						{
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"hgames_TimeTicks": {
+									"min": 0,
+									"max": 17999
+								}
+							}
+						}
+					]
+				},
+				{
+					"type": "loot_table",
+					"name": "hgames:chests/tier2",
+					"conditions": [
+						{
+							"condition": "entity_scores",
+							"entity": "this",
+							"scores": {
+								"hgames_TimeTicks": {
+									"min": 18000,
+									"max": 999999
+								}
+							}
+						}
+					]
 				}
 			]
 		}

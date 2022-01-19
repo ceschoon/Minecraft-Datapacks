@@ -19,27 +19,39 @@ execute as @r[scores={hgames_TimeTicks=200}] at @s run title @a title {"text":"G
 scoreboard players set @a[scores={hgames_LootDropDelay=3600..}] hgames_LootDropDelay 0
 execute if entity @a[scores={hgames_LootDropDelay=0}] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"lootdrop\"",CustomNameVisible:0}
 execute if entity @a[scores={hgames_LootDropDelay=0}] run spreadplayers ~ ~ 150 150 false @e[type=armor_stand,name=lootdrop]
+execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run tp @e[type=armor_stand,name=lootdrop] ~ ~-1 ~
 execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run function hgames:genlootdrop
 execute if entity @a[scores={hgames_LootDropDelay=0}] run tellraw @a [{"text":"Loot has been dropped on the map! Look around for a beacon beam.","color":"green"}]
 execute if entity @a[scores={hgames_LootDropDelay=5}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
 execute if entity @a[scores={hgames_LootDropDelay=10}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
 execute if entity @a[scores={hgames_LootDropDelay=15}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
 
-# loot explosion
-execute if entity @a[scores={hgames_LootDropDelay=2000}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"10","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2020}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"9","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2040}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"8","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2060}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"7","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2080}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"6","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2100}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"5","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2120}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"4","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2140}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"3","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2160}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"2","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2180}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"1","color":"red"}
-execute if entity @a[scores={hgames_LootDropDelay=2200}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~4 ~
-execute if entity @a[scores={hgames_LootDropDelay=2220}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~4 ~
-execute if entity @a[scores={hgames_LootDropDelay=2240}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~2 ~
+# loot explosion + warning
+execute if entity @a[scores={hgames_LootDropDelay=2100}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2120}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2140}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2160}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2180}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2200}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2220}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2240}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2260}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2280}] at @e[type=armor_stand,name=lootdrop] run playsound minecraft:entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~
+execute if entity @a[scores={hgames_LootDropDelay=2100}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"10","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2120}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"9","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2140}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"8","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2160}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"7","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2180}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"6","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2200}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"5","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2220}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"4","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2240}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"3","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2260}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"2","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2280}] at @e[type=armor_stand,name=lootdrop] run title @a[distance=..16] title {"text":"1","color":"red"}
+execute if entity @a[scores={hgames_LootDropDelay=2300}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~5 ~
+execute if entity @a[scores={hgames_LootDropDelay=2320}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~4 ~
+execute if entity @a[scores={hgames_LootDropDelay=2340}] at @e[type=armor_stand,name=lootdrop] run summon tnt ~ ~3 ~
 execute if entity @a[scores={hgames_LootDropDelay=2399}] run kill @e[type=armor_stand,name=lootdrop]
+kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}}]
 
 # reward for kills
 scoreboard players add @a[scores={hgames_Kills=1..}] hgames_Score 10

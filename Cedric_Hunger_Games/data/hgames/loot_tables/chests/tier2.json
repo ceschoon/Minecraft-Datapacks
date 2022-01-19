@@ -9,12 +9,12 @@
 				{
 					"type": "loot_table",
 					"weight": 10,
-					"name": "hgames:chests/tier1_food"
+					"name": "hgames:chests/tier2_food"
 				},
 				{
 					"type": "loot_table",
 					"weight": 5,
-					"name": "hgames:chests/tier1_supplies"
+					"name": "hgames:chests/tier2_supplies"
 				}
 			]
 		},
@@ -27,17 +27,17 @@
 				{
 					"type": "loot_table",
 					"weight": 10,
-					"name": "hgames:chests/tier1_melee"
+					"name": "hgames:chests/tier2_melee"
 				},
 				{
 					"type": "loot_table",
 					"weight": 5,
-					"name": "hgames:chests/tier1_range"
+					"name": "hgames:chests/tier2_range"
 				},
 				{
 					"type": "loot_table",
 					"weight": 15,
-					"name": "hgames:chests/tier1_armor"
+					"name": "hgames:chests/tier2_armor"
 				}
 			]
 		}
