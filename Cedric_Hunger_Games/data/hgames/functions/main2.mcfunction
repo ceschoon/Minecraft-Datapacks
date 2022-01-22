@@ -53,9 +53,24 @@ execute if entity @a[scores={hgames_LootDropDelay=2340}] at @e[type=armor_stand,
 execute if entity @a[scores={hgames_LootDropDelay=2399}] run kill @e[type=armor_stand,name=lootdrop]
 kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}}]
 
+# falling anvils
+execute if entity @a[scores={hgames_LootDropDelay=0}] run function hgames:fallinganvil
+#execute if entity @a[scores={hgames_LootDropDelay=599}] run function hgames:fallinganvil
+execute if entity @a[scores={hgames_LootDropDelay=1199}] run function hgames:fallinganvil
+#execute if entity @a[scores={hgames_LootDropDelay=1799}] run function hgames:fallinganvil
+execute if entity @a[scores={hgames_LootDropDelay=2399}] run function hgames:fallinganvil
+#execute if entity @a[scores={hgames_LootDropDelay=2999}] run function hgames:fallinganvil
+execute if entity @a[scores={hgames_LootDropDelay=3599}] run function hgames:fallinganvil
+
 # summon lightning when trident hits a player
-execute at @e[type=husk] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
-execute at @a unless entity @a[distance=..5,nbt={Inventory:[{Slot:102b,id:"minecraft:netherite_chestplate",tag:{display:{Lore:['"The boomer´s safety jacket"']}}}]}] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
+scoreboard players set @a[scores={hgames_LightningDelay=10..}] hgames_LightningDelay 0
+execute at @e[type=husk] if entity @a[scores={hgames_LightningDelay=0}] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
+execute at @a[scores={hgames_LightningDelay=0}] unless entity @a[distance=..5,nbt={Inventory:[{Slot:102b,id:"minecraft:netherite_chestplate",tag:{display:{Lore:['"Wear this before throwing the trident"']}}}]}] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
+
+# effects to players wearing special armor pieces
+execute as @a[nbt={Inventory:[{Slot:100b,id:"minecraft:netherite_boots",tag:{display:{Lore:['"The water bender´s fancy boots"']}}}]}] at @s if block ~ ~ ~ water run effect give @s dolphins_grace 11
+execute as @a at @s unless entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:netherite_helmet",tag:{display:{Lore:['"The potion master´s helmet"']}}}]}] if entity @a[distance=..10,nbt={Inventory:[{Slot:103b,id:"minecraft:netherite_helmet",tag:{display:{Lore:['"The potion master´s helmet"']}}}]}] run effect give @s blindness 2
+execute as @a[nbt={ActiveEffects:[{Id:8b,Amplifier:0b}]}] run effect give @s jump_boost 480 5
 
 # reward for kills
 scoreboard players add @a[scores={hgames_Kills=1..}] hgames_Score 10
@@ -75,6 +90,7 @@ item replace entity @a hotbar.8 with potion{Potion:"strong_harming",display:{Lor
 # increment time
 scoreboard players add @a hgames_TimeTicks 1
 scoreboard players add @a hgames_LootDropDelay 1
+scoreboard players add @a hgames_LightningDelay 1
 scoreboard players add @a hgames_WarnDelay 1
 
 # tell players when another is nearby + play sound

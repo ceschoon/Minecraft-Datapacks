@@ -39,7 +39,7 @@
 				{
 					"type": "loot_table",
 					"name": "hgames:chests/tier3",
-					"weight": 3,
+					"weight": 5,
 					"conditions": [
 						{
 							"condition": "entity_scores",

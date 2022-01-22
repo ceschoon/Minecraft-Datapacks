@@ -25,6 +25,10 @@
 			"rolls": 1,
 			"entries": [
 				{
+					"type": "empty",
+					"weight": 10
+				},
+				{
 					"type": "loot_table",
 					"weight": 10,
 					"name": "hgames:chests/tier1_melee"
