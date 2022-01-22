@@ -1,0 +1,47 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/tier3_food"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "hgames:chests/tier3_supplies"
+				}
+			]
+		},
+		
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/tier3_melee"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "hgames:chests/tier3_range"
+				},
+				{
+					"type": "loot_table",
+					"weight": 15,
+					"name": "hgames:chests/tier3_armor"
+				}
+			]
+		}
+		
+		
+	]
+}

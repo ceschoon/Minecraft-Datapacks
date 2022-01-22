@@ -53,6 +53,10 @@ execute if entity @a[scores={hgames_LootDropDelay=2340}] at @e[type=armor_stand,
 execute if entity @a[scores={hgames_LootDropDelay=2399}] run kill @e[type=armor_stand,name=lootdrop]
 kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}}]
 
+# summon lightning when trident hits a player
+execute at @e[type=husk] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
+execute at @a unless entity @a[distance=..5,nbt={Inventory:[{Slot:102b,id:"minecraft:netherite_chestplate",tag:{display:{Lore:['"The boomer´s safety jacket"']}}}]}] if entity @e[type=trident,distance=..4] run summon lightning_bolt ~ ~ ~
+
 # reward for kills
 scoreboard players add @a[scores={hgames_Kills=1..}] hgames_Score 10
 scoreboard players remove @a[scores={hgames_Kills=1..}] hgames_Kills 1

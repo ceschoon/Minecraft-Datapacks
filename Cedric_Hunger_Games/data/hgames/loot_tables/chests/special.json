@@ -1,0 +1,34 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/special_air"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/special_boom"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/special_fire"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "hgames:chests/special_water"
+				}
+			]
+		}
+		
+		
+	]
+}
