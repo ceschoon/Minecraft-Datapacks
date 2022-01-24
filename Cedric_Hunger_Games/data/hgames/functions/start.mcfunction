@@ -13,6 +13,7 @@ gamerule keepInventory false
 gamerule doImmediateRespawn true
 gamerule doDaylightCycle true
 gamerule naturalRegeneration true
+gamerule doMobSpawning false
 
 gamemode survival @a
 kill @e[type=armor_stand]

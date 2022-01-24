@@ -18,8 +18,9 @@ execute as @r[scores={hgames_TimeTicks=200}] at @s run title @a title {"text":"G
 # loot drops
 scoreboard players set @a[scores={hgames_LootDropDelay=3600..}] hgames_LootDropDelay 0
 execute if entity @a[scores={hgames_LootDropDelay=0}] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"lootdrop\"",CustomNameVisible:0}
+execute if entity @a[scores={hgames_LootDropDelay=0}] run summon armor_stand ~ ~ ~ {Invisible:1,Marker:1,CustomName:"\"lootdrop\"",CustomNameVisible:0}
 execute if entity @a[scores={hgames_LootDropDelay=0}] run spreadplayers ~ ~ 150 150 false @e[type=armor_stand,name=lootdrop]
-execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run tp @e[type=armor_stand,name=lootdrop] ~ ~-1 ~
+execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run tp @e[type=armor_stand,name=lootdrop,distance=..1] ~ ~-1 ~
 execute if entity @a[scores={hgames_LootDropDelay=0}] at @e[type=armor_stand,name=lootdrop] run function hgames:genlootdrop
 execute if entity @a[scores={hgames_LootDropDelay=0}] run tellraw @a [{"text":"Loot has been dropped on the map! Look around for a beacon beam.","color":"green"}]
 execute if entity @a[scores={hgames_LootDropDelay=5}] run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~
@@ -111,5 +112,5 @@ execute if entity @a[scores={dimroof=1}] run spreadplayers ~ ~ 200 200 under 127
 execute as @a[scores={hgames_DeathCount=2}] at @s run spawnpoint @s ~ ~ ~
 
 # detect end of the game
-execute as @a[scores={hgames_Score=100..}] run function hgames:win
+execute as @a[scores={hgames_Score=200..}] run function hgames:win
 

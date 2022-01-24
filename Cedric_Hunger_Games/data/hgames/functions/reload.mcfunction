@@ -32,5 +32,8 @@ tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command
 tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function hgames:start"},"hoverEvent":{"action":"show_text","value":{"text":""}}}]
 tellraw @a [" "]
 
+# reset particular game rules to the default value
+gamerule doMobSpawning true
+
 #say "Cedric Hunger Games: reloaded!"
 
