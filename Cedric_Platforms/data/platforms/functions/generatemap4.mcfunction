@@ -28,17 +28,17 @@ execute at @e[type=armor_stand,name=villager2] run function platforms:buildvilla
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build cannon platform 1
-execute at @s run summon armor_stand ~ 202 ~30 {Invisible:1,Marker:1,CustomName:"\"cannon1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 202 ~35 {Invisible:1,Marker:1,CustomName:"\"cannon1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=cannon1] run function platforms:buildmagma
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build cannon platform 2
-execute at @s run summon armor_stand ~ 205 ~-60 {Invisible:1,Marker:1,CustomName:"\"cannon2\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 205 ~-70 {Invisible:1,Marker:1,CustomName:"\"cannon2\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=cannon2] run function platforms:buildmagma
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build team1 platform
-execute at @s run summon armor_stand ~ 202 ~-30 {Invisible:1,Marker:1,CustomName:"\"team1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~ 202 ~-35 {Invisible:1,Marker:1,CustomName:"\"team1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=team1] run function platforms:buildteam1
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
