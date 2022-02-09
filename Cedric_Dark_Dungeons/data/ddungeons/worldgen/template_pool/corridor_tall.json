@@ -1,0 +1,24 @@
+{
+	"name": "ddungeons:corridor_tall",
+	"fallback": "ddungeons:terminator",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "ddungeons:corridor_tall_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "ddungeons:corridor_tall_2",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

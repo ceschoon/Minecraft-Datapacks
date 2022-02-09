@@ -1,0 +1,4 @@
+
+## In command blocks (rslamp)
+execute unless entity @e[type=armor_stand,name=rslamp,distance=..3] run summon armor_stand ~ ~2.4 ~ {Invisible:1,Marker:1,CustomName:"\"rslamp\"",CustomNameVisible:0}
+

@@ -1,0 +1,15 @@
+{
+	"name": "ddungeons:corridor_small",
+	"fallback": "ddungeons:terminator",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "ddungeons:corridor_small_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}
