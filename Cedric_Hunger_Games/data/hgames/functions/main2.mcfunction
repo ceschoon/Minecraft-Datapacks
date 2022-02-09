@@ -1,6 +1,6 @@
 
 # effect mining fatigue to all players
-effect give @a mining_fatigue 20 1
+#effect give @a mining_fatigue 20 1
 
 # countdown at start
 execute as @r[scores={hgames_TimeTicks=0}] at @s run title @a title {"text":"10","color":"gold"}
