@@ -40,10 +40,10 @@ int main(int argc, char **argv)
 	int radius = stoi(argv[4]);
 	string mcfilename = argv[5];
 	
+	//////////////////////////////////////////////////////////////
+	
 	string dir_name = dim_name_without_colon(dimension) + "_" + to_string(coordx) + "_" + to_string(coordz) + "_" + to_string(radius);
 	int sysres = system(("mkdir -p " + dir_name).c_str());
-	
-	//////////////////////////////////////////////////////////////
 	
 	stringstream xyz_condition;
 	xyz_condition << "x=" << coordx-radius;
@@ -72,15 +72,17 @@ int main(int argc, char **argv)
 		if (line_in.size()==0) {mcfile_out << endl; continue;}
 		else if (line_in[0]=='#') {mcfile_out << line_in << endl; continue;}
 		
+		bool found_function_keyword = false;
+		
 		// always copy first character
 		int i=0; line_out += line_in[0];
-		
 		
 		while (i<line_in.size()-1)
 		{	
 			// copy character anyway
 			i++; line_out += line_in[i];
 			
+			////////////////////////////////////////
 			bool found_selector = false;
 			
 			if (line_in[i-1]=='@' && line_in[i]=='a') found_selector = true;
@@ -119,6 +121,33 @@ int main(int argc, char **argv)
 					line_out += nbt_condition.str();
 					line_out += "]";
 				}
+			}
+			
+			////////////////////////////////////////
+			// function keyword stuff
+			
+			if (i>=7) 
+			{
+				if (line_in[i-7]=='f' && 
+				    line_in[i-6]=='u' && 
+				    line_in[i-5]=='n' && 
+				    line_in[i-4]=='c' && 
+				    line_in[i-3]=='t' && 
+				    line_in[i-2]=='i' && 
+				    line_in[i-1]=='o' && 
+				    line_in[i-0]=='n') 
+				{
+					found_function_keyword = true;
+					cout << "Found function keyword at line " << line_counter << ":" << i << endl;
+				}
+			}
+			
+			if (found_function_keyword && line_in[i]==':')
+			{
+				line_out += dir_name;
+				line_out += "/";
+				
+				found_function_keyword = false;
 			}
 		}
 		

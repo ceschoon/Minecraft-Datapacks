@@ -14,7 +14,7 @@ do
 	ls $dir | grep -i ".mcfunction" | while read entry # handles whitespaces better than the for loop: "for ffile in $(ls $dir | grep -i $author)"
 	do
 		echo "  Converting file: $dir/$entry"
-		./$dir/change_selectors/change_selectors $dimension $x $z $radius $entry
+		./$dir/change_selectors/change_selectors $dimension $x $z $radius $entry > /dev/null
 	done
 	
 	echo " "
