@@ -1,5 +1,7 @@
-# Rng
-scoreboard players set @a[scores={duels_rng=100..}] duels_rng 0
+# Rng and number of sets
+scoreboard players set @a[scores={duels_rng=10..}] duels_rng 0
+scoreboard players set @a[scores={duels_SetId=10..}] duels_SetId 0
+scoreboard players set @a[scores={duels_SetId=..-1}] duels_SetId 9
 
 # Reset platform (obsidian is looks better than bedrock)
 #execute at @e[type=armor_stand,name=hill] run fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 obsidian

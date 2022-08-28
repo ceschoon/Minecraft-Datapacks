@@ -6,7 +6,8 @@ team join noteam @a
 team join team1 @p[team=noteam]
 team join team2 @p[team=noteam]
 
-gamemode adventure @a[team=!noteam]
+#gamemode adventure @a[team=!noteam]
+gamemode survival @a[team=!noteam]
 
 clear @a[team=!noteam]
 
@@ -23,8 +24,7 @@ execute at @e[type=armor_stand,name="Spawn Point Player2"] run spawnpoint @a[tea
 execute at @e[type=armor_stand,name="Spawn Point Player1"] run tp @a[team=team1] ~ ~ ~
 execute at @e[type=armor_stand,name="Spawn Point Player2"] run tp @a[team=team2] ~ ~ ~
 
-give @a[team=!noteam] apple 8
-give @a[team=!noteam] iron_shovel
+execute as @a[team=!noteam] run function duels:givesetfromid
 
 title @a[team=!noteam] title {"text":"Ready?","color":"gold"}
 tellraw @a {"text":"Duel starts in 5 seconds","color":"gold"}
