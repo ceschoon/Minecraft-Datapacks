@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "cstruct:hut_oak",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 2,
+    "salt": 1636244471
+  }
+}
+

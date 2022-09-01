@@ -1,0 +1,22 @@
+Types of structures to add:
+===========================
+
+Towers (small and medium)
+
+Huts (small)
+
+Houses and abandoned houses (medium)
+
+Crafting area/Abandoned camp site (small)
+
+Castles and Barracks (medium to large)
+--> Use village template to generate several structures around?
+    (watch towers, fields, training sites, etc.)
+
+Dungeons (medium to large)
+--> Various entrances (towers, hidden trapdoors, etc.)
+
+Graves (small)
+--> With valuables to dig??
+
+
