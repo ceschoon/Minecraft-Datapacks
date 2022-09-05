@@ -1,5 +1,0 @@
-{"text":"Floating nether\\n\\n","color":"blue","underlined":true}
-{"text":"The nether dimension with a floating islands generation.\\n\\n","underlined":false}
-{"text":"You access this dimension by building the portal with ","color":"blue","underlined":false}
-{"text":"ancient debris","color":"light_purple","underlined":false}
-{"text":".\\n","color":"blue","underlined":false}

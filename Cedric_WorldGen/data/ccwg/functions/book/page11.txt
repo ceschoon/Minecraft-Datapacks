@@ -1,5 +1,0 @@
-{"text":"Floating islands\\n\\n","color":"blue","underlined":true}
-{"text":"A magical world where the sky is purple, spiders jump around and where mineshafts hang over the void from floating islands.\\n\\n","underlined":false}
-{"text":"You access this dimension by building the portal ring around a ","color":"blue","underlined":false}
-{"text":"cave spider spawner","color":"light_purple","underlined":false}
-{"text":".\\n","color":"blue","underlined":false}
