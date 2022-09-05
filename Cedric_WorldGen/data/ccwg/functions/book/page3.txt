@@ -1,5 +1,0 @@
-{"text":"\\nThe first pages contain shortcuts to the most useful com-\\n","color":"blue"}
-{"text":"mands and general comments on inter-\\n","color":"blue"}
-{"text":"dimensional travel. \\n\\n","color":"blue"}
-{"text":"The remaining pages give specific infor-\\n","color":"blue"}
-{"text":"mations on each new dimension added to the game.","color":"blue"}

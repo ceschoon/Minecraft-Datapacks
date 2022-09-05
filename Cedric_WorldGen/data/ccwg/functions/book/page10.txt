@@ -1,5 +1,0 @@
-{"text":"Slime dimension\\n\\n","color":"blue","underlined":true}
-{"text":"There, the world is made of a single layer of slime block, creating the perfect environment for spleef minigames.\\n\\n","underlined":false}
-{"text":"You must build the portal using a ","color":"blue","underlined":false}
-{"text":"slime block","color":"light_purple","underlined":false}
-{"text":" in the centre of the ring.\\n","color":"blue","underlined":false}
