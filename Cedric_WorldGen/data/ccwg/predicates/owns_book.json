@@ -1,8 +1,0 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "nbt": "{Inventory:[{id:\"minecraft:written_book\",tag:{author:\"Cedriclabo\",display:{Lore:['\"Mostly Harmless\"']},title:\"The Book of the Multiverse\"}}]}"
-  }
-}
-
