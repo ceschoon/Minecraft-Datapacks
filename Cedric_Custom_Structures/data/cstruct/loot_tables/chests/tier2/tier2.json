@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/food"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier2/supplies"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/life_crystal"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/luck"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "empty",
+					"weight": 10
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/melee"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier2/range"
+				},
+				{
+					"type": "loot_table",
+					"weight": 15,
+					"name": "cstruct:chests/tier2/armor"
+				}
+			]
+		}
+		
+		
+	]
+}

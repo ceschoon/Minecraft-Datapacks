@@ -1,0 +1,102 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:tipped_arrow",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.5
+							}
+						},
+						{
+							"function": "minecraft:set_potion",
+							"id": "minecraft:strong_slowness"
+						}
+					]
+				}
+			]
+		},
+		
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:firework_rocket",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.2
+							}
+						}
+					]
+				}
+			]
+		},
+		
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:elytra",
+					"functions": [
+						{
+							"function": "set_enchantments",
+							"enchantments": {
+								"minecraft:unbreaking": 3
+							}
+						},
+						{
+							"function": "set_nbt",
+							"tag": "{display:{Lore:['\"The air bender´s wings\"']}}"
+						}
+					]
+				}
+			]
+		},
+		
+		
+				
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:bow",
+					"functions": [
+						{
+							"function": "set_enchantments",
+							"enchantments": {
+								"minecraft:power": 1
+							}
+						}
+					]
+				}
+			]
+		}
+		
+		
+	]
+}

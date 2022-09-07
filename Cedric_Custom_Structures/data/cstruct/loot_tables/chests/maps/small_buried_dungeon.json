@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cstruct:small_buried_dungeon",
+              "decoration": "banner_gray",
+              "zoom": 2,
+              "search_radius": 16,
+              "skip_existing_chunks": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
