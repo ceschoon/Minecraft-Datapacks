@@ -4,39 +4,17 @@
 		
 		
 		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "loot_table",
-					"weight": 5,
-					"name": "cstruct:chests/camp_sites/fish_salmon"
-				},
-				{
-					"type": "loot_table",
-					"weight": 10,
-					"name": "cstruct:chests/camp_sites/fish_cod"
-				},
-				{
-					"type": "loot_table",
-					"weight": 10,
-					"name": "cstruct:chests/camp_sites/rabbit"
-				}
-			]
-		},
-		
-		
-		{
-			"rolls": 3,
+			"rolls": 4,
 			"entries": [
 				{
 					"type": "minecraft:item",
 					"weight": 5,
-					"name": "minecraft:flint"
+					"name": "minecraft:golden_apple"
 				},
 				{
 					"type": "minecraft:item",
 					"weight": 10,
-					"name": "minecraft:string",
+					"name": "minecraft:apple",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
@@ -50,14 +28,29 @@
 				},
 				{
 					"type": "minecraft:item",
-					"weight": 10,
-					"name": "minecraft:feather",
+					"weight": 5,
+					"name": "minecraft:stick",
 					"functions": [
 						{
 							"function": "minecraft:set_count",
 							"count": {
 								"type": "minecraft:binomial",
 								"n": 8,
+								"p": 0.5
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:oak_sapling",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 4,
 								"p": 0.5
 							}
 						}
@@ -73,7 +66,7 @@
 				{
 					"type": "loot_table",
 					"weight": 10,
-					"name": "cstruct:chests/tier2/life_crystal"
+					"name": "cstruct:chests/tier1/life_crystal"
 				}
 			]
 		},
@@ -83,8 +76,12 @@
 			"rolls": 1,
 			"entries": [
 				{
+					"type": "empty",
+					"weight": 20
+				},
+				{
 					"type": "loot_table",
-					"weight": 5,
+					"weight": 10,
 					"name": "cstruct:chests/tier1/melee"
 				},
 				{
@@ -94,23 +91,8 @@
 				},
 				{
 					"type": "loot_table",
-					"weight": 10,
+					"weight": 15,
 					"name": "cstruct:chests/tier1/armor"
-				},
-				{
-					"type": "item",
-					"weight": 20,
-					"name": "minecraft:iron_shovel"
-				},
-				{
-					"type": "item",
-					"weight": 10,
-					"name": "minecraft:iron_pickaxe"
-				},
-				{
-					"type": "item",
-					"weight": 10,
-					"name": "minecraft:spyglass"
 				}
 			]
 		}
