@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 5,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/towers/tower_stuff"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier1/tier1"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/tier2"
+				}
+			]
+		}
+		
+		
+	]
+}
