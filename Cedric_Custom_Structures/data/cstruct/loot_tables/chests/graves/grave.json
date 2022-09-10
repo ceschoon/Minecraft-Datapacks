@@ -70,6 +70,11 @@
 					"name": "cstruct:chests/maps/tower"
 				},
 				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/maps/pyramid"
+				},
+				{
 					"type": "empty",
 					"weight": 20
 				}

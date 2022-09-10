@@ -2,6 +2,7 @@ Types of structures to add:
 ===========================
 
 Towers (small and medium)
+--> Spawn pillagers around them
 
 Huts (small)
 
@@ -18,5 +19,12 @@ Dungeons (medium to large)
 
 Graves (small)
 --> With valuables to dig??
+--> Some kind of curse/only cursed items
+
+Pyramid
+--> custom rooms randomly generated
+--> dungeon underneath? (not always?)
+--> both desert and jungle versions?
+--> spawn husk inside (desert) or regular zombies (jungle)
 
 

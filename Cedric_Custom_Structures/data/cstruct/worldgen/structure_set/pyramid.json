@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "cstruct:pyramid",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 3,
+    "salt": 1336433446
+  }
+}
+

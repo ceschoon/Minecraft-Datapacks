@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cstruct:pyramid",
+              "decoration": "banner_yellow",
+              "zoom": 3,
+              "search_radius": 64,
+              "skip_existing_chunks": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
