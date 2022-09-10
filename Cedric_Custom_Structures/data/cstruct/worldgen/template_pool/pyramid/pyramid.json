@@ -6,7 +6,7 @@
 			"weight": 10,
 			"element": {
 				"location": "cstruct:pyramid/pyramid_1",
-				"processors": "minecraft:empty",
+				"processors": "cstruct:pyramid_base",
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}
@@ -15,7 +15,7 @@
 			"weight": 10,
 			"element": {
 				"location": "cstruct:pyramid/pyramid_2",
-				"processors": "minecraft:empty",
+				"processors": "cstruct:pyramid_base",
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}
@@ -24,7 +24,7 @@
 			"weight": 10,
 			"element": {
 				"location": "cstruct:pyramid/pyramid_3",
-				"processors": "minecraft:empty",
+				"processors": "cstruct:pyramid_base",
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}
