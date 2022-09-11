@@ -46,6 +46,42 @@
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_6",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_7",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_8",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_9",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
 		}
 	]
 }
