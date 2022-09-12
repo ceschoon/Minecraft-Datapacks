@@ -1,0 +1,75 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 4,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/pyramid/pyramid_stuff"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/food"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier3/food"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 20,
+					"name": "cstruct:chests/tier2/armor"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/melee"
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier3/armor"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier3/melee"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier2/life_crystal"
+				}
+			]
+		}
+		
+		
+	]
+}

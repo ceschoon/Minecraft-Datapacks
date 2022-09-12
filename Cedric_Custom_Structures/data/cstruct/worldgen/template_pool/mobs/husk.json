@@ -1,12 +1,12 @@
 {
-	"name": "cstruct:pyramid/room_10x5x4_type1",
+	"name": "cstruct:mobs/husk",
 	"fallback": "minecraft:empty",
 	"elements": [
 		{
-			"weight": 10,
+			"weight": 30,
 			"element": {
-				"location": "cstruct:pyramid/room_10x5x4_type1_v1",
-				"processors": "cstruct:pyramid_room",
+				"location": "cstruct:mobs/husk",
+				"processors": "minecraft:empty",
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}

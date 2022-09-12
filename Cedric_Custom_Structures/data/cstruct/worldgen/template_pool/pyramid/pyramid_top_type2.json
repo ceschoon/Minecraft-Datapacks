@@ -5,7 +5,7 @@
 		{
 			"weight": 10,
 			"element": {
-				"location": "cstruct:pyramid/pyramid_top_type2_v0",
+				"location": "cstruct:pyramid/pyramid_top_type2_v1",
 				"processors": "cstruct:pyramid_base",
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
