@@ -10,6 +10,15 @@
 				"projection": "rigid",
 				"element_type": "minecraft:single_pool_element"
 			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/room_10x5x4_type1_v2",
+				"processors": "cstruct:pyramid_room",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
 		}
 	]
 }

@@ -11,6 +11,9 @@ summon minecraft:chicken ~ ~2 ~ {Passengers:[{id:"minecraft:zombie",PersistenceR
 Witch on bat:
 summon minecraft:bat ~ ~2 ~ {Health:20,ActiveEffects:[{Id:10,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Passengers:[{id:"minecraft:witch",PersistenceRequired:1b,Attributes:[{Name:"generic.followRange",Base:64}],ActiveEffects:[{Id:28,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}]}
 
+TODO: - witch throwing lingering potions
+      - spawn area effect clouds in structures (infinite duration)
+
 Drowned with trident/reinforcements:
 summon minecraft:drowned ~ ~2 ~ {Health:20,CanPickUpLoot:1b,PersistenceRequired:1b,HandItems:[{id:trident,tag:{Enchantments:[{id:impaling,lvl:1},{id:loyalty,lvl:3}]},Count:1}],HandDropChances:[0.10f],Attributes:[{Name:"zombie.spawn_reinforcements",Base:0.5f},{Name:"generic.max_health",Base:20f}]}
 
@@ -18,4 +21,6 @@ Killer rabbit (spawner to put in structures):
 spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnData:{id:"minecraft:rabbit",RabbitType:99,HandDropChances:[0.5F,2F],HandItems:[{id:"minecraft:rabbit_foot",Count:1},{}]}}
 spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnPotentials:[{weight:2,data:{entity:{id:"minecraft:rabbit",RabbitType:99,HandDropChances:[0.5F,2F],HandItems:[{id:"minecraft:rabbit_foot",Count:1},{}]}}},{weight:10,data:{entity:{id:"minecraft:rabbit",RabbitType:1}}}]}
 
+Spider/Cave spider spawner:
+spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnPotentials:[{weight:2,data:{entity:{id:"minecraft:cave_spider"}}},{weight:10,data:{entity:{id:"minecraft:spider"}}}]}
 
