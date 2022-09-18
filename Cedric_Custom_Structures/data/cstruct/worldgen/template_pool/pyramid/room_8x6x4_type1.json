@@ -21,7 +21,7 @@
 			}
 		},
 		{
-			"weight": 20,
+			"weight": 10,
 			"element": {
 				"location": "cstruct:pyramid/room_8x6x4_type1_v3",
 				"processors": "cstruct:pyramid_room",
