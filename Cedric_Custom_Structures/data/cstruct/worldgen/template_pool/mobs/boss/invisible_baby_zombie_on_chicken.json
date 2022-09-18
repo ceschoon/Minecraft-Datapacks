@@ -1,0 +1,15 @@
+{
+	"name": "cstruct:mobs/boss/invisible_baby_zombie_on_chicken",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:mobs/boss/invisible_baby_zombie_on_chicken",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}
