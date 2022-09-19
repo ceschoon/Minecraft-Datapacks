@@ -1,0 +1,15 @@
+{
+	"name": "cstruct:pyramid_mesa/pyramid_top_type1",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid_mesa/pyramid_top_type1_v1",
+				"processors": "cstruct:pyramid_mesa_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}
