@@ -3,7 +3,7 @@ scoreboard objectives remove num_life_cryst
 scoreboard objectives add num_life_cryst dummy
 scoreboard players set @a num_life_cryst 0
 
-execute store result score @s num_life_cryst run clear @s amethyst_shard{display:{Lore:['[{"text":"Life crystal","italic":false}]']}} 0
+execute store result score @s num_life_cryst run clear @s amethyst_shard{display:{Lore:['{"text":"Life crystal"}']}} 0
 
 attribute @s[scores={num_life_cryst=0}] minecraft:generic.max_health base set 20
 attribute @s[scores={num_life_cryst=1}] minecraft:generic.max_health base set 22
