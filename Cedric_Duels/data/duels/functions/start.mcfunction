@@ -1,6 +1,7 @@
 
 # Scoreboards
-scoreboard objectives setdisplay sidebar duels_TimeSec
+#scoreboard objectives setdisplay sidebar duels_TimeSec
+scoreboard objectives setdisplay sidebar duels_Score
 
 # Gamerules
 gamerule keepInventory true
