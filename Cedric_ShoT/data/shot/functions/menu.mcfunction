@@ -1,0 +1,7 @@
+tellraw @a [" "]
+tellraw @a [{"text":"=== Share or Take ===","color":"gold","bold":true}]
+tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function shot:info"}}]
+tellraw @a [{"text":"[Reload]","color":"dark_aqua", "clickEvent":{"action":"run_command","value":"/function shot:reload"}}]
+tellraw @a [{"text":"[Generate map]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function shot:initstructures"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: Takes a few seconds to generate. You must be in a biome with a lot of grass (everywhere within 100 blocks radius)"}}}]
+tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function shot:start"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: generate map first"}}}]
+tellraw @a [" "]

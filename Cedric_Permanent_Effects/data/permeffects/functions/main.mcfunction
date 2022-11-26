@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Permanent Effects module]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function permeffects:menu"}}]
+
 scoreboard players set @a[scores={permeffects_glowing=2..}] permeffects_glowing 0
 scoreboard players set @a[scores={permeffects_darkness=2..}] permeffects_darkness 0
 scoreboard players set @a[scores={permeffects_invisibility=2..}] permeffects_invisibility 0

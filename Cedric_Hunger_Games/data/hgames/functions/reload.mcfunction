@@ -26,14 +26,8 @@ scoreboard players set @a hgames_WarnDelay 0
 scoreboard players set @a hgames_Kills 0
 scoreboard players set @a hgames_Score 0
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== Hunger Games ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function hgames:info"}}]
-tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function hgames:start"},"hoverEvent":{"action":"show_text","value":{"text":""}}}]
-tellraw @a [" "]
-
 # reset particular game rules to the default value
 gamerule doMobSpawning true
 
-#say "Cedric Hunger Games: reloaded!"
+say Cedric Hunger Games: reloaded!
 

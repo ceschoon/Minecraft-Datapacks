@@ -20,8 +20,4 @@ scoreboard players set @a permeffects_night_vision 0
 scoreboard players set @a permeffects_saturation 0
 scoreboard players set @a permeffects_water_breathing 0
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== Permanent Effects ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Manage effects]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function permeffects:manage"}}]
-tellraw @a [" "]
-
+say Cedric Permanent Effects: reloaded!

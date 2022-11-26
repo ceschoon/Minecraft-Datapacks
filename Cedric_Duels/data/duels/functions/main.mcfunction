@@ -1,3 +1,7 @@
+
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Duels]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function duels:menu"}}]
+
 # Rng and number of sets
 scoreboard players set @a[scores={duels_rng=10..}] duels_rng 0
 scoreboard players set @a[scores={duels_SetId=10..}] duels_SetId 0

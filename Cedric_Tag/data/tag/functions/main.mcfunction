@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Tag]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function tag:menu"}}]
+
 # permanent effects
 effect give @a[scores={tag_On=1,tag_rtagxs=1}] strength 20 255
 effect give @a[scores={tag_On=1}] night_vision 20 255

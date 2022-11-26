@@ -25,12 +25,6 @@ team add onhill
 team modify offhill color gray
 team modify onhill color gold
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== King of the Hill ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function koth:info"}}]
-tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function koth:start"},"hoverEvent":{"action":"show_text","value":{"text":"Note: the platform will be generated where you stand"}}}]
-tellraw @a [" "]
-
-#say "Cedric Koth: reloaded"
+say Cedric Koth: reloaded!
 
 function koth:compassreload

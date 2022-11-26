@@ -1,3 +1,7 @@
+
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: King of the Hill]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function koth:menu"}}]
+
 # Rng
 scoreboard players set @a[scores={koth_rng=100..}] koth_rng 0
 

@@ -15,15 +15,16 @@
 | **Cedric_Shot** | Share or Take: a game of trust and betrayals, plus a bit of man hunting... |
 | **Cedric_Flying_Sheep** | Bring sheep to your team's skybase using a leash and elytra |
 | **Cedric_Teams** | Shared module for team management |
-| **Cedric_WorldGen** | Experimenting with custom dimensions etc. |
+| **Cedric_Permanent_Effects** | Shared module to configure permanent effects |
+| **Cedric_Custom_Structures** | Experimenting with custom structures |
 
 ## Installation
 
 The datapacks must be installed in the "datapacks" folder of the server. Then all datapacks must be reloaded in game using the "/reload" command.
 
-After "/reload" a menu appears in chat with the minigames. You can simply click to start a game. 
+Once in a while a message appears in chat, giving the option to display the minigame menus. You can simply click to start a game. 
 
 ![alt text](Cedric_Platforms/menu.png?raw=true)
 
-You can always end a game prematurely using the "/reload" command.
+You can always end a game prematurely by reloading the corresponding datapack.
 

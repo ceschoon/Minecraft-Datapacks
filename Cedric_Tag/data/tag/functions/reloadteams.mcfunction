@@ -50,5 +50,5 @@ team modify tag_hunter6 color dark_aqua
 team modify tag_hunter7 color light_purple
 team modify tag_hunter8 color dark_purple
 
-#say "Cedric Tag: reloaded teams"
+say Cedric Tag: reloaded teams module!
 

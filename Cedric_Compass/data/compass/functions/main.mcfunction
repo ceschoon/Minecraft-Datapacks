@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Compass module]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function compass:menu"}}]
+
 # Detect targeted players in the same dimension
 
 execute as @a[nbt={Dimension:"minecraft:overworld"}] if entity @a[scores={target=1},nbt={Dimension:"minecraft:overworld"}] run function compass:detect

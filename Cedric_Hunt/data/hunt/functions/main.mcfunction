@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Hunt]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function hunt:menu"}}]
+
 # Game starts 10 seconds after start function is executed
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=0}] at @s run title @a title {"text":"10","color":"gold"}
 execute as @r[scores={hunt_On=0,hunt_TimeTotal=20}] at @s run title @a title {"text":"9","color":"gold"}

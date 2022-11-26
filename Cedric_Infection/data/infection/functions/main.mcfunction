@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Infection]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function infection:menu"}}]
+
 # effect glowing to all sane players
 effect give @a[scores={inf_On=1},team=sane] glowing 10
 
