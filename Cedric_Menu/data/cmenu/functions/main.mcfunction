@@ -10,7 +10,7 @@ scoreboard players add @a[scores={cmenu_show=1..}] cmenu_show 1
 
 ## Pop-up message to display menus
 tellraw @a[scores={cmenu_delay=0}] [" "]
-tellraw @a[scores={cmenu_delay=0}] [{"text":"=== Cedric's Datapacks ","color":"gold","bold":true},{"text":"[display]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set @s cmenu_show 1"}},{"text":" ===","color":"gold","bold":true}]
+tellraw @a[scores={cmenu_delay=0}] [{"text":"=== Cedric's Minigames ","color":"gold","bold":true},{"text":"[display]","color":"aqua","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set @s cmenu_show 1"}},{"text":" ===","color":"gold","bold":true}]
 tellraw @a[scores={cmenu_delay=0}] [" "]
 
 ## Add delay of 3 minutes (3*1200 ticks) between pop-up messages

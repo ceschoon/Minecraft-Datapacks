@@ -15,6 +15,7 @@
 | **Cedric_Shot** | Share or Take: a game of trust and betrayals, plus a bit of man hunting... |
 | **Cedric_Flying_Sheep** | Bring sheep to your team's skybase using a leash and elytra |
 | **Cedric_Teams** | Shared module for team management |
+| **Cedric_Time** | Shared module for time, pauses, etc. |
 | **Cedric_Permanent_Effects** | Shared module to configure permanent effects |
 | **Cedric_Custom_Structures** | Experimenting with custom structures |
 
