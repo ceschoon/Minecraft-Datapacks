@@ -1,5 +1,4 @@
 
-scoreboard players set @a tag_stag 0
 scoreboard players set @a tag_rtag 0
 scoreboard players set @a tag_rtagxs 0
 
