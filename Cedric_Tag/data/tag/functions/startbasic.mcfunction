@@ -1,13 +1,15 @@
 
 scoreboard players set @a tag_rtag 0
 scoreboard players set @a tag_rtagxs 0
+scoreboard players set @a ctime_Pause 0
 
-scoreboard objectives setdisplay sidebar tag_TimeSec
+scoreboard objectives setdisplay sidebar ctime_Seconds
+scoreboard objectives modify ctime_Seconds displayname "Time Tagged"
 
 scoreboard players set @a tag_On 1
-scoreboard players set @a tag_TimeTicks 0
-scoreboard players set @a tag_TimeSec 0
-scoreboard players set @a tag_TimeTotal 0
+scoreboard players set @a ctime_Ticks 0
+scoreboard players set @a ctime_Seconds 0
+scoreboard players set @a ctime_Total 0
 scoreboard players set @a tag_ScoreCopy 0
 scoreboard players set @a tag_Tag 0
 

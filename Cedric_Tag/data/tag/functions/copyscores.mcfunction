@@ -1,7 +1,7 @@
-# copy scores (tag_TimeSec) in new variable
+# copy scores (ctime_Seconds) in new variable
 # this will serve to find the player with lowest score
 
-execute as @a store result score @s tag_ScoreCopy run scoreboard players get @s tag_TimeSec
+execute as @a store result score @s tag_ScoreCopy run scoreboard players get @s ctime_Seconds
 
 # set the score of the current runner to a high number so that he is not chosen again
 # only if the game state is 1 (to not interfere with the end game analysis)

@@ -1,16 +1,8 @@
 
-scoreboard objectives remove tag_DeathCount
-scoreboard objectives remove tag_TimeTicks
-scoreboard objectives remove tag_TimeSec
-scoreboard objectives remove tag_TimeTotal
 scoreboard objectives remove tag_ScoreCopy
 scoreboard objectives remove tag_Tag
 scoreboard objectives remove tag_On
 
-scoreboard objectives add tag_DeathCount deathCount
-scoreboard objectives add tag_TimeTicks dummy
-scoreboard objectives add tag_TimeSec dummy "Time Tagged"
-scoreboard objectives add tag_TimeTotal dummy
 scoreboard objectives add tag_ScoreCopy dummy
 scoreboard objectives add tag_Tag dummy
 scoreboard objectives add tag_On dummy

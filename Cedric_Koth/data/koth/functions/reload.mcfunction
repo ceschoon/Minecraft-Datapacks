@@ -1,16 +1,9 @@
 
-scoreboard objectives remove koth_DeathCount
-scoreboard objectives remove koth_TimeTicks
-scoreboard objectives remove koth_TimeSec
-scoreboard objectives remove koth_timeTotal
 scoreboard objectives remove koth_On
+scoreboard objectives remove koth_SecondsOnPlatform
 
-scoreboard objectives add koth_DeathCount deathCount
-scoreboard objectives add koth_TimeTicks dummy
-scoreboard objectives add koth_TimeSec dummy "Time"
-scoreboard objectives add koth_TimeTotal dummy
-scoreboard objectives add koth_Hunted dummy
 scoreboard objectives add koth_On dummy
+scoreboard objectives add koth_SecondsOnPlatform dummy "Time on Platform"
 
 team remove offhill
 team remove onhill

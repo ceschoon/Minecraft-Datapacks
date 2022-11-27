@@ -6,9 +6,7 @@ team join noteam @a
 team join team1 @p[team=noteam]
 team join team2 @p[team=noteam]
 
-#gamemode adventure @a[team=!noteam]
 gamemode survival @a[team=!noteam]
-
 clear @a[team=!noteam]
 
 effect clear @a[team=!noteam]

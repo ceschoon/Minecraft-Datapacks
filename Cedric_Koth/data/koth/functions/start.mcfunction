@@ -1,11 +1,13 @@
 
 # Scoreboards
-scoreboard objectives setdisplay sidebar koth_TimeSec
+scoreboard objectives setdisplay sidebar koth_SecondsOnPlatform
 
 scoreboard players set @a koth_On 1
-scoreboard players set @a koth_TimeTicks 0
-scoreboard players set @a koth_TimeSec 0
-scoreboard players set @a koth_TimeTotal 0
+scoreboard players set @a koth_SecondsOnPlatform 0
+scoreboard players set @a ctime_Ticks 0
+scoreboard players set @a ctime_Seconds 0
+scoreboard players set @a ctime_TicksInSec 0
+scoreboard players set @a ctime_Pause 0
 
 # Gamerules
 gamerule keepInventory true

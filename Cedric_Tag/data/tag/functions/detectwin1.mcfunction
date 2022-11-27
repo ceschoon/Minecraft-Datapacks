@@ -10,8 +10,8 @@ scoreboard objectives add temp dummy
 scoreboard players set @a temp -1
 
 # count number of players with score below limit
-execute if entity @a[scores={tag_rtag=1}] store result score @a temp run execute if entity @a[scores={tag_TimeSec=..1200}]
-execute if entity @a[scores={tag_rtagxs=1}] store result score @a temp run execute if entity @a[scores={tag_TimeSec=..600}]
+execute if entity @a[scores={tag_rtag=1}] store result score @a temp run execute if entity @a[scores={ctime_Seconds=..1200}]
+execute if entity @a[scores={tag_rtagxs=1}] store result score @a temp run execute if entity @a[scores={ctime_Seconds=..600}]
 
 execute if entity @a[scores={tag_On=1,tag_rtag=1,temp=1}] run scoreboard players set @a tag_On -1
 execute if entity @a[scores={tag_On=1,tag_rtagxs=1,temp=1}] run scoreboard players set @a tag_On -1
