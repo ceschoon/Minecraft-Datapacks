@@ -4,4 +4,5 @@ tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command
 tellraw @a [{"text":"[Reload]","color":"dark_aqua", "clickEvent":{"action":"run_command","value":"/function flsheep:reload"}}]
 tellraw @a [{"text":"[Start 2 teams]","color":"green", "clickEvent":{"action":"run_command","value":"/function flsheep:start2"}}]
 tellraw @a [{"text":"[Start 4 teams]","color":"green", "clickEvent":{"action":"run_command","value":"/function flsheep:start4"}}]
+tellraw @a [{"text":"[Pause/Restart]","color":"dark_green", "clickEvent":{"action":"run_command","value":"/function ctime:togglepause"}}]
 tellraw @a [" "]

@@ -1,8 +1,10 @@
 
+scoreboard objectives remove tag_Score
 scoreboard objectives remove tag_ScoreCopy
 scoreboard objectives remove tag_Tag
 scoreboard objectives remove tag_On
 
+scoreboard objectives add tag_Score dummy "Time Tagged"
 scoreboard objectives add tag_ScoreCopy dummy
 scoreboard objectives add tag_Tag dummy
 scoreboard objectives add tag_On dummy

@@ -6,7 +6,7 @@ kill @a[x=-1000000,y=0,z=-1000000,dx=2000000,dy=149,dz=2000000,scores={pltf_Deat
 
 # Delay respawn
 scoreboard players set @a[scores={pltf_DeathCount=201..}] pltf_DeathCount 0
-scoreboard players add @a[scores={pltf_DeathCount=1..}] pltf_DeathCount 1
+scoreboard players add @a[scores={ctime_Pause=0,pltf_DeathCount=1..}] pltf_DeathCount 1
 
 # Handle dead players
 gamemode spectator @a[scores={pltf_DeathCount=2}]
@@ -94,9 +94,9 @@ execute at @e[type=armor_stand,name=emerald1] run kill @e[type=item,nbt={Item:{i
 execute at @e[type=armor_stand,name=emerald2] run kill @e[type=item,nbt={Item:{id:"minecraft:emerald_block"}},distance=..10]
 
 # Decrement time delays for generators
-scoreboard players remove @a pltf_DelayEmrld 1
-scoreboard players remove @a pltf_DelayDiamd 1
-scoreboard players remove @a pltf_DelayWool 1
+scoreboard players remove @a[scores={ctime_Pause=0}] pltf_DelayEmrld 1
+scoreboard players remove @a[scores={ctime_Pause=0}] pltf_DelayDiamd 1
+scoreboard players remove @a[scores={ctime_Pause=0}] pltf_DelayWool 1
 
 # Spawn loot at armor stand when delay completed
 execute at @e[type=armor_stand,name=diamond] if entity @a[scores={pltf_DelayDiamd=..0}] run loot spawn ~ ~ ~ loot minecraft:blocks/diamond_ore
@@ -120,8 +120,8 @@ execute at @e[type=armor_stand,name=villager2] run tp @e[type=villager,distance=
 #function platforms:summonfireball
 
 # Delay for cannons
-scoreboard players remove @a pltf_DelayFire1 1
-scoreboard players remove @a pltf_DelayFire2 1
+scoreboard players remove @a[scores={ctime_Pause=0}] pltf_DelayFire1 1
+scoreboard players remove @a[scores={ctime_Pause=0}] pltf_DelayFire2 1
 execute if entity @a[scores={pltf_CountFire1=3..,pltf_DelayFire1=..0}] run scoreboard players set @a pltf_DelayFire1 2400
 execute if entity @a[scores={pltf_CountFire2=3..,pltf_DelayFire2=..0}] run scoreboard players set @a pltf_DelayFire2 2400
 execute if entity @a[scores={pltf_CountFire1=3..}] run scoreboard players set @a pltf_CountFire1 0
@@ -141,6 +141,12 @@ execute at @e[type=armor_stand,name=cannon2] if entity @a[scores={pltf_SummonFir
 
 # Enforce no fireball rule if activated
 execute if entity @a[scores={pltf_nofireballs=1}] run kill @e[type=fireball]
+
+# Freeze and make players invincible during pauses
+effect give @a[scores={ctime_Pause=1}] slowness 1 255
+effect give @a[scores={ctime_Pause=1}] mining_fatigue 1 255
+effect give @a[scores={ctime_Pause=1}] resistance 1 255
+
 
 # detect end of the game
 execute as @a[team=team1,scores={pltf_Score=30..}] run function platforms:win1

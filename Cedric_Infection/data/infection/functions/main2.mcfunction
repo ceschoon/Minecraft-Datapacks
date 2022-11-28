@@ -28,6 +28,9 @@ execute as @a[scores={inf_test_mole=1}] at @s run playsound minecraft:entity.gha
 # increment time
 scoreboard players add @a[scores={inf_On=1,ctime_TicksInSec=0}] inf_WarnDelay 1
 
+# make players invincible during pauses
+effect give @a[scores={ctime_Pause=1}] resistance 1 255
+
 # detect end of the game
 execute if entity @a[scores={inf_On=1}] unless entity @a[team=sane] run function infection:win
 

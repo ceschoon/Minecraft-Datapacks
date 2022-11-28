@@ -2,9 +2,9 @@
 scoreboard players set @a tag_rtag 0
 scoreboard players set @a tag_rtagxs 0
 scoreboard players set @a ctime_Pause 0
+scoreboard players set @a tag_Score 0
 
-scoreboard objectives setdisplay sidebar ctime_Seconds
-scoreboard objectives modify ctime_Seconds displayname "Time Tagged"
+scoreboard objectives setdisplay sidebar tag_Score
 
 scoreboard players set @a tag_On 1
 scoreboard players set @a ctime_Ticks 0
