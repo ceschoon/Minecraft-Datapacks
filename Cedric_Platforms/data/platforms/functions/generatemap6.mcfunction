@@ -6,12 +6,12 @@ execute at @s run summon armor_stand ~ 200 ~ {Invisible:1,Marker:1,CustomName:"\
 execute at @e[type=armor_stand,name=diamond] run function platforms:builddiamond
 
 # Build emerald platform 1
-execute at @s run summon armor_stand ~20 203 ~ {Invisible:1,Marker:1,CustomName:"\"emerald1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~20 203 ~25 {Invisible:1,Marker:1,CustomName:"\"emerald1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=emerald1] run function platforms:buildemerald
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build villager platform 1
-execute at @s run summon armor_stand ~-20 203 ~ {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
+execute at @s run summon armor_stand ~-20 203 ~25 {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
 execute at @e[type=armor_stand,name=villager1] run function platforms:buildvillager
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
@@ -19,6 +19,17 @@ execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 # Build cannon platform 1
 execute at @s run summon armor_stand ~ 206 ~45 {Invisible:1,Marker:1,CustomName:"\"cannon1\"",CustomNameVisible:0}
 execute at @e[type=armor_stand,name=cannon1] run function platforms:buildmagma
+execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
+
+# Build emerald platform 2
+execute at @s run summon armor_stand ~-20 203 ~-25 {Invisible:1,Marker:1,CustomName:"\"emerald1\"",CustomNameVisible:0}
+execute at @e[type=armor_stand,name=emerald1] run function platforms:buildemerald
+execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
+
+# Build villager platform 2
+execute at @s run summon armor_stand ~20 203 ~-25 {Invisible:1,Marker:1,CustomName:"\"villager1\"",CustomNameVisible:0}
+execute at @e[type=armor_stand,name=villager1] run function platforms:summonvillager
+execute at @e[type=armor_stand,name=villager1] run function platforms:buildvillager
 execute at @e[type=armor_stand,name=diamond] run tp @s ~ ~ ~
 
 # Build cannon platform 2

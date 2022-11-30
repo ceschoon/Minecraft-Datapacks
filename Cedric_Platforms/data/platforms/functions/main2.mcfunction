@@ -149,8 +149,8 @@ effect give @a[scores={ctime_Pause=1}] resistance 1 255
 
 
 # detect end of the game
-execute as @a[team=team1,scores={pltf_Score=30..}] run function platforms:win1
-execute as @a[team=team2,scores={pltf_Score=30..}] run function platforms:win2
-execute as @a[team=team3,scores={pltf_Score=30..}] run function platforms:win3
-execute as @a[team=team4,scores={pltf_Score=30..}] run function platforms:win4
+execute as @a[team=team1,scores={pltf_Score=20..}] run function platforms:win1
+execute as @a[team=team2,scores={pltf_Score=20..}] run function platforms:win2
+execute as @a[team=team3,scores={pltf_Score=20..}] run function platforms:win3
+execute as @a[team=team4,scores={pltf_Score=20..}] run function platforms:win4
 
