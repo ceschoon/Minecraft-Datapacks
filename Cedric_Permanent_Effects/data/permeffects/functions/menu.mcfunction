@@ -3,6 +3,7 @@ tellraw @a [{"text":"=== Permanent Effects Module ===","color":"gold","bold":tru
 tellraw @a [{"text":"[Reload]","color":"dark_aqua", "clickEvent":{"action":"run_command","value":"/function permeffects:reload"}}]
 tellraw @a [{"text":"[Toggle Glowing]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_glowing 1"}}]
 tellraw @a [{"text":"[Toggle Darkness]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_darkness 1"}}]
+tellraw @a [{"text":"[Toggle Dark Night]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_darknight 1"}, "hoverEvent":{"action":"show_text","value":{"text":"For the night is dark and full of terrors..."}}}]
 tellraw @a [{"text":"[Toggle Invisibility]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_invisibility 1"}}]
 tellraw @a [{"text":"[Toggle Night Vision]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_night_vision 1"}}]
 tellraw @a [{"text":"[Toggle Saturation]","color":"aqua", "clickEvent":{"action":"run_command","value":"/scoreboard players add @a permeffects_saturation 1"}}]
