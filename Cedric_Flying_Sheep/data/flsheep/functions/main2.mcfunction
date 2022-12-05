@@ -9,7 +9,7 @@ kill @a[x=-1000000,y=0,z=-1000000,dx=2000000,dy=149,dz=2000000,scores={flsheep_D
 
 # Delay respawn
 scoreboard players set @a[scores={flsheep_DeathCnt=201..}] flsheep_DeathCnt 0
-scoreboard players add @a[scores={flsheep_DeathCnt=1..}] flsheep_DeathCnt 1
+scoreboard players add @a[scores={ctime_Pause=0,flsheep_DeathCnt=1..}] flsheep_DeathCnt 1
 
 # Handle dead players
 gamemode spectator @a[scores={flsheep_DeathCnt=2}]
@@ -94,7 +94,7 @@ execute at @e[type=armor_stand,name=team3] run function flsheep:buildteam3
 execute at @e[type=armor_stand,name=team4] run function flsheep:buildteam4
 
 # Decrement time delays
-scoreboard players remove @a flsheep_Delay 1
+scoreboard players remove @a[scores={ctime_Pause=0}] flsheep_Delay 1
 
 # Spawn sheep in centre when delay completed
 # 10 percent chance for all of the following events:

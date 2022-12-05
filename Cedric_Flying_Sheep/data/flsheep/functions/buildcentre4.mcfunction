@@ -19,11 +19,6 @@ fill ~-5 ~ ~-5 ~5 ~5 ~5 air
 fill ~-5 ~ ~ ~5 ~5 ~ air
 fill ~ ~ ~-5 ~ ~5 ~5 air
 
-#setblock ~-6 ~ ~ oak_fence_gate[facing=west] keep
-#setblock ~6 ~ ~ oak_fence_gate[facing=east] keep
-#setblock ~ ~ ~-6 oak_fence_gate[facing=north] keep
-#setblock ~ ~ ~6 oak_fence_gate[facing=south] keep
-
 setblock ~-6 ~-1 ~-6 sea_lantern
 setblock ~-6 ~-1 ~6 sea_lantern
 setblock ~6 ~-1 ~-6 sea_lantern

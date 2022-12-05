@@ -30,25 +30,9 @@ scoreboard objectives add pltf_On dummy
 scoreboard players set @a pltf_NumTeams 4
 scoreboard players set @a pltf_On 0
 
-scoreboard objectives remove pltf_rng
-scoreboard objectives add pltf_rng minecraft.custom:minecraft.walk_one_cm
-scoreboard players set @a pltf_rng 0
-
 scoreboard objectives remove pltf_nofireballs
 scoreboard objectives add pltf_nofireballs dummy
 scoreboard players set @a pltf_nofireballs 0
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== Platforms ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:info"}}]
-tellraw @a [{"text":"[Generate map 1]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap1"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and 6 platforms"}}}]
-tellraw @a [{"text":"[Generate map 2]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap2"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 4 teams and 6 platforms"}}}]
-tellraw @a [{"text":"[Generate map 3]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap3"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 3 platforms"}}}]
-tellraw @a [{"text":"[Generate map 4]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap4"},"hoverEvent":{"action":"show_text","value":{"text":"Circular map with 3 teams and 6 platforms"}}}]
-tellraw @a [{"text":"[Generate map 5]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap5"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 4 teams and platforms in the middle"}}}]
-tellraw @a [{"text":"[Generate map 6]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function platforms:generatemap6"},"hoverEvent":{"action":"show_text","value":{"text":"Non-circular map with 2 teams and platforms in the middle"}}}]
-tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function platforms:start"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: generate map first"}}}]
-tellraw @a [" "]
-
-#say "Cedric Platforms: reloaded"
+say Cedric Platforms: reloaded!
 

@@ -1,9 +1,11 @@
 
-scoreboard objectives setdisplay sidebar inf_TimeSec
+scoreboard objectives modify ctime_Seconds displayname "Time"
+scoreboard objectives setdisplay sidebar ctime_Seconds
 
 scoreboard players set @a inf_On 1
-scoreboard players set @a inf_TimeTicks 0
-scoreboard players set @a inf_TimeSec 0
+scoreboard players set @a ctime_TicksInSec 0
+scoreboard players set @a ctime_Seconds 0
+scoreboard players set @a ctime_Pause 0
 scoreboard players set @a inf_WarnDelay 0
 
 gamerule keepInventory true
@@ -39,9 +41,6 @@ clear @a
 team empty infected
 team empty sane
 team join sane @a
-
-# One is an infected player (Unused -> start with a mole instead)
-#team join infected @s
 
 # All sane at the start but one of them is a mole whose goal is to kill his 
 # teammates and spread the "infection"

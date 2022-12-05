@@ -23,4 +23,4 @@ scoreboard players set @a srn_particles 0
 scoreboard players set @a srn_lightning 0
 scoreboard players set @a srn_griefing 0
 
-#say "Cedric Sauron: reloaded"
+say Cedric Sauron: reloaded!

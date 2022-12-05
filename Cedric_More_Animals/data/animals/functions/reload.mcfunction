@@ -12,4 +12,4 @@ scoreboard objectives remove animals_count
 scoreboard objectives add animals_count dummy
 scoreboard players set @a animals_count 0
 
-say @s "More Animals: reloaded!"
+say Cedric More Animals: reloaded!

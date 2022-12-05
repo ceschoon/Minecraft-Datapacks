@@ -19,8 +19,4 @@ scoreboard objectives add dimroof dummy
 scoreboard players set @a target 0
 scoreboard players set @a dimroof 0
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== Compass module ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function compass:info"}}]
-tellraw @a [{"text":"[Track me]","color":"green", "clickEvent":{"action":"run_command","value":"/function compass:trackme"},"hoverEvent":{"action":"show_text","value":{"text":"Make compasses point to the player who clicks"}}}]
-tellraw @a [" "]
+say Cedric Compass module: reloaded!

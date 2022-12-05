@@ -1,0 +1,6 @@
+tellraw @a [" "]
+tellraw @a [{"text":"=== Hunger Games ===","color":"gold","bold":true}]
+tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function hgames:info"}}]
+tellraw @a [{"text":"[Reload]","color":"dark_aqua", "clickEvent":{"action":"run_command","value":"/function hgames:reload"}}]
+tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function hgames:start"},"hoverEvent":{"action":"show_text","value":{"text":""}}}]
+tellraw @a [" "]

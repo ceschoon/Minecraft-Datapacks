@@ -1,6 +1,6 @@
 # Start of rtag game (variant of base tag)
 
-function tag:start
+function tag:startbasic
 
 gamerule keepInventory true
 gamerule doImmediateRespawn true

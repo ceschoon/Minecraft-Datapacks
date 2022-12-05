@@ -13,5 +13,5 @@ scoreboard objectives add ddungeons_Mole dummy
 
 scoreboard players set @a ddungeons_On 0
 
-say @s "Dark Dungeons: Reloaded!"
+say Cedric Dark Dungeons: reloaded!
 

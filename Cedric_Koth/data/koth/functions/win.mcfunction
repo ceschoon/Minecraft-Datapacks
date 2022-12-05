@@ -16,4 +16,5 @@ effect give @s strength 600 255
 effect give @s resistance 600 255
 effect give @s regeneration 600 255 
 
+scoreboard players set @a ctime_Pause 1
 

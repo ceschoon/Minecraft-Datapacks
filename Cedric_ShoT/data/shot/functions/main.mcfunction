@@ -1,4 +1,7 @@
 
+# display menu
+tellraw @a[scores={cmenu_show=1..}] [{"text":"[Show menu: Share or Take]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function shot:menu"}}]
+
 # note: 
 # shot_On = 0 means we are not playing
 # shot_On = 1 means we are playing

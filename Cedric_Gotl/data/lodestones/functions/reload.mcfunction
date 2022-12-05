@@ -19,4 +19,4 @@ scoreboard objectives add ls_DeathCount deathCount
 function lodestones:compassreload
 
 # Messages 
-#say "Cedric Gotl: reloaded lodestones module!"
+say Cedric Gotl: reloaded lodestones module!

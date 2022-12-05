@@ -65,7 +65,7 @@ gamemode survival @a
 
 # Game starts message
 title @a title {"text":"Go!","color":"gold"}
-tellraw @a {"text":"Platforms: Bring 30 diamonds to your base to win.","color":"gold"}
+tellraw @a {"text":"Platforms: Bring 20 diamonds to your base to win.","color":"gold"}
 tellraw @a {"text":"Platforms: Game starts now!","color":"gold"}
 
 

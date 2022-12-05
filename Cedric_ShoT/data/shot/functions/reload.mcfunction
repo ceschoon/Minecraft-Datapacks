@@ -66,12 +66,5 @@ scoreboard objectives remove shot_rng
 scoreboard objectives add shot_rng minecraft.custom:minecraft.walk_one_cm
 scoreboard players set @a shot_rng 0
 
-tellraw @a [" "]
-tellraw @a [{"text":"=== Share or Take ===","color":"gold","bold":true}]
-tellraw @a [{"text":"[Info]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function shot:info"}}]
-tellraw @a [{"text":"[Generate map]","color":"aqua", "clickEvent":{"action":"run_command","value":"/function shot:initstructures"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: Takes a few seconds to generate. You must be in a biome with a lot of grass (everywhere within 100 blocks radius)"}}}]
-tellraw @a [{"text":"[Start]","color":"green", "clickEvent":{"action":"run_command","value":"/function shot:start"},"hoverEvent":{"action":"show_text","value":{"text":"Warning: generate map first"}}}]
-tellraw @a [" "]
-
-#say "Cedric ShoT: reloaded"
+say Cedric ShoT: reloaded!
 

@@ -1,1 +1,1 @@
-say Cedric's Custom Structures Magic reloaded!
+say Cedric Custom Structures Magic: reloaded!

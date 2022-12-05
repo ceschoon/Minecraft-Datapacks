@@ -1,6 +1,5 @@
 
 # Scoreboards
-#scoreboard objectives setdisplay sidebar duels_TimeSec
 scoreboard objectives setdisplay sidebar duels_Score
 
 # Gamerules
@@ -15,13 +14,11 @@ gamemode spectator @a
 tp @a @s
 
 # World
-#execute in minecraft:overworld run worldborder center ~ ~
-#execute in minecraft:overworld run worldborder set 1000000
 time set 0
 
-# Set spawn (world spawn too, should not be close to platform)
+# Set spawn (other players, will later be reset for duelists)
 execute as @a at @s run spawnpoint @s ~ ~ ~
-execute at @r run setworldspawn ~ ~ ~
+execute at @s run setworldspawn ~ ~ ~
 
 schedule function duels:prepareduelists 1s
 schedule function duels:delayedstart 6s

@@ -1,11 +1,10 @@
 
-scoreboard objectives setdisplay sidebar hunt_TimeSec
-
-scoreboard players set @a hunt_On 0
-scoreboard players set @a hunt_TimeTicks 0
-scoreboard players set @a hunt_TimeSec 0
-scoreboard players set @a hunt_TimeTotal 0
+scoreboard players set @a hunt_On 2
 scoreboard players set @a hunt_Hunted 0
+scoreboard players set @a ctime_Ticks 0
+scoreboard players set @a ctime_Seconds 0
+scoreboard players set @a ctime_TicksInSec 0
+scoreboard players set @a ctime_Pause 0
 
 gamerule keepInventory false
 gamerule doImmediateRespawn true
