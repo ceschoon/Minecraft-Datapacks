@@ -17,6 +17,7 @@
 | **Cedric_Teams** | Shared module for team management |
 | **Cedric_Time** | Shared module for time, pauses, etc. |
 | **Cedric_Permanent_Effects** | Shared module to configure permanent effects |
+| **Cedric_Zombies** | Zombie apocalypse |
 | **Cedric_Custom_Structures** | Experimenting with custom structures |
 
 ## Installation
@@ -25,7 +26,14 @@ The datapacks must be installed in the "datapacks" folder of the server. Then al
 
 Once in a while a message appears in chat, giving the option to display the minigame menus. You can simply click to start a game. 
 
+![alt text](Cedric_Menu/example_chat_message.png?raw=true)
 ![alt text](Cedric_Platforms/menu.png?raw=true)
 
 You can always end a game prematurely by reloading the corresponding datapack.
+
+![alt text](Cedric_Menu/example_zombies.png?raw=true)
+![alt text](Cedric_Zombies/zombies_near_tent.png?raw=true)
+![alt text](Cedric_Tag/chase.png?raw=true)
+![alt text](Cedric_Tag/fort.png?raw=true)
+![alt text](Cedric_Tag/sneak.png?raw=true)
 
