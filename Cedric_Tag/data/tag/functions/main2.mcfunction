@@ -14,9 +14,16 @@ execute if entity @a run function tag:deathmechanics
 execute as @a[scores={tag_gamemode=0}] run function tag:detectwin0
 execute as @a[scores={tag_gamemode=1}] run function tag:detectwin1
 
-# enforce additional rules
-execute as @a at @s run function tagrules:main
+# enforce additional rules (legacy)
+#execute as @a at @s run function tagrules:main
 
-## make players invincible during pauses
+# make players invincible during pauses
 effect give @a[scores={ctime_Pause=1}] resistance 1 255
+
+# reward kills
+scoreboard players add @a[scores={tag_Kills=1..,tag_kill_rewards=1,tag_gamemode=0,tag_rtag=1,tag_Score=..600}] tag_Score 60
+scoreboard players add @a[scores={tag_Kills=1..,tag_kill_rewards=1,tag_gamemode=0,tag_rtagxs=1,tag_Score=..300}] tag_Score 10
+scoreboard players remove @a[scores={tag_Kills=1..,tag_kill_rewards=1,tag_gamemode=1,tag_rtag=1,tag_Score=1200..}] tag_Score 60
+scoreboard players remove @a[scores={tag_Kills=1..,tag_kill_rewards=1,tag_gamemode=1,tag_rtagxs=1,tag_Score=600..}] tag_Score 10
+scoreboard players set @a[scores={tag_Kills=1..}] tag_Kills 0
 

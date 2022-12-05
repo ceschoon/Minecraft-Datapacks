@@ -11,6 +11,7 @@ scoreboard players set @a ctime_Ticks 0
 scoreboard players set @a ctime_Seconds 0
 scoreboard players set @a ctime_Total 0
 scoreboard players set @a tag_ScoreCopy 0
+scoreboard players set @a tag_Kills 0
 scoreboard players set @a tag_Tag 0
 
 execute as @r at @s run function tag:newrunner
