@@ -10,13 +10,13 @@ gamerule naturalRegeneration true
 
 gamemode spectator @a
 
-# World
-execute in minecraft:overworld run worldborder center ~ ~
-execute in minecraft:overworld run worldborder set 1000000
-time set 0
-
 # Tp all players to bring them in the correct dimension
 tp @a @s
+
+# World
+#execute in minecraft:overworld run worldborder center ~ ~
+#execute in minecraft:overworld run worldborder set 1000000
+time set 0
 
 # Set spawn (world spawn too, should not be close to platform)
 execute as @a at @s run spawnpoint @s ~ ~ ~
