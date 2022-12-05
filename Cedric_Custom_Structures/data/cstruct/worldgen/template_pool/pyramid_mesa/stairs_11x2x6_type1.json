@@ -1,0 +1,24 @@
+{
+	"name": "cstruct:pyramid_mesa/stairs_11x2x6_type1",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid_mesa/stairs_11x2x6_type1_v1",
+				"processors": "cstruct:pyramid_mesa_room",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid_mesa/stairs_11x2x6_type1_v2",
+				"processors": "cstruct:pyramid_mesa_room",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

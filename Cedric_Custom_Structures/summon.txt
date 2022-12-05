@@ -1,0 +1,26 @@
+
+Stray on spider:
+summon minecraft:spider ~ ~2 ~ {PersistenceRequired:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:5,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:10,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Passengers:[{id:"minecraft:stray",PersistenceRequired:1b,HandItems:[{id:"minecraft:bow",Count:1,tag:{Enchantments:[{id:power,lvl:3}]}},{}],HandDropChances:[0.1F,0F],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1,tag:{Enchantments:[{id:projectile_protection,lvl:4}]}}],ArmorDropChances:[0F,0F,0F,0.1F],ActiveEffects:[{Id:5,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:10,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}]}
+
+Wither Skeleton:
+summon minecraft:wither_skeleton ~ ~2 ~ {PersistenceRequired:1b,Health:40,Attributes:[{Name:"generic.maxHealth",Base:40}],HandItems:[{id:"minecraft:netherite_sword",tag:{display:{Lore:['{"text":"Unleashes the fires of Hell"}']},Enchantments:[{id:fire_aspect,lvl:2}]},Count:1},{}],HandDropChances:[0.1F,0F],ArmorItems:[{},{},{},{id:"minecraft:netherite_helmet",Count:1,tag:{display:{Lore:['{"text":"Qui s'y frotte s'y pique!"}']},Enchantments:[{id:thorns,lvl:3}]}}],ArmorDropChances:[0F,0F,0F,0.1F],ActiveEffects:[{Id:12,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:10,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}
+
+Killer chicken:
+summon minecraft:chicken ~ ~2 ~ {Passengers:[{id:"minecraft:zombie",PersistenceRequired:1b,Health:20,Attributes:[{Name:"generic.maxHealth",Base:20},{Name:"generic.followRange",Base:64}],Silent:1,IsBaby:1,ActiveEffects:[{Id:5,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}]}
+
+Witch on bat:
+summon minecraft:bat ~ ~2 ~ {Health:20,ActiveEffects:[{Id:10,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Passengers:[{id:"minecraft:witch",PersistenceRequired:1b,Attributes:[{Name:"generic.followRange",Base:64}],ActiveEffects:[{Id:28,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}]}
+
+TODO: - witch throwing lingering potions
+      - spawn area effect clouds in structures (infinite duration)
+
+Drowned with trident/reinforcements:
+summon minecraft:drowned ~ ~2 ~ {Health:20,CanPickUpLoot:1b,PersistenceRequired:1b,HandItems:[{id:trident,tag:{Enchantments:[{id:impaling,lvl:1},{id:loyalty,lvl:3}]},Count:1}],HandDropChances:[0.10f],Attributes:[{Name:"zombie.spawn_reinforcements",Base:0.5f},{Name:"generic.max_health",Base:20f}]}
+
+Killer rabbit (spawner to put in structures):
+spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnData:{id:"minecraft:rabbit",RabbitType:99,HandDropChances:[0.5F,2F],HandItems:[{id:"minecraft:rabbit_foot",Count:1},{}]}}
+spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnPotentials:[{weight:2,data:{entity:{id:"minecraft:rabbit",RabbitType:99,HandDropChances:[0.5F,2F],HandItems:[{id:"minecraft:rabbit_foot",Count:1},{}]}}},{weight:10,data:{entity:{id:"minecraft:rabbit",RabbitType:1}}}]}
+
+Spider/Cave spider spawner:
+spawner{SpawnCount:1,MaxNearbyEntities:3,SpawnRange:4,Delay:20,MinSpawnDelay:60,MaxSpawnDelay:120,RequiredPlayerRange:16,SpawnPotentials:[{weight:2,data:{entity:{id:"minecraft:cave_spider"}}},{weight:10,data:{entity:{id:"minecraft:spider"}}}]}
+

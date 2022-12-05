@@ -1,0 +1,138 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 3,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:iron_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 10,
+								"p": 0.2
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "minecraft:diamond",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 10,
+								"p": 0.2
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:oak_log",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.05
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:cobblestone",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.15
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:coal",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 10,
+								"p": 0.5
+							}
+						}
+					]
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:ender_pearl",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 20,
+								"p": 0.1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:saddle"
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "minecraft:totem_of_undying",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "minecraft:enchanted_golden_apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				}
+			]
+		}
+		
+		
+	]
+}

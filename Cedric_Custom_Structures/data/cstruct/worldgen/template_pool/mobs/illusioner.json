@@ -1,0 +1,15 @@
+{
+	"name": "cstruct:mobs/illusioner",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 30,
+			"element": {
+				"location": "cstruct:mobs/illusioner",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

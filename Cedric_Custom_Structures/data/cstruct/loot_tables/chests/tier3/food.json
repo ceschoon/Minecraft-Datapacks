@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 3,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:golden_carrot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 10,
+								"p": 0.2
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:cooked_beef",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"weight": 5,
+					"name": "minecraft:cooked_porkchop",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 64,
+								"p": 0.1
+							}
+						}
+					]
+				}
+			]
+		}
+		
+		
+	]
+}

@@ -1,0 +1,102 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 4,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:golden_apple"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:apple",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 4,
+								"p": 0.5
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:stick",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 8,
+								"p": 0.5
+							}
+						}
+					]
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:oak_sapling",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 4,
+								"p": 0.5
+							}
+						}
+					]
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier1/life_crystal"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "empty",
+					"weight": 20
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier1/melee"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier1/range"
+				},
+				{
+					"type": "loot_table",
+					"weight": 15,
+					"name": "cstruct:chests/tier1/armor"
+				}
+			]
+		}
+		
+		
+	]
+}

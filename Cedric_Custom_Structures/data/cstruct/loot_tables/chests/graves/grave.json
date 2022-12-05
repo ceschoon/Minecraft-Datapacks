@@ -1,0 +1,86 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 5,
+					"name": "minecraft:bone"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 10,
+					"name": "minecraft:rotten_flesh",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+								"type": "minecraft:binomial",
+								"n": 4,
+								"p": 0.5
+							}
+						}
+					]
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "empty",
+					"weight": 10
+				},
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/tier1/melee"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/tier1/range"
+				},
+				{
+					"type": "loot_table",
+					"weight": 15,
+					"name": "cstruct:chests/tier1/armor"
+				}
+			]
+		},
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "loot_table",
+					"weight": 10,
+					"name": "cstruct:chests/maps/small_buried_dungeon"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/maps/tower"
+				},
+				{
+					"type": "loot_table",
+					"weight": 5,
+					"name": "cstruct:chests/maps/pyramid"
+				},
+				{
+					"type": "empty",
+					"weight": 20
+				}
+			]
+		}
+		
+		
+	]
+}

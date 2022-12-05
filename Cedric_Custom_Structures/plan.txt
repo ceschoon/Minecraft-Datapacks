@@ -1,0 +1,35 @@
+Types of structures to add:
+===========================
+
+Towers (small and medium)
+--> Spawn pillagers around them
+
+Huts (small)
+
+Houses and abandoned houses (medium)
+
+Crafting area/Abandoned camp site (small)
+
+Castles and Barracks (medium to large)
+--> Use village template to generate several structures around?
+    (watch towers, fields, training sites, etc.)
+
+Dungeons (medium to large)
+--> Various entrances (towers, hidden trapdoors, etc.)
+
+Graves (small)
+--> With valuables to dig??
+--> Some kind of curse/only cursed items
+
+Cursed ruins with permanent cloud effect
+
+Pyramid
+--> custom rooms randomly generated
+--> dungeon underneath? (not always?)
+    ! would require rooms with at least 2 jigsaw blocks, 
+      and thus a separate collection of rooms
+--> both desert, mesa and jungle versions?
+    (make red sandstone and stonebricks variants when desert is finished)
+--> spawn husk inside (desert) or regular zombies (jungle)
+
+

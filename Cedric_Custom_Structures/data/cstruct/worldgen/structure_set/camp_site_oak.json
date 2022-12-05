@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "cstruct:camp_site_oak",
+      "weight": 10
+    },
+    {
+      "structure": "cstruct:camp_site_birch",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 2,
+    "salt": 1635217471
+  }
+}
+

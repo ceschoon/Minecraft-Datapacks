@@ -1,0 +1,24 @@
+{
+	"name": "cstruct:mobs/skeleton_likely",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 30,
+			"element": {
+				"location": "cstruct:mobs/skeleton",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:mobs/no_mob",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

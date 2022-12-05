@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		
+		
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"weight": 10,
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "minecraft:set_potion",
+							"id": "minecraft:luck"
+						}
+					]
+				},
+				{
+					"type": "empty",
+					"weight": 90
+				}
+			]
+		}
+		
+		
+	]
+}

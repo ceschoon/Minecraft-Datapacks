@@ -1,0 +1,87 @@
+{
+	"name": "cstruct:pyramid/pyramid",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_1",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_2",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_3",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_4",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_5",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_6",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_7",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_8",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 10,
+			"element": {
+				"location": "cstruct:pyramid/pyramid_9",
+				"processors": "cstruct:pyramid_base",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}
